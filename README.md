@@ -71,6 +71,55 @@ This pipeline runs automatically on commits to the **main branch** and publishes
 
 ---
 
+## 🔑 Key Vault Integration
+
+Azure Key Vault secrets are securely integrated into the pipeline using **Azure DevOps Variable Groups** and a **Service Connection**.
+
+---
+
+### 1. Service Connection (Azure Resource Manager)
+
+- Created in **Project Settings → Service Connections**.  
+- Allows the pipeline to authenticate to **Azure Key Vault**.  
+- Requires:  
+  - Subscription ID  
+  - Resource Group  
+  - Vault Name  
+- Permission: must have **Get & List** access on the Key Vault.  
+
+📷 *[Insert Screenshot: Service Connection setup]*
+
+---
+
+### 2. Key Vault Variable Group
+
+- Configured in **Pipelines → Library → Variable Groups**.  
+- Linked to the **Azure Key Vault** via the service connection.  
+- Automatically pulls secrets from Key Vault into the pipeline.  
+- Secrets are **masked** in logs.  
+
+📷 *[Insert Screenshot: Variable Group linked to Key Vault]*
+
+---
+
+### 3. Usage in Pipeline YAML
+
+```yaml
+variables:
+- group: nithish-keyvault   # variable group linked to Key Vault
+
+ # Docker build & push
+        - task: Docker@2
+          displayName: "Build & Push Docker Image"
+          inputs:
+            command: buildAndPush
+            repository: $(imageName)
+            dockerfile: $(DockerfileName)
+            containerRegistry: $(dockerRegistryServiceConnection)
+            tags: |
+              v1
+---
+
 ## Logs
 
 - Logs for **CI, Dev, Staging, and Production deployments** are stored in this repository.  
