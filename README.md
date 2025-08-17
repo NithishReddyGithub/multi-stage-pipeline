@@ -74,7 +74,28 @@ This pipeline runs automatically on commits to the **main branch** and publishes
 ## 🔑 Key Vault Integration
 
 Azure Key Vault secrets are securely integrated into the pipeline using **Azure DevOps Variable Groups** and a **Service Connection**.
+# Azure Key Vault Setup
 
+## Create Key Vault
+
+Use the following Azure CLI command to create a Key Vault named **`nithish-keyvault`**:
+
+```bash
+# Variables
+RESOURCE_GROUP=my-resource-group
+LOCATION=eastus
+KEYVAULT_NAME=nithish-keyvault
+
+# Create Key Vault
+az keyvault create \
+  --name $KEYVAULT_NAME \
+  --resource-group $RESOURCE_GROUP \
+  --location $LOCATION \
+  --sku standard \
+  --enabled-for-deployment true \
+  --enabled-for-template-deployment true \
+  --enabled-for-disk-encryption true
+```
 ---
 
 ### 1. Service Connection (Azure Resource Manager)
@@ -87,7 +108,7 @@ Azure Key Vault secrets are securely integrated into the pipeline using **Azure 
   - Vault Name  
 - Permission: must have **Get & List** access on the Key Vault.  
 
-📷 *[Insert Screenshot: Service Connection setup]*
+📷 - ![Service Connection](./screenshots/service-connection.png)
 
 ---
 
@@ -98,7 +119,7 @@ Azure Key Vault secrets are securely integrated into the pipeline using **Azure 
 - Automatically pulls secrets from Key Vault into the pipeline.  
 - Secrets are **masked** in logs.  
 
-📷 *[Insert Screenshot: Variable Group linked to Key Vault]*
+📷 - ![Key Vault Variable Group](./screenshots/variable-group.png)
 
 ---
 
