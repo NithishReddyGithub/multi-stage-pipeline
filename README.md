@@ -76,7 +76,7 @@ This pipeline runs automatically on commits to the **main branch** and publishes
 - Logs for **CI, Dev, Staging, and Production deployments** are stored in this repository.  
 - File: **`1_Job.txt`** (or equivalent).  
 - Repo URL (to be added by you):  
-  👉 [View Pipeline Logs]([[YOUR_REPO_URL_HERE](https://github.com/NithishReddyGithub/multi-stage-pipeline/tree/main/Production%20Deployment)] 
+  👉 ([[View Pipeline Logs](https://github.com/NithishReddyGithub/multi-stage-pipeline/tree/main/Production%20Deployment)] 
 
 ---
 
