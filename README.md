@@ -76,7 +76,7 @@ This pipeline runs automatically on commits to the **main branch** and publishes
 - Logs for **CI, Dev, Staging, and Production deployments** are stored in this repository.  
 - File: **`1_Job.txt`** (or equivalent).  
 - Repo URL (to be added by you):  
-  👉 [View Pipeline Logs](YOUR_REPO_URL_HERE)  
+  👉 [View Pipeline Logs]([[YOUR_REPO_URL_HERE](https://github.com/NithishReddyGithub/multi-stage-pipeline/tree/main/Production%20Deployment)] 
 
 ---
 
@@ -84,17 +84,10 @@ This pipeline runs automatically on commits to the **main branch** and publishes
 
 ### Build Artifact
 - Packaged at the end of the CI stage.  
-- Contains application tarball + Kubernetes manifests.  
-
-### Screenshots *(to be added)*
-- Successful **Dev deployment**.  
-- Successful **Staging deployment**.  
-- Successful **Production deployment**.  
+- Contains application tarball + Kubernetes manifests.    
 
 Example placeholders:  
-- ![Dev Deployment](./screenshots/dev-deployment.png)  
-- ![Staging Deployment](./screenshots/staging-deployment.png)  
-- ![Production Deployment](./screenshots/production-deployment.png)  
+- ![Dev-Staging-Production Deployment](./screenshots/dev-deployment.png)   
 
 ---
 
@@ -106,4 +99,4 @@ Example placeholders:
 4. CD stages proceed sequentially:  
    - Deploy → Dev → Staging → Production.  
 5. Verify rollouts in AKS using `kubectl`.  
-6. For detailed logs, check [pipeline logs](YOUR_REPO_URL_HERE).  
+6. For detailed logs, check pipeline logs.  
