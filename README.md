@@ -71,6 +71,77 @@ This pipeline runs automatically on commits to the **main branch** and publishes
 
 ---
 
+## 🔑 Key Vault Integration
+
+Azure Key Vault secrets are securely integrated into the pipeline using **Azure DevOps Variable Groups** and a **Service Connection**.
+# Azure Key Vault Setup
+
+## Create Key Vault
+
+Use the following Azure CLI command to create a Key Vault named **`nithish-keyvault`**:
+
+```bash
+# Variables
+RESOURCE_GROUP=my-resource-group
+LOCATION=eastus
+KEYVAULT_NAME=nithish-keyvault
+
+# Create Key Vault
+az keyvault create \
+  --name $KEYVAULT_NAME \
+  --resource-group $RESOURCE_GROUP \
+  --location $LOCATION \
+  --sku standard \
+  --enabled-for-deployment true \
+  --enabled-for-template-deployment true \
+  --enabled-for-disk-encryption true
+```
+---
+
+### 1. Service Connection (Azure Resource Manager)
+
+- Created in **Project Settings → Service Connections**.  
+- Allows the pipeline to authenticate to **Azure Key Vault**.  
+- Requires:  
+  - Subscription ID  
+  - Resource Group  
+  - Vault Name  
+- Permission: must have **Get & List** access on the Key Vault.  
+
+📷 - ![Service Connection](./screenshots/service-connection.png)
+
+---
+
+### 2. Key Vault Variable Group
+
+- Configured in **Pipelines → Library → Variable Groups**.  
+- Linked to the **Azure Key Vault** via the service connection.  
+- Automatically pulls secrets from Key Vault into the pipeline.  
+- Secrets are **masked** in logs.  
+
+📷 - ![Key Vault Variable Group](./screenshots/variable-group.png)
+
+---
+
+### 3. Usage in Pipeline YAML
+
+```yaml
+variables:
+- group: nithish-keyvault   # variable group linked to Key Vault
+
+ # Docker build & push
+        - task: Docker@2
+          displayName: "Build & Push Docker Image"
+          inputs:
+            command: buildAndPush
+            repository: $(imageName)
+            dockerfile: $(DockerfileName)
+            containerRegistry: $(dockerRegistryServiceConnection)
+            tags: |
+              v1
+```
+---
+
 ## Logs
 
 - Logs for **CI, Dev, Staging, and Production deployments** are stored in this repository.  
