@@ -118,6 +118,7 @@ variables:
             containerRegistry: $(dockerRegistryServiceConnection)
             tags: |
               v1
+```
 ---
 
 ## Logs
