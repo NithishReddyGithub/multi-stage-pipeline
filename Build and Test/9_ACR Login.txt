@@ -1,0 +1,17 @@
+2025-08-17T05:20:38.0131971Z ##[section]Starting: ACR Login
+2025-08-17T05:20:38.0137850Z ==============================================================================
+2025-08-17T05:20:38.0138194Z Task         : Command line
+2025-08-17T05:20:38.0138283Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2025-08-17T05:20:38.0138438Z Version      : 2.250.1
+2025-08-17T05:20:38.0138547Z Author       : Microsoft Corporation
+2025-08-17T05:20:38.0138674Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2025-08-17T05:20:38.0138819Z ==============================================================================
+2025-08-17T05:20:38.8820732Z Generating script.
+2025-08-17T05:20:38.8821775Z Script contents:
+2025-08-17T05:20:38.8821977Z az acr login --name nithishacrm3wx2
+2025-08-17T05:20:38.8822229Z ========================== Starting Command Output ===========================
+2025-08-17T05:20:38.8825707Z [command]/usr/bin/bash --noprofile --norc /home/nithish/myagent/_temp/6a600***74-2dfd-4fdb-82cb-76***9a9b00e9a.sh
+2025-08-17T05:20:38.8826136Z WARNING: The output will be changed in next breaking change release(2.73.0) scheduled for May 2025. Exit code will be *** if command fails for docker login.
+2025-08-17T05:20:40.1258379Z Login Succeeded
+2025-08-17T05:20:40.3213077Z 
+2025-08-17T05:20:40.3266741Z ##[section]Finishing: ACR Login

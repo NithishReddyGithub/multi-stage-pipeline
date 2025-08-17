@@ -1,0 +1,313 @@
+name: "$(Build.DefinitionName)_$(Date:yyyyMMdd)$(Rev:.r)"
+
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  name: linux-pool
+  demands: Agent.Name -equals nithish
+
+variables:
+  - group: nithish-keyvault
+
+  # - name: imageName
+  #   value: 'my-app'
+  - name: dockerRegistryServiceConnection
+    value: 'nithish-acr'
+  - name: aksSubscription
+    value: 'nithish-aks'
+  - name: acrName
+    value: 'nithishacrm3wx2'
+  - name: aksRG
+    value: 'nithish-aks-rg'
+  - name: aksCluster
+    value: 'nithish-aks-aks'
+  # imageName: 'my-app'
+  # dockerRegistryServiceConnection: 'nithish-acr'
+  # acrName: 'nithishacrm3wx2'
+  # aksSubscription: 'nithish-aks'
+  # aksRG: 'nithish-aks-rg'
+  # aksCluster: 'nithish-aks-aks'
+
+stages:
+# ------------------------
+# Stage 1 — CI (Build & Test)
+# ------------------------
+- stage: CI
+  displayName: "CI - Build, Test, Dockerize"
+  jobs:
+    - job: Build_Test
+      displayName: "Build and Test"
+      steps:
+        - script: |
+            node -v
+            npm -v
+          displayName: "Check Node & npm versions"
+
+        - script: |
+            npm install
+            npm ci
+          displayName: "Install dependencies"
+
+        - script: npm test
+          displayName: "Run unit tests"
+          env:
+            CI: true
+
+        - task: PublishTestResults@2
+          displayName: "Publish test results (JUnit)"
+          inputs:
+            testResultsFormat: "JUnit"
+            testResultsFiles: "test-results/junit.xml"
+            testRunTitle: "Node.js Unit Tests"
+            failTaskOnFailedTests: true
+
+        # ACR login
+        - script: |
+            az acr login --name $(acrName)
+          displayName: "ACR Login"
+
+        # Docker build & push
+        - task: Docker@2
+          displayName: "Build & Push Docker Image"
+          inputs:
+            command: buildAndPush
+            repository: $(imageName)
+            dockerfile: $(DockerfileName)
+            containerRegistry: $(dockerRegistryServiceConnection)
+            tags: |
+              v1
+
+        # Package artifact
+        - script: |
+            mkdir -p artifact
+            tar -czf artifact/app.tar.gz app.js server.js package.json package-lock.json
+            cp -r manifests/*.yaml artifact/ || echo "No manifests found"
+            sudo chmod 777 artifact/*
+            ls -R artifact
+          displayName: "Create Artifact"
+
+        - task: PublishBuildArtifacts@1
+          displayName: "Publish build artifact"
+          inputs:
+            PathtoPublish: "artifact"
+            ArtifactName: "drop"
+            publishLocation: "Container"
+
+# ------------------------
+# Stage 2 — Deploy to Dev
+# ------------------------
+- stage: Deploy_Dev
+  # variables:
+  #   REPLICAS: 1
+  displayName: "Deploy to Dev AKS"
+  dependsOn: CI
+  condition: succeeded()
+  jobs:
+    - deployment: dev_deploy
+      displayName: "Dev Deployment"
+      environment: dev
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+              - download: current
+                artifact: drop
+
+              - task: AzureCLI@2
+                displayName: "Authenticate with AKS"
+                inputs:
+                  azureSubscription: $(aksSubscription)
+                  scriptType: bash
+                  scriptLocation: inlineScript
+                  inlineScript: |
+                    az aks get-credentials \
+                      --resource-group $(aksRG) \
+                      --name $(aksCluster) \
+                      --overwrite-existing
+
+              - script: |
+                  kubectl get ns dev || kubectl create ns dev
+                displayName: "Ensure Dev namespace"
+
+              - script: |
+                  if [ -d configs/dev ]; then
+                    kubectl -n dev create configmap app-config \
+                      --from-file=configs/dev/ \
+                      --dry-run=client -o yaml | kubectl apply -f -
+                  else
+                    echo "No dev config files found, skipping ConfigMap."
+                  fi
+                displayName: "Apply ConfigMap"
+
+              - checkout: self
+                persistCredentials: true
+                clean: true
+
+              # copy manifests
+              - script: |
+                  echo "copying manifests from repo"
+                  # mkdir -p manifest-files
+                  ls -R $(Build.SourcesDirectory)/manifests/
+                  # ls -R manifest-files
+                  envsubst < $(Build.SourcesDirectory)/manifests/dev-deployment.yaml > $(Build.SourcesDirectory)/manifests/dev-deployment.rendered.yaml
+
+              - task: Kubernetes@1
+                displayName: "Deploy to Dev"
+                inputs:
+                  connectionType: 'Azure Resource Manager'
+                  azureSubscriptionEndpoint: $(aksSubscription)
+                  azureResourceGroup: $(aksRG)
+                  kubernetesCluster: $(aksCluster)
+                  namespace: 'dev'
+                  command: apply
+                  useConfigurationFile: true
+                  configuration: $(Build.SourcesDirectory)/manifests/dev-deployment.rendered.yaml
+
+              - script: |
+                  kubectl -n dev rollout status deployment/my-app --timeout=60s
+                displayName: "Verify Dev rollout"
+
+# ------------------------
+# Stage 3 — Deploy to Staging
+# ------------------------
+- stage: Deploy_Staging
+  displayName: "Deploy to Staging AKS"
+  dependsOn: Deploy_Dev
+  condition: succeeded()
+  jobs:
+    - deployment: staging_deploy
+      displayName: "Staging Deployment"
+      environment: staging
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+              - download: current
+                artifact: drop
+
+              - task: AzureCLI@2
+                displayName: "Authenticate with AKS"
+                inputs:
+                  azureSubscription: $(aksSubscription)
+                  scriptType: bash
+                  scriptLocation: inlineScript
+                  inlineScript: |
+                    az aks get-credentials \
+                      --resource-group $(aksRG) \
+                      --name $(aksCluster) \
+                      --overwrite-existing
+
+              - script: |
+                  kubectl get ns staging || kubectl create ns staging
+                displayName: "Ensure Staging namespace"
+
+              - script: |
+                  if [ -d configs/staging ]; then
+                    kubectl -n staging create configmap app-config \
+                      --from-file=configs/staging/ \
+                      --dry-run=client -o yaml | kubectl apply -f -
+                  else
+                    echo "No staging config files found, skipping ConfigMap."
+                  fi
+                displayName: "Apply ConfigMap"
+
+              - checkout: self
+                persistCredentials: true
+                clean: true
+
+              # copy manifests
+              - script: |
+                  echo "copying manifests from repo"
+                  # mkdir -p manifest-files
+                  ls -R $(Build.SourcesDirectory)/manifests/
+                  # ls -R manifest-files
+
+              - task: Kubernetes@1
+                displayName: "Deploy to Staging"
+                inputs:
+                  connectionType: 'Azure Resource Manager'
+                  azureSubscriptionEndpoint: $(aksSubscription)
+                  azureResourceGroup: $(aksRG)
+                  kubernetesCluster: $(aksCluster)
+                  namespace: 'staging'
+                  command: apply
+                  useConfigurationFile: true
+                  configuration: $(Build.SourcesDirectory)/manifests/staging-deployment.yaml
+
+              - script: |
+                  kubectl -n staging rollout status deployment/my-app --timeout=60s
+                displayName: "Verify Staging rollout"
+
+# ------------------------
+# Stage 4 — Deploy to Production
+# ------------------------
+- stage: Deploy_Production
+  displayName: "Deploy to Production AKS"
+  dependsOn: Deploy_Staging
+  condition: succeeded()
+  jobs:
+    - deployment: production_deploy
+      displayName: "Production Deployment"
+      environment: production
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+              - download: current
+                artifact: drop
+
+              - task: AzureCLI@2
+                displayName: "Authenticate with AKS"
+                inputs:
+                  azureSubscription: $(aksSubscription)
+                  scriptType: bash
+                  scriptLocation: inlineScript
+                  inlineScript: |
+                    az aks get-credentials \
+                      --resource-group $(aksRG) \
+                      --name $(aksCluster) \
+                      --overwrite-existing
+
+              - script: |
+                  kubectl get ns production || kubectl create ns production
+                displayName: "Ensure Production namespace"
+
+              - script: |
+                  if [ -d configs/production ]; then
+                    kubectl -n production create configmap app-config \
+                      --from-file=configs/production/ \
+                      --dry-run=client -o yaml | kubectl apply -f -
+                  else
+                    echo "No production config files found, skipping ConfigMap."
+                  fi
+                displayName: "Apply ConfigMap"
+
+              - checkout: self
+                persistCredentials: true
+                clean: true
+
+              # copy manifests
+              - script: |
+                  echo "copying manifests from repo"
+                  # mkdir -p manifest-files
+                  ls -R $(Build.SourcesDirectory)/manifests/
+                  # ls -R manifest-files
+
+              - task: Kubernetes@1
+                displayName: "Deploy to Production"
+                inputs:
+                  connectionType: 'Azure Resource Manager'
+                  azureSubscriptionEndpoint: $(aksSubscription)
+                  azureResourceGroup: $(aksRG)
+                  kubernetesCluster: $(aksCluster)
+                  namespace: 'production'
+                  command: apply
+                  useConfigurationFile: true
+                  configuration: $(Build.SourcesDirectory)/manifests/production-deployment.yaml
+
+              - script: |
+                  kubectl -n production rollout status deployment/my-app --timeout=60s
+                displayName: "Verify Production rollout"

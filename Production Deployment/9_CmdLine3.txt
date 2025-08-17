@@ -1,0 +1,18 @@
+2025-08-17T05:23:05.4549822Z ##[section]Starting: CmdLine3
+2025-08-17T05:23:05.4555329Z ==============================================================================
+2025-08-17T05:23:05.4555474Z Task         : Command line
+2025-08-17T05:23:05.4555547Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2025-08-17T05:23:05.4555683Z Version      : 2.250.1
+2025-08-17T05:23:05.4555770Z Author       : Microsoft Corporation
+2025-08-17T05:23:05.4555873Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2025-08-17T05:23:05.4555983Z ==============================================================================
+2025-08-17T05:23:05.6176870Z Generating script.
+2025-08-17T05:23:05.6197892Z ========================== Starting Command Output ===========================
+2025-08-17T05:23:05.6258222Z [command]/usr/bin/bash --noprofile --norc /home/nithish/myagent/_temp/***aa6fa32-a5ee-4***5a-8452-2baf4b62377e.sh
+2025-08-17T05:23:05.6318059Z copying manifests from repo
+2025-08-17T05:23:05.6328568Z /home/nithish/myagent/4/s/manifests/:
+2025-08-17T05:23:05.6329065Z dev-deployment.yaml
+2025-08-17T05:23:05.6329371Z production-deployment.yaml
+2025-08-17T05:23:05.6329677Z staging-deployment.yaml
+2025-08-17T05:23:05.6341514Z 
+2025-08-17T05:23:05.6404430Z ##[section]Finishing: CmdLine3

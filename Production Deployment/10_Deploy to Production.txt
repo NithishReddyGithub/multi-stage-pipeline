@@ -1,0 +1,177 @@
+2025-08-17T05:23:05.6426024Z ##[section]Starting: Deploy to Production
+2025-08-17T05:23:05.6433329Z ==============================================================================
+2025-08-17T05:23:05.6433458Z Task         : Kubectl
+2025-08-17T05:23:05.6433544Z Description  : Deploy, configure, update a Kubernetes cluster in Azure Container Service by running kubectl commands
+2025-08-17T05:23:05.6433697Z Version      : 1.259.3
+2025-08-17T05:23:05.6433803Z Author       : Microsoft Corporation
+2025-08-17T05:23:05.6433896Z Help         : https://aka.ms/azpipes-kubectl-tsg
+2025-08-17T05:23:05.6433981Z ==============================================================================
+2025-08-17T05:23:07.1787359Z Prepending PATH environment variable with directory: /usr/bin
+2025-08-17T05:23:07.3595461Z ==============================================================================
+2025-08-17T05:23:07.3596336Z 			Kubectl Client Version: v***.33.3
+2025-08-17T05:23:07.3596984Z 			Kubectl Server Version: v***.32.6
+2025-08-17T05:23:07.3597378Z ==============================================================================
+2025-08-17T05:23:07.3803298Z [command]/usr/bin/kubectl apply -n production -f /home/nithish/myagent/4/s/manifests/production-deployment.yaml -o json
+2025-08-17T05:23:07.9620752Z {
+2025-08-17T05:23:07.9621254Z     "kind": "List",
+2025-08-17T05:23:07.9621622Z     "apiVersion": "v***",
+2025-08-17T05:23:07.9622253Z     "metadata": {},
+2025-08-17T05:23:07.9622499Z     "items": [
+2025-08-17T05:23:07.9622724Z         {
+2025-08-17T05:23:07.9622975Z             "apiVersion": "apps/v***",
+2025-08-17T05:23:07.9623243Z             "kind": "Deployment",
+2025-08-17T05:23:07.9623481Z             "metadata": {
+2025-08-17T05:23:07.9623715Z                 "annotations": {
+2025-08-17T05:23:07.9623992Z                     "deployment.kubernetes.io/revision": "***",
+2025-08-17T05:23:07.9624721Z                     "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v***\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{},\"name\":\"***\",\"namespace\":\"production\"},\"spec\":{\"replicas\":***,\"selector\":{\"matchLabels\":{\"app\":\"***\"}},\"template\":{\"metadata\":{\"labels\":{\"app\":\"***\"}},\"spec\":{\"containers\":[{\"image\":\"nithishacrm3wx2.azurecr.io/***:v***\",\"imagePullPolicy\":\"IfNotPresent\",\"name\":\"***\",\"ports\":[{\"containerPort\":3000}]}],\"imagePullSecrets\":[{\"name\":\"acr-production\"}],\"tolerations\":[{\"effect\":\"NoSchedule\",\"key\":\"CriticalAddonsOnly\",\"operator\":\"Exists\"}]}}}}\n"
+2025-08-17T05:23:07.9625348Z                 },
+2025-08-17T05:23:07.9625634Z                 "creationTimestamp": "2025-08-***6T***5:09:***Z",
+2025-08-17T05:23:07.9625921Z                 "generation": ***,
+2025-08-17T05:23:07.9626181Z                 "name": "***",
+2025-08-17T05:23:07.9626427Z                 "namespace": "production",
+2025-08-17T05:23:07.9626707Z                 "resourceVersion": "9***5507",
+2025-08-17T05:23:07.9626994Z                 "uid": "***554a***34-b322-4700-8ae***-62fe65220***ab"
+2025-08-17T05:23:07.9627250Z             },
+2025-08-17T05:23:07.9627483Z             "spec": {
+2025-08-17T05:23:07.9627726Z                 "progressDeadlineSeconds": 600,
+2025-08-17T05:23:07.9627981Z                 "replicas": ***,
+2025-08-17T05:23:07.9628253Z                 "revisionHistoryLimit": ***0,
+2025-08-17T05:23:07.9628496Z                 "selector": {
+2025-08-17T05:23:07.9628744Z                     "matchLabels": {
+2025-08-17T05:23:07.9628989Z                         "app": "***"
+2025-08-17T05:23:07.9629213Z                     }
+2025-08-17T05:23:07.9629456Z                 },
+2025-08-17T05:23:07.9629680Z                 "strategy": {
+2025-08-17T05:23:07.9629911Z                     "rollingUpdate": {
+2025-08-17T05:23:07.9630170Z                         "maxSurge": "25%",
+2025-08-17T05:23:07.9630476Z                         "maxUnavailable": "25%"
+2025-08-17T05:23:07.9630725Z                     },
+2025-08-17T05:23:07.9630960Z                     "type": "RollingUpdate"
+2025-08-17T05:23:07.9631209Z                 },
+2025-08-17T05:23:07.9631605Z                 "template": {
+2025-08-17T05:23:07.9631838Z                     "metadata": {
+2025-08-17T05:23:07.9632102Z                         "creationTimestamp": null,
+2025-08-17T05:23:07.9632342Z                         "labels": {
+2025-08-17T05:23:07.9632586Z                             "app": "***"
+2025-08-17T05:23:07.9632831Z                         }
+2025-08-17T05:23:07.9633050Z                     },
+2025-08-17T05:23:07.9633273Z                     "spec": {
+2025-08-17T05:23:07.9633522Z                         "containers": [
+2025-08-17T05:23:07.9633747Z                             {
+2025-08-17T05:23:07.9634033Z                                 "image": "nithishacrm3wx2.azurecr.io/***:v***",
+2025-08-17T05:23:07.9634320Z                                 "imagePullPolicy": "IfNotPresent",
+2025-08-17T05:23:07.9634584Z                                 "name": "***",
+2025-08-17T05:23:07.9634833Z                                 "ports": [
+2025-08-17T05:23:07.9635062Z                                     {
+2025-08-17T05:23:07.9635307Z                                         "containerPort": 3000,
+2025-08-17T05:23:07.9635570Z                                         "protocol": "TCP"
+2025-08-17T05:23:07.9635801Z                                     }
+2025-08-17T05:23:07.9636019Z                                 ],
+2025-08-17T05:23:07.9636339Z                                 "resources": {},
+2025-08-17T05:23:07.9636746Z                                 "terminationMessagePath": "/dev/termination-log",
+2025-08-17T05:23:07.9637042Z                                 "terminationMessagePolicy": "File"
+2025-08-17T05:23:07.9637297Z                             }
+2025-08-17T05:23:07.9637517Z                         ],
+2025-08-17T05:23:07.9637756Z                         "dnsPolicy": "ClusterFirst",
+2025-08-17T05:23:07.9638021Z                         "imagePullSecrets": [
+2025-08-17T05:23:07.9638251Z                             {
+2025-08-17T05:23:07.9638487Z                                 "name": "acr-production"
+2025-08-17T05:23:07.9638726Z                             }
+2025-08-17T05:23:07.9639191Z                         ],
+2025-08-17T05:23:07.9639434Z                         "restartPolicy": "Always",
+2025-08-17T05:23:07.9639715Z                         "schedulerName": "default-scheduler",
+2025-08-17T05:23:07.9639981Z                         "securityContext": {},
+2025-08-17T05:23:07.9640239Z                         "terminationGracePeriodSeconds": 30,
+2025-08-17T05:23:07.9640512Z                         "tolerations": [
+2025-08-17T05:23:07.9640741Z                             {
+2025-08-17T05:23:07.9640974Z                                 "effect": "NoSchedule",
+2025-08-17T05:23:07.9641247Z                                 "key": "CriticalAddonsOnly",
+2025-08-17T05:23:07.9641498Z                                 "operator": "Exists"
+2025-08-17T05:23:07.9641726Z                             }
+2025-08-17T05:23:07.9641957Z                         ]
+2025-08-17T05:23:07.9642175Z                     }
+2025-08-17T05:23:07.9642397Z                 }
+2025-08-17T05:23:07.9642641Z             },
+2025-08-17T05:23:07.9642886Z             "status": {
+2025-08-17T05:23:07.9643137Z                 "availableReplicas": ***,
+2025-08-17T05:23:07.9643392Z                 "conditions": [
+2025-08-17T05:23:07.9643616Z                     {
+2025-08-17T05:23:07.9643890Z                         "lastTransitionTime": "2025-08-***6T***5:09:***2Z",
+2025-08-17T05:23:07.9644214Z                         "lastUpdateTime": "2025-08-***6T***5:09:***2Z",
+2025-08-17T05:23:07.9644508Z                         "message": "Deployment has minimum availability.",
+2025-08-17T05:23:07.9644799Z                         "reason": "MinimumReplicasAvailable",
+2025-08-17T05:23:07.9645178Z                         "status": "True",
+2025-08-17T05:23:07.9645422Z                         "type": "Available"
+2025-08-17T05:23:07.9645652Z                     },
+2025-08-17T05:23:07.9645884Z                     {
+2025-08-17T05:23:07.9646158Z                         "lastTransitionTime": "2025-08-***6T***5:09:***Z",
+2025-08-17T05:23:07.9646606Z                         "lastUpdateTime": "2025-08-***6T***5:09:***2Z",
+2025-08-17T05:23:07.9646927Z                         "message": "ReplicaSet \"***-5fb7c8f69d\" has successfully progressed.",
+2025-08-17T05:23:07.9647236Z                         "reason": "NewReplicaSetAvailable",
+2025-08-17T05:23:07.9647494Z                         "status": "True",
+2025-08-17T05:23:07.9647745Z                         "type": "Progressing"
+2025-08-17T05:23:07.9647991Z                     }
+2025-08-17T05:23:07.9648212Z                 ],
+2025-08-17T05:23:07.9648455Z                 "observedGeneration": ***,
+2025-08-17T05:23:07.9648725Z                 "readyReplicas": ***,
+2025-08-17T05:23:07.9648973Z                 "replicas": ***,
+2025-08-17T05:23:07.9649237Z                 "updatedReplicas": ***
+2025-08-17T05:23:07.9649498Z             }
+2025-08-17T05:23:07.9649851Z         },
+2025-08-17T05:23:07.9650415Z         {
+2025-08-17T05:23:07.9650823Z             "apiVersion": "v***",
+2025-08-17T05:23:07.9651721Z             "kind": "Service",
+2025-08-17T05:23:07.9651909Z             "metadata": {
+2025-08-17T05:23:07.9652077Z                 "annotations": {
+2025-08-17T05:23:07.9652469Z                     "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v***\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"name\":\"***-service\",\"namespace\":\"production\"},\"spec\":{\"ports\":[{\"port\":80,\"targetPort\":3000}],\"selector\":{\"app\":\"***\"},\"type\":\"LoadBalancer\"}}\n"
+2025-08-17T05:23:07.9652926Z                 },
+2025-08-17T05:23:07.9653143Z                 "creationTimestamp": "2025-08-***6T***5:09:***Z",
+2025-08-17T05:23:07.9653341Z                 "finalizers": [
+2025-08-17T05:23:07.9653531Z                     "service.kubernetes.io/load-balancer-cleanup"
+2025-08-17T05:23:07.9653708Z                 ],
+2025-08-17T05:23:07.9653897Z                 "name": "***-service",
+2025-08-17T05:23:07.9654083Z                 "namespace": "production",
+2025-08-17T05:23:07.9654276Z                 "resourceVersion": "9***556***",
+2025-08-17T05:23:07.9654508Z                 "uid": "b9***83be9-652e-47***d-ab50-46fddba***f527"
+2025-08-17T05:23:07.9654690Z             },
+2025-08-17T05:23:07.9654849Z             "spec": {
+2025-08-17T05:23:07.9655049Z                 "allocateLoadBalancerNodePorts": true,
+2025-08-17T05:23:07.9655250Z                 "clusterIP": "***0.0.244.29",
+2025-08-17T05:23:07.9655428Z                 "clusterIPs": [
+2025-08-17T05:23:07.9655614Z                     "***0.0.244.29"
+2025-08-17T05:23:07.9655772Z                 ],
+2025-08-17T05:23:07.9655951Z                 "externalTrafficPolicy": "Cluster",
+2025-08-17T05:23:07.9656160Z                 "internalTrafficPolicy": "Cluster",
+2025-08-17T05:23:07.9656339Z                 "ipFamilies": [
+2025-08-17T05:23:07.9656500Z                     "IPv4"
+2025-08-17T05:23:07.9656653Z                 ],
+2025-08-17T05:23:07.9656840Z                 "ipFamilyPolicy": "SingleStack",
+2025-08-17T05:23:07.9657014Z                 "ports": [
+2025-08-17T05:23:07.9657818Z                     {
+2025-08-17T05:23:07.9658005Z                         "nodePort": 30***88,
+2025-08-17T05:23:07.9658190Z                         "port": 80,
+2025-08-17T05:23:07.9658360Z                         "protocol": "TCP",
+2025-08-17T05:23:07.9658538Z                         "targetPort": 3000
+2025-08-17T05:23:07.9658710Z                     }
+2025-08-17T05:23:07.9658858Z                 ],
+2025-08-17T05:23:07.9659016Z                 "selector": {
+2025-08-17T05:23:07.9659186Z                     "app": "***"
+2025-08-17T05:23:07.9659357Z                 },
+2025-08-17T05:23:07.9659525Z                 "sessionAffinity": "None",
+2025-08-17T05:23:07.9659704Z                 "type": "LoadBalancer"
+2025-08-17T05:23:07.9659863Z             },
+2025-08-17T05:23:07.9660037Z             "status": {
+2025-08-17T05:23:07.9717562Z                 "loadBalancer": {
+2025-08-17T05:23:07.9717972Z                     "ingress": [
+2025-08-17T05:23:07.9718416Z                         {
+2025-08-17T05:23:07.9718684Z                             "ip": "4.***87.***99.***87",
+2025-08-17T05:23:07.9718870Z                             "ipMode": "VIP"
+2025-08-17T05:23:07.9719032Z                         }
+2025-08-17T05:23:07.9719184Z                     ]
+2025-08-17T05:23:07.9719360Z                 }
+2025-08-17T05:23:07.9719510Z             }
+2025-08-17T05:23:07.9719656Z         }
+2025-08-17T05:23:07.9719801Z     ]
+2025-08-17T05:23:07.9719955Z }
+2025-08-17T05:23:07.9720009Z 
+2025-08-17T05:23:08.2722317Z ##[section]Finishing: Deploy to Production

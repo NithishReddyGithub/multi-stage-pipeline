@@ -1,0 +1,40 @@
+2025-08-17T05:22:24.3538767Z ##[section]Starting: Checkout Multi-Stage Project@main to s
+2025-08-17T05:22:24.3552776Z ==============================================================================
+2025-08-17T05:22:24.3552940Z Task         : Get sources
+2025-08-17T05:22:24.3553026Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2025-08-17T05:22:24.3553159Z Version      : 1.0.0
+2025-08-17T05:22:24.3553251Z Author       : Microsoft
+2025-08-17T05:22:24.3553939Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2025-08-17T05:22:24.3554067Z ==============================================================================
+2025-08-17T05:22:24.6739521Z Syncing repository: Multi-Stage Project (Git)
+2025-08-17T05:22:24.6828870Z ##[command]git version
+2025-08-17T05:22:24.7199901Z git version 2.25.***
+2025-08-17T05:22:24.7300450Z ##[command]git config --get remote.origin.url
+2025-08-17T05:22:24.7368613Z ##[command]git clean -ffdx
+2025-08-17T05:22:24.7404610Z Removing manifests/dev-deployment.rendered.yaml
+2025-08-17T05:22:24.7409222Z ##[command]git reset --hard HEAD
+2025-08-17T05:22:24.7455003Z HEAD is now at a04da72 Updated azure-pipeline.yml
+2025-08-17T05:22:24.7473499Z ##[command]git sparse-checkout disable
+2025-08-17T05:22:24.7524038Z ##[command]git config gc.auto 0
+2025-08-17T05:22:24.7594086Z ##[command]git config core.longpaths true
+2025-08-17T05:22:24.7622430Z ##[command]git config --get-all http.https://nithishp@dev.azure.com/nithishp/Technical%AZP2520Assessment%AZP2520-%AZP2520ABB/_git/Multi-Stage%AZP2520Project.extraheader
+2025-08-17T05:22:24.7659497Z ##[command]git config --get-all http.extraheader
+2025-08-17T05:22:24.7716008Z ##[command]git config --get-regexp .*extraheader
+2025-08-17T05:22:24.7864609Z ##[command]git config --get-all http.proxy
+2025-08-17T05:22:24.7890526Z ##[command]git config http.version HTTP/***.***
+2025-08-17T05:22:24.7961907Z ##[command]git -c http.extraheader="AUTHORIZATION: bearer *** fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=***  +a04da729027ebd9025e8feacd4e***58b0f***3be***c4:refs/remotes/origin/a04da729027ebd9025e8feacd4e***58b0f***3be***c4
+2025-08-17T05:22:24.9008361Z remote: Azure Repos        
+2025-08-17T05:22:24.9051867Z remote: We noticed you're using an older version of Git. For the best experience, upgrade to a newer version.        
+2025-08-17T05:22:24.9052394Z remote: 
+2025-08-17T05:22:24.9052912Z remote: Found 0 objects to send. (0 ms)        
+2025-08-17T05:22:24.9457458Z ##[command]git -c http.extraheader="AUTHORIZATION: bearer *** fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=***  +a04da729027ebd9025e8feacd4e***58b0f***3be***c4
+2025-08-17T05:22:25.0192082Z remote: Azure Repos        
+2025-08-17T05:22:25.0195937Z remote: We noticed you're using an older version of Git. For the best experience, upgrade to a newer version.        
+2025-08-17T05:22:25.0200180Z remote: 
+2025-08-17T05:22:25.0201392Z remote: Found 0 objects to send. (0 ms)        
+2025-08-17T05:22:25.0318491Z From https://dev.azure.com/nithishp/Technical%20Assessment%20-%20ABB/_git/Multi-Stage%20Project
+2025-08-17T05:22:25.0319751Z  * branch            a04da729027ebd9025e8feacd4e***58b0f***3be***c4 -> FETCH_HEAD
+2025-08-17T05:22:25.0832135Z ##[command]git checkout --progress --force refs/remotes/origin/a04da729027ebd9025e8feacd4e***58b0f***3be***c4
+2025-08-17T05:22:25.0838970Z HEAD is now at a04da72 Updated azure-pipeline.yml
+2025-08-17T05:22:25.0840860Z ##[command]git config http.https://nithishp@dev.azure.com/nithishp/Technical%AZP2520Assessment%AZP2520-%AZP2520ABB/_git/Multi-Stage%AZP2520Project.extraheader "AUTHORIZATION: placeholder_6237***44b-34d9-40a0-ab6a-***234cab0ac74"
+2025-08-17T05:22:25.0861439Z ##[section]Finishing: Checkout Multi-Stage Project@main to s

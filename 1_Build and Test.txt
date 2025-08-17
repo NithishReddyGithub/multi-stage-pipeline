@@ -1,0 +1,503 @@
+2025-08-17T05:20:26.6095912Z ##[section]Starting: Build and Test
+2025-08-17T05:20:26.7470811Z ##[section]Starting: Initialize job
+2025-08-17T05:20:26.7473850Z Agent name: 'nithish'
+2025-08-17T05:20:26.7474381Z Agent machine name: 'linux-vm'
+2025-08-17T05:20:26.7474648Z Current agent version: '4.260.0'
+2025-08-17T05:20:26.8443905Z Agent running as: 'nithish'
+2025-08-17T05:20:26.8491719Z Prepare build directory.
+2025-08-17T05:20:26.8821764Z Set build variables.
+2025-08-17T05:20:26.8840391Z Download all required tasks.
+2025-08-17T05:20:26.9845357Z Checking job knob settings.
+2025-08-17T05:20:26.9849475Z    Knob: DockerActionRetries = true Source: $(VSTSAGENT_DOCKER_ACTION_RETRIES) 
+2025-08-17T05:20:26.9851183Z    Knob: UseGitLongPaths = true Source: $(USE_GIT_LONG_PATHS) 
+2025-08-17T05:20:26.9853624Z    Knob: EnableIssueSourceValidation = true Source: $(ENABLE_ISSUE_SOURCE_VALIDATION) 
+2025-08-17T05:20:26.9854695Z    Knob: AgentEnablePipelineArtifactLargeChunkSize = true Source: $(AGENT_ENABLE_PIPELINEARTIFACT_LARGE_CHUNK_SIZE) 
+2025-08-17T05:20:26.9902674Z    Knob: ContinueAfterCancelProcessTreeKillAttempt = true Source: $(VSTSAGENT_CONTINUE_AFTER_CANCEL_PROCESSTREEKILL_ATTEMPT) 
+2025-08-17T05:20:26.9904120Z    Knob: ProcessHandlerSecureArguments = false Source: $(AZP_75787_ENABLE_NEW_LOGIC) 
+2025-08-17T05:20:26.9904706Z    Knob: ProcessHandlerSecureArguments = false Source: $(AZP_75787_ENABLE_NEW_LOGIC_LOG) 
+2025-08-17T05:20:26.9905290Z    Knob: ProcessHandlerTelemetry = true Source: $(AZP_75787_ENABLE_COLLECT) 
+2025-08-17T05:20:26.9905937Z    Knob: UseNewNodeHandlerTelemetry = True Source: $(DistributedTask.Agent.USENEWNODEHANDLERTELEMETRY) 
+2025-08-17T05:20:26.9906545Z    Knob: ProcessHandlerEnableNewLogic = true Source: $(AZP_75787_ENABLE_NEW_PH_LOGIC) 
+2025-08-17T05:20:26.9907453Z    Knob: EnableResourceMonitorDebugOutput = true Source: $(AZP_ENABLE_RESOURCE_MONITOR_DEBUG_OUTPUT) 
+2025-08-17T05:20:26.9908077Z    Knob: EnableResourceUtilizationWarnings = true Source: $(AZP_ENABLE_RESOURCE_UTILIZATION_WARNINGS) 
+2025-08-17T05:20:26.9908972Z    Knob: IgnoreVSTSTaskLib = true Source: $(AZP_AGENT_IGNORE_VSTSTASKLIB) 
+2025-08-17T05:20:26.9909525Z    Knob: FailJobWhenAgentDies = true Source: $(FAIL_JOB_WHEN_AGENT_DIES) 
+2025-08-17T05:20:26.9910251Z    Knob: CheckForTaskDeprecation = true Source: $(AZP_AGENT_CHECK_FOR_TASK_DEPRECATION) 
+2025-08-17T05:20:26.9911042Z    Knob: CheckIfTaskNodeRunnerIsDeprecated246 = True Source: $(DistributedTask.Agent.CheckIfTaskNodeRunnerIsDeprecated246) 
+2025-08-17T05:20:26.9912238Z    Knob: LogTaskNameInUserAgent = true Source: $(AZP_AGENT_LOG_TASKNAME_IN_USERAGENT) 
+2025-08-17T05:20:26.9912832Z    Knob: UseFetchFilterInCheckoutTask = true Source: $(AGENT_USE_FETCH_FILTER_IN_CHECKOUT_TASK) 
+2025-08-17T05:20:26.9913540Z    Knob: Rosetta2Warning = true Source: $(ROSETTA2_WARNING) 
+2025-08-17T05:20:26.9915291Z    Knob: UseSparseCheckoutInCheckoutTask = true Source: $(AGENT_USE_SPARSE_CHECKOUT_IN_CHECKOUT_TASK) 
+2025-08-17T05:20:26.9916087Z    Knob: AgentCDNConnectivityFailWarning = False Source: $(DistributedTask.Agent.AgentCDNConnectivityFailWarning) 
+2025-08-17T05:20:26.9916426Z Finished checking job knob settings.
+2025-08-17T05:20:27.0287708Z Start tracking orphan processes.
+2025-08-17T05:20:27.0430634Z ##[section]Finishing: Initialize job
+2025-08-17T05:20:27.0499120Z ##[section]Async Command Start: DetectDockerContainer
+2025-08-17T05:20:27.0499822Z ##[section]Async Command End: DetectDockerContainer
+2025-08-17T05:20:27.0500844Z ##[section]Async Command Start: DetectDockerContainer
+2025-08-17T05:20:27.0501271Z ##[section]Async Command End: DetectDockerContainer
+2025-08-17T05:20:27.0653671Z ##[section]Starting: Download secrets: nithish-vault-demo
+2025-08-17T05:20:27.0764266Z ==============================================================================
+2025-08-17T05:20:27.0765360Z Task         : Azure Key Vault
+2025-08-17T05:20:27.0765719Z Description  : Download Azure Key Vault secrets
+2025-08-17T05:20:27.0765916Z Version      : 2.259.2
+2025-08-17T05:20:27.0766192Z Author       : Microsoft Corporation
+2025-08-17T05:20:27.0766887Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/deploy/azure-key-vault
+2025-08-17T05:20:27.0767110Z ==============================================================================
+2025-08-17T05:20:27.5349743Z ##[section]Finishing: Download secrets: nithish-vault-demo
+2025-08-17T05:20:27.5391805Z ##[section]Starting: Download secrets: nithish-vault-demo
+2025-08-17T05:20:27.5400590Z ==============================================================================
+2025-08-17T05:20:27.5400826Z Task         : Azure Key Vault
+2025-08-17T05:20:27.5400962Z Description  : Download Azure Key Vault secrets
+2025-08-17T05:20:27.5401137Z Version      : 2.259.2
+2025-08-17T05:20:27.5401272Z Author       : Microsoft Corporation
+2025-08-17T05:20:27.5401437Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/deploy/azure-key-vault
+2025-08-17T05:20:27.5401645Z ==============================================================================
+2025-08-17T05:20:27.9130761Z SubscriptionId: c4c0a9c0-532c-47f2-ba91-33d673835ff4.
+2025-08-17T05:20:27.9134668Z Key vault name: nithish-vault-demo.
+2025-08-17T05:20:27.9151482Z Downloading secret value for: imageName.
+2025-08-17T05:20:27.9153836Z Downloading secret value for: DockerfileName.
+2025-08-17T05:20:27.9156402Z Downloading secret value for: REPLICAS.
+2025-08-17T05:20:28.2634185Z ##[section]Finishing: Download secrets: nithish-vault-demo
+2025-08-17T05:20:28.2716068Z ##[section]Starting: Checkout Multi-Stage Project@main to s
+2025-08-17T05:20:28.2734842Z ==============================================================================
+2025-08-17T05:20:28.2735382Z Task         : Get sources
+2025-08-17T05:20:28.2735713Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2025-08-17T05:20:28.2736178Z Version      : 1.0.0
+2025-08-17T05:20:28.2736562Z Author       : Microsoft
+2025-08-17T05:20:28.2737477Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2025-08-17T05:20:28.2738009Z ==============================================================================
+2025-08-17T05:20:28.6753595Z Syncing repository: Multi-Stage Project (Git)
+2025-08-17T05:20:28.6771958Z ##[command]git version
+2025-08-17T05:20:28.6944080Z git version 2.25.***
+2025-08-17T05:20:28.7007925Z ##[command]git config --get remote.origin.url
+2025-08-17T05:20:28.7088092Z ##[command]git clean -ffdx
+2025-08-17T05:20:28.7129630Z Removing manifests/dev-deployment.yamlllll
+2025-08-17T05:20:28.7144002Z ##[command]git reset --hard HEAD
+2025-08-17T05:20:28.7188679Z HEAD is now at a04da72 Updated azure-pipeline.yml
+2025-08-17T05:20:28.7220990Z ##[command]git sparse-checkout disable
+2025-08-17T05:20:28.7252239Z ##[command]git config gc.auto 0
+2025-08-17T05:20:28.7272286Z ##[command]git config core.longpaths true
+2025-08-17T05:20:28.7290190Z ##[command]git config --get-all http.https://nithishp@dev.azure.com/nithishp/Technical%AZP2520Assessment%AZP2520-%AZP2520ABB/_git/Multi-Stage%AZP2520Project.extraheader
+2025-08-17T05:20:28.7343978Z ##[command]git config --get-all http.extraheader
+2025-08-17T05:20:28.7382955Z ##[command]git config --get-regexp .*extraheader
+2025-08-17T05:20:28.7430502Z ##[command]git config --get-all http.proxy
+2025-08-17T05:20:28.7462358Z ##[command]git config http.version HTTP/***.***
+2025-08-17T05:20:28.7542930Z ##[command]git -c http.extraheader="AUTHORIZATION: bearer *** fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=***  +a04da729027ebd9025e8feacd4e***58b0f***3be***c4:refs/remotes/origin/a04da729027ebd9025e8feacd4e***58b0f***3be***c4
+2025-08-17T05:20:28.8592772Z remote: Azure Repos        
+2025-08-17T05:20:28.8622975Z remote: We noticed you're using an older version of Git. For the best experience, upgrade to a newer version.        
+2025-08-17T05:20:28.8625481Z remote: 
+2025-08-17T05:20:28.8626946Z remote: Found 0 objects to send. (0 ms)        
+2025-08-17T05:20:28.9395038Z ##[command]git -c http.extraheader="AUTHORIZATION: bearer *** fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=***  +a04da729027ebd9025e8feacd4e***58b0f***3be***c4
+2025-08-17T05:20:28.9785681Z remote: Azure Repos        
+2025-08-17T05:20:28.9788691Z remote: We noticed you're using an older version of Git. For the best experience, upgrade to a newer version.        
+2025-08-17T05:20:28.9789833Z remote: 
+2025-08-17T05:20:28.9790818Z remote: Found 0 objects to send. (0 ms)        
+2025-08-17T05:20:28.9921970Z From https://dev.azure.com/nithishp/Technical%20Assessment%20-%20ABB/_git/Multi-Stage%20Project
+2025-08-17T05:20:28.9923490Z  * branch            a04da729027ebd9025e8feacd4e***58b0f***3be***c4 -> FETCH_HEAD
+2025-08-17T05:20:29.0421450Z ##[command]git checkout --progress --force refs/remotes/origin/a04da729027ebd9025e8feacd4e***58b0f***3be***c4
+2025-08-17T05:20:29.0437864Z HEAD is now at a04da72 Updated azure-pipeline.yml
+2025-08-17T05:20:29.0474564Z ##[section]Finishing: Checkout Multi-Stage Project@main to s
+2025-08-17T05:20:29.0541354Z ##[section]Starting: Check Node & npm versions
+2025-08-17T05:20:29.0553327Z ==============================================================================
+2025-08-17T05:20:29.0553740Z Task         : Command line
+2025-08-17T05:20:29.0554021Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2025-08-17T05:20:29.0554414Z Version      : 2.250.1
+2025-08-17T05:20:29.0554749Z Author       : Microsoft Corporation
+2025-08-17T05:20:29.0555051Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2025-08-17T05:20:29.0555432Z ==============================================================================
+2025-08-17T05:20:29.3035577Z Generating script.
+2025-08-17T05:20:29.3048114Z ========================== Starting Command Output ===========================
+2025-08-17T05:20:29.3081161Z [command]/usr/bin/bash --noprofile --norc /home/nithish/myagent/_temp/0839***ec-f7e2-48f3-a7f5-f067ab50f***d8.sh
+2025-08-17T05:20:29.3182785Z v***8.20.8
+2025-08-17T05:20:29.4445121Z ***0.8.2
+2025-08-17T05:20:29.4587168Z 
+2025-08-17T05:20:29.4633390Z ##[section]Finishing: Check Node & npm versions
+2025-08-17T05:20:29.4701819Z ##[section]Starting: Install dependencies
+2025-08-17T05:20:29.4715482Z ==============================================================================
+2025-08-17T05:20:29.4715898Z Task         : Command line
+2025-08-17T05:20:29.4716185Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2025-08-17T05:20:29.4716785Z Version      : 2.250.1
+2025-08-17T05:20:29.4717136Z Author       : Microsoft Corporation
+2025-08-17T05:20:29.4717442Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2025-08-17T05:20:29.4717821Z ==============================================================================
+2025-08-17T05:20:29.6807263Z Generating script.
+2025-08-17T05:20:29.6817174Z ========================== Starting Command Output ===========================
+2025-08-17T05:20:29.6843594Z [command]/usr/bin/bash --noprofile --norc /home/nithish/myagent/_temp/24cd9670-0ecf-4bdd-a439-0b2c02853a6f.sh
+2025-08-17T05:20:31.3344965Z npm warn deprecated inflight@***.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2025-08-17T05:20:31.5087883Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2025-08-17T05:20:32.4483743Z 
+2025-08-17T05:20:32.4485078Z added 358 packages, and audited 359 packages in 3s
+2025-08-17T05:20:32.4485421Z 
+2025-08-17T05:20:32.4485869Z 49 packages are looking for funding
+2025-08-17T05:20:32.4486303Z   run `npm fund` for details
+2025-08-17T05:20:32.4493810Z 
+2025-08-17T05:20:32.4494507Z found 0 vulnerabilities
+2025-08-17T05:20:34.1563666Z npm warn deprecated inflight@***.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2025-08-17T05:20:34.3008483Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2025-08-17T05:20:35.0230504Z 
+2025-08-17T05:20:35.0232056Z added 358 packages, and audited 359 packages in 2s
+2025-08-17T05:20:35.0238247Z 
+2025-08-17T05:20:35.0238892Z 49 packages are looking for funding
+2025-08-17T05:20:35.0239281Z   run `npm fund` for details
+2025-08-17T05:20:35.0250668Z 
+2025-08-17T05:20:35.0251192Z found 0 vulnerabilities
+2025-08-17T05:20:35.0392298Z 
+2025-08-17T05:20:35.0453872Z ##[section]Finishing: Install dependencies
+2025-08-17T05:20:35.0479644Z ##[section]Starting: Run unit tests
+2025-08-17T05:20:35.0487071Z ==============================================================================
+2025-08-17T05:20:35.0487216Z Task         : Command line
+2025-08-17T05:20:35.0487326Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2025-08-17T05:20:35.0487461Z Version      : 2.250.1
+2025-08-17T05:20:35.0487632Z Author       : Microsoft Corporation
+2025-08-17T05:20:35.0487740Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2025-08-17T05:20:35.0487864Z ==============================================================================
+2025-08-17T05:20:35.3188130Z Generating script.
+2025-08-17T05:20:35.3198225Z Script contents:
+2025-08-17T05:20:35.3207605Z npm test
+2025-08-17T05:20:35.3208155Z ========================== Starting Command Output ===========================
+2025-08-17T05:20:35.3225458Z [command]/usr/bin/bash --noprofile --norc /home/nithish/myagent/_temp/5bba62e9-deec-4f96-8622-8a9068449fd4.sh
+2025-08-17T05:20:35.4871333Z 
+2025-08-17T05:20:35.4872514Z > simple-node-ci-demo@***.0.0 test
+2025-08-17T05:20:35.4873055Z > jest --ci --reporters=default --reporters=jest-junit
+2025-08-17T05:20:35.4873720Z 
+2025-08-17T05:20:36.4278568Z PASS __tests__/app.test.js
+2025-08-17T05:20:36.4284422Z   GET /
+2025-08-17T05:20:36.4505313Z     ✓ responds with Hello, world! (22 ms)
+2025-08-17T05:20:36.4506552Z 
+2025-08-17T05:20:36.4507076Z Test Suites: *** passed, *** total
+2025-08-17T05:20:36.4507292Z Tests:       *** passed, *** total
+2025-08-17T05:20:36.4507486Z Snapshots:   0 total
+2025-08-17T05:20:36.4507711Z Time:        0.473 s, estimated *** s
+2025-08-17T05:20:36.4507907Z Ran all test suites.
+2025-08-17T05:20:36.5523563Z 
+2025-08-17T05:20:36.5583191Z ##[section]Finishing: Run unit tests
+2025-08-17T05:20:36.5607846Z ##[section]Starting: Publish test results (JUnit)
+2025-08-17T05:20:36.5614035Z ==============================================================================
+2025-08-17T05:20:36.5614183Z Task         : Publish Test Results
+2025-08-17T05:20:36.5614267Z Description  : Publish test results to Azure Pipelines
+2025-08-17T05:20:36.5614380Z Version      : 2.254.0
+2025-08-17T05:20:36.5614456Z Author       : Microsoft Corporation
+2025-08-17T05:20:36.5614551Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/test/publish-test-results
+2025-08-17T05:20:36.5614690Z ==============================================================================
+2025-08-17T05:20:37.0736730Z Result Attachments will be stored in LogStore
+2025-08-17T05:20:37.0820484Z Run Attachments will be stored in LogStore
+2025-08-17T05:20:37.1776670Z ##[section]Async Command Start: Publish test results
+2025-08-17T05:20:37.3325484Z Publishing test results to test run '89'.
+2025-08-17T05:20:37.3339388Z TestResults To Publish ***, Test run id:89
+2025-08-17T05:20:37.3366434Z Test results publishing ***, remaining: 0. Test run id: 89
+2025-08-17T05:20:37.9855859Z Published Test Run : https://dev.azure.com/nithishp/Technical%20Assessment%20-%20ABB/_TestManagement/Runs?runId=89&_a=runCharts
+2025-08-17T05:20:38.0104449Z ##[section]Async Command End: Publish test results
+2025-08-17T05:20:38.0105645Z ##[section]Finishing: Publish test results (JUnit)
+2025-08-17T05:20:38.0131982Z ##[section]Starting: ACR Login
+2025-08-17T05:20:38.0137860Z ==============================================================================
+2025-08-17T05:20:38.0138198Z Task         : Command line
+2025-08-17T05:20:38.0138286Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2025-08-17T05:20:38.0138442Z Version      : 2.250.1
+2025-08-17T05:20:38.0138550Z Author       : Microsoft Corporation
+2025-08-17T05:20:38.0138678Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2025-08-17T05:20:38.0138822Z ==============================================================================
+2025-08-17T05:20:38.8820760Z Generating script.
+2025-08-17T05:20:38.8821778Z Script contents:
+2025-08-17T05:20:38.8821980Z az acr login --name nithishacrm3wx2
+2025-08-17T05:20:38.8822233Z ========================== Starting Command Output ===========================
+2025-08-17T05:20:38.8825763Z [command]/usr/bin/bash --noprofile --norc /home/nithish/myagent/_temp/6a600***74-2dfd-4fdb-82cb-76***9a9b00e9a.sh
+2025-08-17T05:20:38.8826140Z WARNING: The output will be changed in next breaking change release(2.73.0) scheduled for May 2025. Exit code will be *** if command fails for docker login.
+2025-08-17T05:20:40.1258431Z Login Succeeded
+2025-08-17T05:20:40.3213133Z 
+2025-08-17T05:20:40.3266754Z ##[section]Finishing: ACR Login
+2025-08-17T05:20:40.3291618Z ##[section]Starting: Build & Push Docker Image
+2025-08-17T05:20:40.3297816Z ==============================================================================
+2025-08-17T05:20:40.3297946Z Task         : Docker
+2025-08-17T05:20:40.3298035Z Description  : Build or push Docker images, login or logout, start or stop containers, or run a Docker command
+2025-08-17T05:20:40.3298169Z Version      : 2.259.0
+2025-08-17T05:20:40.3298260Z Author       : Microsoft Corporation
+2025-08-17T05:20:40.3298344Z Help         : https://aka.ms/azpipes-docker-tsg
+2025-08-17T05:20:40.3298448Z ==============================================================================
+2025-08-17T05:20:40.7306110Z [command]/usr/bin/docker pull node:***8
+2025-08-17T05:20:42.9602005Z ***8: Pulling from library/node
+2025-08-17T05:20:42.9602369Z Digest: sha256:c6ae79e38498325db67***93d39***e6ec***d224d96c693a8a4d9434985567***6d3783
+2025-08-17T05:20:42.9602667Z Status: Image is up to date for node:***8
+2025-08-17T05:20:42.9602969Z docker.io/library/node:***8
+2025-08-17T05:20:42.9606016Z [command]/usr/bin/docker inspect node:***8
+2025-08-17T05:20:42.9798873Z [
+2025-08-17T05:20:42.9799732Z     {
+2025-08-17T05:20:42.9800874Z         "Id": "sha256:b50082bc3670d0396b2d90e4b0e5bb***0265ba5d0ee***6bf40f9a505f7045ee563",
+2025-08-17T05:20:42.9801360Z         "RepoTags": [
+2025-08-17T05:20:42.9802205Z             "node:***8"
+2025-08-17T05:20:42.9802451Z         ],
+2025-08-17T05:20:42.9802635Z         "RepoDigests": [
+2025-08-17T05:20:42.9802936Z             "node@sha256:c6ae79e38498325db67***93d39***e6ec***d224d96c693a8a4d9434985567***6d3783"
+2025-08-17T05:20:42.9803237Z         ],
+2025-08-17T05:20:42.9803414Z         "Parent": "",
+2025-08-17T05:20:42.9803618Z         "Comment": "buildkit.dockerfile.v0",
+2025-08-17T05:20:42.9803898Z         "Created": "2025-03-27T***4:23:08Z",
+2025-08-17T05:20:42.9804128Z         "DockerVersion": "",
+2025-08-17T05:20:42.9804312Z         "Author": "",
+2025-08-17T05:20:42.9804492Z         "Config": {
+2025-08-17T05:20:42.9804706Z             "Hostname": "",
+2025-08-17T05:20:42.9804890Z             "Domainname": "",
+2025-08-17T05:20:42.9805084Z             "User": "",
+2025-08-17T05:20:42.9805274Z             "AttachStdin": false,
+2025-08-17T05:20:42.9805481Z             "AttachStdout": false,
+2025-08-17T05:20:42.9805677Z             "AttachStderr": false,
+2025-08-17T05:20:42.9805891Z             "Tty": false,
+2025-08-17T05:20:42.9806078Z             "OpenStdin": false,
+2025-08-17T05:20:42.9806286Z             "StdinOnce": false,
+2025-08-17T05:20:42.9806468Z             "Env": [
+2025-08-17T05:20:42.9806703Z                 "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+2025-08-17T05:20:42.9806942Z                 "NODE_VERSION=***8.20.8",
+2025-08-17T05:20:42.9807575Z                 "YARN_VERSION=***.22.22"
+2025-08-17T05:20:42.9807770Z             ],
+2025-08-17T05:20:42.9807977Z             "Cmd": [
+2025-08-17T05:20:42.9808154Z                 "node"
+2025-08-17T05:20:42.9808352Z             ],
+2025-08-17T05:20:42.9808533Z             "Image": "",
+2025-08-17T05:20:42.9808729Z             "Volumes": null,
+2025-08-17T05:20:42.9808915Z             "WorkingDir": "",
+2025-08-17T05:20:42.9809113Z             "Entrypoint": [
+2025-08-17T05:20:42.9809303Z                 "docker-entrypoint.sh"
+2025-08-17T05:20:42.9809498Z             ],
+2025-08-17T05:20:42.9809677Z             "OnBuild": null,
+2025-08-17T05:20:42.9809860Z             "Labels": null
+2025-08-17T05:20:42.9810051Z         },
+2025-08-17T05:20:42.9810230Z         "Architecture": "amd64",
+2025-08-17T05:20:42.9810440Z         "Os": "linux",
+2025-08-17T05:20:42.9810651Z         "Size": ***089055639,
+2025-08-17T05:20:42.9810857Z         "GraphDriver": {
+2025-08-17T05:20:42.9811041Z             "Data": {
+2025-08-17T05:20:42.9812047Z                 "LowerDir": "/var/lib/docker/overlay2/fa528bf3858***923bf***d3e6***2c4***0807ebf0e27bd68d6faf47fbe3354c203356/diff:/var/lib/docker/overlay2/78dbbaf5ee02a5***22***c73b73***bc4***a96be57***0e9702befca***8b770b755477fb9/diff:/var/lib/docker/overlay2/e4dadc0e***d4bbcbde***75b2eaaf83305dabe85f56629a***4b9c9463***97b***93f8c4/diff:/var/lib/docker/overlay2/f966c97***02dcbc0789ecbb87bf003642dd798e887536e055622909c6382cec0a/diff:/var/lib/docker/overlay2/d04***b2a47e76bfa57b4b5e76***6a0c8ea7006cf8***3025fbcd8a***783848deaa492/diff:/var/lib/docker/overlay2/f6fcc7f9f***6804***9b4fcd39***7574a98c7ced5235b0a9***52da3fe39cdd0f0aad8/diff:/var/lib/docker/overlay2/526cc3bc2***b4252534aeac9cffc6fb090995***f6895ff58edbe2587c0a3***24a7***/diff",
+2025-08-17T05:20:42.9812998Z                 "MergedDir": "/var/lib/docker/overlay2/62007b0d732088b9***e78b08feb6cda7d0af36a96a948baf33484b7a***c***5***c***f3/merged",
+2025-08-17T05:20:42.9813363Z                 "UpperDir": "/var/lib/docker/overlay2/62007b0d732088b9***e78b08feb6cda7d0af36a96a948baf33484b7a***c***5***c***f3/diff",
+2025-08-17T05:20:42.9813720Z                 "WorkDir": "/var/lib/docker/overlay2/62007b0d732088b9***e78b08feb6cda7d0af36a96a948baf33484b7a***c***5***c***f3/work"
+2025-08-17T05:20:42.9813989Z             },
+2025-08-17T05:20:42.9814169Z             "Name": "overlay2"
+2025-08-17T05:20:42.9814358Z         },
+2025-08-17T05:20:42.9814530Z         "RootFS": {
+2025-08-17T05:20:42.9814712Z             "Type": "layers",
+2025-08-17T05:20:42.9814906Z             "Layers": [
+2025-08-17T05:20:42.9815172Z                 "sha256:2f7436e79a0bc6cdec6536da54ae6a5863c8e3b5f***45e0f8ac0b96306baddbc9",
+2025-08-17T05:20:42.9815483Z                 "sha256:6428cc293366f93395949a2d***efd9b89c898c7a4a***2405***c3793c***faf7664269",
+2025-08-17T05:20:42.9815802Z                 "sha256:e4dc8cd9ecc886f56babec383662506d94a28645c***a3***085deaf7870366ec225",
+2025-08-17T05:20:42.9816127Z                 "sha256:ce84ba2***2e49beebef47aad***0b***e672eb0532e9***d3***3994f6db7fb***6e***6c7a78",
+2025-08-17T05:20:42.9816680Z                 "sha256:84f9fa***79c***bf833d4ff2874c30bf4e2aada4***ebba5***548b26be3a2***34aef097",
+2025-08-17T05:20:42.9817008Z                 "sha256:d399c9dc306f57fe43d9dd6505b38d***883db07c22b04cb***5db***d3dad8b3f56b4",
+2025-08-17T05:20:42.9817317Z                 "sha256:b624aa2d5ea2cc5b2d6bb2***bda0b89b6***fe653bca8842f0ad***2f2f4c***70a4***52",
+2025-08-17T05:20:42.9817637Z                 "sha256:d2a99***bcab4d50884e2e89d4659ac766bc8a6f2e29cefcf750385732b298d***55"
+2025-08-17T05:20:42.9817878Z             ]
+2025-08-17T05:20:42.9818044Z         },
+2025-08-17T05:20:42.9818233Z         "Metadata": {
+2025-08-17T05:20:42.9818460Z             "LastTagTime": "000***-0***-0***T00:00:00Z"
+2025-08-17T05:20:42.9818677Z         }
+2025-08-17T05:20:42.9818842Z     }
+2025-08-17T05:20:42.9819015Z ]
+2025-08-17T05:20:42.9850085Z [command]/usr/bin/docker build -f /home/nithish/myagent/4/s/*** --label com.azure.dev.image.system.teamfoundationcollectionuri=https://dev.azure.com/nithishp/ --label com.azure.dev.image.system.teamproject=Technical Assessment - ABB --label com.azure.dev.image.build.repository.name=Multi-Stage Project --label com.azure.dev.image.build.sourceversion=a04da729027ebd9025e8feacd4e***58b0f***3be***c4 --label com.azure.dev.image.build.repository.uri=https://nithishp@dev.azure.com/nithishp/Technical%20Assessment%20-%20ABB/_git/Multi-Stage%20Project --label com.azure.dev.image.build.sourcebranchname=main --label com.azure.dev.image.build.definitionname=Multi-Stage Project --label com.azure.dev.image.build.buildnumber=Multi-Stage Project_202508***7.***4 --label com.azure.dev.image.build.builduri=vstfs:///Build/Build/246 --label image.base.ref.name=node:***8 --label image.base.digest=sha256:c6ae79e38498325db67***93d39***e6ec***d224d96c693a8a4d9434985567***6d3783 -t ***/***:v*** /home/nithish/myagent/4/s
+2025-08-17T05:20:42.9987645Z DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+2025-08-17T05:20:42.9988285Z             Install the buildx component to build images with BuildKit:
+2025-08-17T05:20:42.9988749Z             https://docs.docker.com/go/buildx/
+2025-08-17T05:20:42.9989164Z 
+2025-08-17T05:20:43.7345345Z Sending build context to Docker daemon  32.55MB
+2025-08-17T05:20:43.7345828Z 
+2025-08-17T05:20:43.7410408Z Step ***/***8 : FROM node:***8
+2025-08-17T05:20:43.7418876Z  ---> b50082bc3670
+2025-08-17T05:20:43.7419395Z Step 2/***8 : WORKDIR /usr/src/app
+2025-08-17T05:20:43.7428451Z  ---> Using cache
+2025-08-17T05:20:43.7428897Z  ---> ***26efba2608
+2025-08-17T05:20:43.7433992Z Step 3/***8 : COPY package*.json ./
+2025-08-17T05:20:43.7679059Z  ---> Using cache
+2025-08-17T05:20:43.7684270Z  ---> e34***494aabf0
+2025-08-17T05:20:43.7691215Z Step 4/***8 : RUN npm install --production
+2025-08-17T05:20:43.7697372Z  ---> Using cache
+2025-08-17T05:20:43.7701178Z  ---> 09a2755***5b95
+2025-08-17T05:20:43.7706962Z Step 5/***8 : COPY . .
+2025-08-17T05:20:51.4205422Z  ---> 345b07de***5e3
+2025-08-17T05:20:51.4205703Z Step 6/***8 : EXPOSE 3000
+2025-08-17T05:20:51.6389665Z  ---> Running in ca***0ee2e6a6c
+2025-08-17T05:20:53.4034377Z  ---> Removed intermediate container ca***0ee2e6a6c
+2025-08-17T05:20:53.4034727Z  ---> 2309c63fbc48
+2025-08-17T05:20:53.4034982Z Step 7/***8 : CMD ["node", "server.js"]
+2025-08-17T05:20:53.6180047Z  ---> Running in 3e6899396***32
+2025-08-17T05:20:55.3077235Z  ---> Removed intermediate container 3e6899396***32
+2025-08-17T05:20:55.3077832Z  ---> 40bef946c4ea
+2025-08-17T05:20:55.3081315Z Step 8/***8 : LABEL com.azure.dev.image.build.buildnumber=Multi-Stage Project_202508***7.***4
+2025-08-17T05:20:55.6580704Z  ---> Running in d5f7d893e3db
+2025-08-17T05:20:57.4505812Z  ---> Removed intermediate container d5f7d893e3db
+2025-08-17T05:20:57.4506106Z  ---> 9cf5ceff0945
+2025-08-17T05:20:57.4506502Z Step 9/***8 : LABEL com.azure.dev.image.build.builduri=vstfs:///Build/Build/246
+2025-08-17T05:20:57.6643593Z  ---> Running in c200c3b3b6d7
+2025-08-17T05:20:59.3814111Z  ---> Removed intermediate container c200c3b3b6d7
+2025-08-17T05:20:59.3814542Z  ---> 4952f64fa50***
+2025-08-17T05:20:59.3814872Z Step ***0/***8 : LABEL com.azure.dev.image.build.definitionname=Multi-Stage Project
+2025-08-17T05:20:59.6262802Z  ---> Running in e4a7950d204f
+2025-08-17T05:21:01.3493326Z  ---> Removed intermediate container e4a7950d204f
+2025-08-17T05:21:01.3493619Z  ---> 7e3b3685f756
+2025-08-17T05:21:01.3494047Z Step ***/***8 : LABEL com.azure.dev.image.build.repository.name=Multi-Stage Project
+2025-08-17T05:21:01.5438599Z  ---> Running in 877e8027e4ce
+2025-08-17T05:21:03.3764123Z  ---> Removed intermediate container 877e8027e4ce
+2025-08-17T05:21:04.3769861Z  ---> f4a6bfe8***a50
+2025-08-17T05:21:04.3775990Z Step ***2/***8 : LABEL com.azure.dev.image.build.repository.uri=https://nithishp@dev.azure.com/nithishp/Technical%20Assessment%20-%20ABB/_git/Multi-Stage%20Project
+2025-08-17T05:21:04.3912034Z  ---> Running in 9***88d5ab6f80
+2025-08-17T05:21:05.2419011Z  ---> Removed intermediate container 9***88d5ab6f80
+2025-08-17T05:21:05.2419740Z  ---> 83c3***b9***9b4***
+2025-08-17T05:21:05.2420047Z Step ***3/***8 : LABEL com.azure.dev.image.build.sourcebranchname=main
+2025-08-17T05:21:05.4378859Z  ---> Running in b563829e3adc
+2025-08-17T05:21:07.1512827Z  ---> Removed intermediate container b563829e3adc
+2025-08-17T05:21:07.1513258Z  ---> 9e07a562***677
+2025-08-17T05:21:07.1513625Z Step ***4/***8 : LABEL com.azure.dev.image.build.sourceversion=a04da729027ebd9025e8feacd4e***58b0f***3be***c4
+2025-08-17T05:21:07.4223535Z  ---> Running in 53f5b36f4f8b
+2025-08-17T05:21:09.1396115Z  ---> Removed intermediate container 53f5b36f4f8b
+2025-08-17T05:21:09.1396497Z  ---> ffe7***57f0f33
+2025-08-17T05:21:09.1397081Z Step ***5/***8 : LABEL com.azure.dev.image.system.teamfoundationcollectionuri=https://dev.azure.com/nithishp/
+2025-08-17T05:21:09.3210141Z  ---> Running in 5883c57bb4b0
+2025-08-17T05:21:11.8669816Z  ---> Removed intermediate container 5883c57bb4b0
+2025-08-17T05:21:11.8670179Z  ---> f642e6704f9a
+2025-08-17T05:21:11.8670585Z Step ***6/***8 : LABEL com.azure.dev.image.system.teamproject=Technical Assessment - ABB
+2025-08-17T05:21:12.2603657Z  ---> Running in ***02d2f4a2be9
+2025-08-17T05:21:13.9876155Z  ---> Removed intermediate container ***02d2f4a2be9
+2025-08-17T05:21:13.9876531Z  ---> 4c762e2d***4af
+2025-08-17T05:21:13.9877515Z Step ***7/***8 : LABEL image.base.digest=sha256:c6ae79e38498325db67***93d39***e6ec***d224d96c693a8a4d9434985567***6d3783
+2025-08-17T05:21:14.2191184Z  ---> Running in fbd7a58009b0
+2025-08-17T05:21:15.8889501Z  ---> Removed intermediate container fbd7a58009b0
+2025-08-17T05:21:15.8889899Z  ---> ***3cc***d720b***e
+2025-08-17T05:21:15.8890163Z Step ***8/***8 : LABEL image.base.ref.name=node:***8
+2025-08-17T05:21:16.2076091Z  ---> Running in ***7c883***fbe9c
+2025-08-17T05:21:17.9445539Z  ---> Removed intermediate container ***7c883***fbe9c
+2025-08-17T05:21:17.9445855Z  ---> 84255***7a***ac8
+2025-08-17T05:21:18.0583344Z Successfully built 84255***7a***ac8
+2025-08-17T05:21:18.0914889Z Successfully tagged ***/***:v***
+2025-08-17T05:21:18.0939671Z 
+2025-08-17T05:21:18.1068242Z [command]/usr/bin/docker images
+2025-08-17T05:21:18.1109959Z [command]/usr/bin/docker push ***/***:v***
+2025-08-17T05:21:18.1333049Z REPOSITORY                          TAG       IMAGE ID       CREATED         SIZE
+2025-08-17T05:21:18.1333514Z ***/***   v***        84255***7a***ac8   *** second ago    ***.***2GB
+2025-08-17T05:21:18.1333995Z ***/***   <none>    44***b0e98fbeb   8 minutes ago   ***.***2GB
+2025-08-17T05:21:18.1334331Z node                                ***8        b50082bc3670   4 months ago    ***.09GB
+2025-08-17T05:21:18.1349119Z 
+2025-08-17T05:21:18.1442114Z The push refers to repository [***/***]
+2025-08-17T05:21:18.1571467Z 7bc07343f4e4: Preparing
+2025-08-17T05:21:18.1576087Z 36e49ec5e328: Preparing
+2025-08-17T05:21:18.1576751Z afc92***b3f***8a: Preparing
+2025-08-17T05:21:18.1577200Z 382a8a7fa254: Preparing
+2025-08-17T05:21:18.1579456Z d2a99***bcab4d: Preparing
+2025-08-17T05:21:18.1580224Z b624aa2d5ea2: Preparing
+2025-08-17T05:21:18.1580576Z d399c9dc306f: Preparing
+2025-08-17T05:21:18.1580858Z 84f9fa***79c***b: Preparing
+2025-08-17T05:21:18.1581083Z ce84ba2***2e49: Preparing
+2025-08-17T05:21:18.1581281Z e4dc8cd9ecc8: Preparing
+2025-08-17T05:21:18.1581474Z 6428cc293366: Preparing
+2025-08-17T05:21:18.1581700Z 2f7436e79a0b: Preparing
+2025-08-17T05:21:18.1581891Z b624aa2d5ea2: Waiting
+2025-08-17T05:21:18.1582097Z d399c9dc306f: Waiting
+2025-08-17T05:21:18.1582296Z 84f9fa***79c***b: Waiting
+2025-08-17T05:21:18.1582509Z ce84ba2***2e49: Waiting
+2025-08-17T05:21:18.1587060Z e4dc8cd9ecc8: Waiting
+2025-08-17T05:21:18.1587379Z 6428cc293366: Waiting
+2025-08-17T05:21:18.1587708Z 2f7436e79a0b: Waiting
+2025-08-17T05:21:18.4643169Z afc92***b3f***8a: Layer already exists
+2025-08-17T05:21:18.4821897Z 36e49ec5e328: Layer already exists
+2025-08-17T05:21:18.5379527Z d399c9dc306f: Layer already exists
+2025-08-17T05:21:18.5536796Z b624aa2d5ea2: Layer already exists
+2025-08-17T05:21:18.6060759Z ce84ba2***2e49: Layer already exists
+2025-08-17T05:21:18.6597859Z e4dc8cd9ecc8: Layer already exists
+2025-08-17T05:21:18.7093442Z 6428cc293366: Layer already exists
+2025-08-17T05:21:20.1153093Z 7bc07343f4e4: Pushed
+2025-08-17T05:21:22.4961513Z 382a8a7fa254: Layer already exists
+2025-08-17T05:21:22.5152635Z d2a99***bcab4d: Layer already exists
+2025-08-17T05:21:22.5164301Z 84f9fa***79c***b: Layer already exists
+2025-08-17T05:21:22.5198290Z 2f7436e79a0b: Layer already exists
+2025-08-17T05:21:23.3893734Z v***: digest: sha256:72954599de6f0b394be945***df***e6f8a99***e9b5ba38***5ba59b***b7052330d3b77b size: 2843
+2025-08-17T05:21:23.4010375Z 
+2025-08-17T05:21:23.4041453Z [command]/usr/bin/docker history --format createdAt:{{.CreatedAt}}; layerSize:{{.Size}}; createdBy:{{.CreatedBy}}; layerId:{{.ID}} --no-trunc ***/***:v***
+2025-08-17T05:21:23.4345296Z createdAt:2025-08-***7T05:2***:***7Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL image.base.ref.name=node:***8; layerId:sha256:84255***7a***ac8***24cd6007f6***3e42c92e4ae6bb46e0250995b46cbfde4ff5c6e6
+2025-08-17T05:21:23.4346297Z createdAt:2025-08-***7T05:2***:***5Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL image.base.digest=sha256:c6ae79e38498325db67***93d39***e6ec***d224d96c693a8a4d9434985567***6d3783; layerId:sha256:***3cc***d720b***e3a2eecbd***e8a***e30e96***2f468***bfea***3cae464cbb779e53a3***63
+2025-08-17T05:21:23.4346984Z createdAt:2025-08-***7T05:2***:***3Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.system.teamproject=Technical Assessment - ABB; layerId:sha256:4c762e2d***4af202e***ae93fa24333b9b4df0b54778702347e63***f5ac***26bd89***0
+2025-08-17T05:21:23.4347610Z createdAt:2025-08-***7T05:2***:***Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.system.teamfoundationcollectionuri=https://dev.azure.com/nithishp/; layerId:sha256:f642e6704f9a8ff469***fe2cc6d49e4b537ccdc72062c7494c356c***9572429909
+2025-08-17T05:21:23.4348231Z createdAt:2025-08-***7T05:2***:08Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.sourceversion=a04da729027ebd9025e8feacd4e***58b0f***3be***c4; layerId:sha256:ffe7***57f0f332a3798604a57e***276f9a98952***e84***772c0bc***a70d0ead63b7e6
+2025-08-17T05:21:23.4348848Z createdAt:2025-08-***7T05:2***:06Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.sourcebranchname=main; layerId:sha256:9e07a562***677b388d3ed7cea34d055***957ea858625440473e903***f8f7c9459a9
+2025-08-17T05:21:23.4349477Z createdAt:2025-08-***7T05:2***:05Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.repository.uri=https://nithishp@dev.azure.com/nithishp/Technical%20Assessment%20-%20ABB/_git/Multi-Stage%20Project; layerId:sha256:83c3***b9***9b4***de75075867a560445de8e340e6880b855032775d***69a***3040f0b
+2025-08-17T05:21:23.4350114Z createdAt:2025-08-***7T05:2***:03Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.repository.name=Multi-Stage Project; layerId:sha256:f4a6bfe8***a507b553adc255000028a2eab6efd4d04f84d9f076fb4b7a9d4da42
+2025-08-17T05:21:23.4350692Z createdAt:2025-08-***7T05:2***:0***Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.definitionname=Multi-Stage Project; layerId:sha256:7e3b3685f756088d6ac8e057***a50cbe5***f93665204a7***9***6d***9bad3426448a3e
+2025-08-17T05:21:23.4351261Z createdAt:2025-08-***7T05:20:59Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.builduri=vstfs:///Build/Build/246; layerId:sha256:4952f64fa50***c263035cc78ec6fb54ded33dc553ff2ca5***e42a7986e3fc9cd8***
+2025-08-17T05:21:23.4351830Z createdAt:2025-08-***7T05:20:57Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.buildnumber=Multi-Stage Project_202508***7.***4; layerId:sha256:9cf5ceff09450e506dbe54f07f5538a6cb7f554***0d3eb0e***44f0035fd0c***f2ee
+2025-08-17T05:21:23.4352376Z createdAt:2025-08-***7T05:20:55Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  CMD ["node" "server.js"]; layerId:sha256:40bef946c4eaa3e***363d0fe2fa6984aa97675a3bb33bdc5f8dd406ce29f83234
+2025-08-17T05:21:23.4352847Z createdAt:2025-08-***7T05:20:53Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  EXPOSE 3000; layerId:sha256:2309c63fbc48047a7829230afee49cf08c9bcc0c60888f6c6878620ab8d805c***
+2025-08-17T05:21:23.4353506Z createdAt:2025-08-***7T05:20:48Z; layerSize:27.8MB; createdBy:/bin/sh -c #(nop) COPY dir:eb7b69c3e3b***a69223***e58b02***7efabf844766***83***eb525c6cf74d33823c***e94 in . ; layerId:sha256:345b07de***5e32***e44dfaabd2285c2e25f2ee68***ca93054f26a3a8bbf***efcf22
+2025-08-17T05:21:23.4354078Z createdAt:2025-08-***7T05:***2:36Z; layerSize:3.23MB; createdBy:/bin/sh -c npm install --production; layerId:sha256:09a2755***5b95***4c4b89c878387dd***8968b76c9f***d***60abe632***ba***d36bb0a75
+2025-08-17T05:21:23.4354635Z createdAt:2025-08-***7T05:***2:3***Z; layerSize:***7***kB; createdBy:/bin/sh -c #(nop) COPY multi:c67c6f696073d94da0e0d93b567cec9bd79cb5d6df9922423875aa3***4947df63 in ./ ; layerId:sha256:e34***494aabf0d0efc8a059bc7d9c543303cde97d***ccf03af8***5e***c675507***89d
+2025-08-17T05:21:23.4355176Z createdAt:2025-08-***7T05:***2:30Z; layerSize:0B; createdBy:/bin/sh -c #(nop) WORKDIR /usr/src/app; layerId:sha256:***26efba26085a92f3f38c66733098bb***65bf294548bc6afbcc8da2240fcfde9
+2025-08-17T05:21:23.4355699Z createdAt:2025-03-27T***4:23:08Z; layerSize:0B; createdBy:CMD ["node"]; layerId:sha256:b50082bc3670d0396b2d90e4b0e5bb***0265ba5d0ee***6bf40f9a505f7045ee563
+2025-08-17T05:21:23.4356122Z createdAt:2025-03-27T***4:23:08Z; layerSize:0B; createdBy:ENTRYPOINT ["docker-entrypoint.sh"]; layerId:<missing>
+2025-08-17T05:21:23.4356496Z createdAt:2025-03-27T***4:23:08Z; layerSize:388B; createdBy:COPY docker-entrypoint.sh /usr/local/bin/ # buildkit; layerId:<missing>
+2025-08-17T05:21:23.4357673Z createdAt:2025-03-27T***4:23:08Z; layerSize:5.34MB; createdBy:RUN /bin/sh -c set -ex   && export GNUPGHOME="$(mktemp -d)"   && for key in     6A0***0C5***66006599AA***7F08***46C2***30DFD2497F5   ; do     gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz"   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc"   && gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && gpgconf --kill all   && rm -rf "$GNUPGHOME"   && mkdir -p /opt   && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && yarn --version   && rm -rf /tmp/* # buildkit; layerId:<missing>
+2025-08-17T05:21:23.4358618Z createdAt:2025-03-27T***4:23:08Z; layerSize:0B; createdBy:ENV YARN_VERSION=***.22.22; layerId:<missing>
+2025-08-17T05:21:23.4360167Z createdAt:2025-03-27T***4:23:08Z; layerSize:***54MB; createdBy:RUN /bin/sh -c ARCH= && dpkgArch="$(dpkg --print-architecture)"   && case "${dpkgArch##*-}" in     amd64) ARCH='x64';;     ppc64el) ARCH='ppc64le';;     s390x) ARCH='s390x';;     arm64) ARCH='arm64';;     armhf) ARCH='armv7l';;     i386) ARCH='x86';;     *) echo "unsupported architecture"; exit *** ;;   esac   && export GNUPGHOME="$(mktemp -d)"   && set -ex   && for key in     C0D6248439F***D5604AAFFB402***D900FFDB233756     DD792F5973C6DE52C432CBDAC77ABFA00DDBF2B7     CC68F5A3***06FF448322E48ED27F5E38D5B0A2***5F     8FCCA***3FEF***D0C2E9***008E09770F7A9A5AE***5600     890C08DB8579***62FEE0DF9DB8BEAB4DFCF555EF4     C82FA3AE***CBEDC6BE46B9360C43CEC45C***7AB93C     ***08F52B48DB57BB0CC439B2997B0***4***9BD92F80A     A363A49929***CBBC940DD62E4***F***0027AF002F8B0   ; do       gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||       gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH.tar.xz"   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc"   && gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc   && gpgconf --kill all   && rm -rf "$GNUPGHOME"   && grep " node-v$NODE_VERSION-linux-$ARCH.tar.xz\$" SHASUMS256.txt | sha256sum -c -   && tar -xJf "node-v$NODE_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=*** --no-same-owner   && rm "node-v$NODE_VERSION-linux-$ARCH.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt   && ln -s /usr/local/bin/node /usr/local/bin/nodejs   && node --version   && npm --version # buildkit; layerId:<missing>
+2025-08-17T05:21:23.4361612Z createdAt:2025-03-27T***4:23:08Z; layerSize:0B; createdBy:ENV NODE_VERSION=***8.20.8; layerId:<missing>
+2025-08-17T05:21:23.4362052Z createdAt:2025-03-27T***4:23:08Z; layerSize:8.94kB; createdBy:RUN /bin/sh -c groupadd --gid ***000 node   && useradd --uid ***000 --gid node --shell /bin/bash --create-home node # buildkit; layerId:<missing>
+2025-08-17T05:21:23.4362967Z createdAt:2024-0***-09T0***:***4:25Z; layerSize:588MB; createdBy:RUN /bin/sh -c set -ex;  apt-get update;  apt-get install -y --no-install-recommends   autoconf   automake   bzip2   default-libmysqlclient-dev   dpkg-dev   file   g++   gcc   imagemagick   libbz2-dev   libc6-dev   libcurl4-openssl-dev   libdb-dev   libevent-dev   libffi-dev   libgdbm-dev   libglib2.0-dev   libgmp-dev   libjpeg-dev   libkrb5-dev   liblzma-dev   libmagickcore-dev   libmagickwand-dev   libmaxminddb-dev   libncurses5-dev   libncursesw5-dev   libpng-dev   libpq-dev   libreadline-dev   libsqlite3-dev   libssl-dev   libtool   libwebp-dev   libxml2-dev   libxslt-dev   libyaml-dev   make   patch   unzip   xz-utils   zlib***g-dev  ;  rm -rf /var/lib/apt/lists/* # buildkit; layerId:<missing>
+2025-08-17T05:21:23.4363889Z createdAt:2024-0***-09T0***:***4:25Z; layerSize:***77MB; createdBy:RUN /bin/sh -c set -eux;  apt-get update;  apt-get install -y --no-install-recommends   git   mercurial   openssh-client   subversion     procps  ;  rm -rf /var/lib/apt/lists/* # buildkit; layerId:<missing>
+2025-08-17T05:21:23.4364658Z createdAt:2023-05-***0T23:29:59Z; layerSize:48.4MB; createdBy:RUN /bin/sh -c set -eux;  apt-get update;  apt-get install -y --no-install-recommends   ca-certificates   curl   gnupg   netbase   sq   wget  ;  rm -rf /var/lib/apt/lists/* # buildkit; layerId:<missing>
+2025-08-17T05:21:23.4365349Z createdAt:2023-05-***0T23:29:59Z; layerSize:***7MB; createdBy:# debian.sh --arch 'amd64' out/ 'bookworm' '@***747699200'; layerId:<missing>
+2025-08-17T05:21:23.4369727Z 
+2025-08-17T05:21:23.4401197Z [command]/usr/bin/docker inspect 84255***7a***ac8***24cd6007f6***3e42c92e4ae6bb46e0250995b46cbfde4ff5c6e6 -f {{.RootFS.Layers}}
+2025-08-17T05:21:23.4563490Z [sha256:2f7436e79a0bc6cdec6536da54ae6a5863c8e3b5f***45e0f8ac0b96306baddbc9 sha256:6428cc293366f93395949a2d***efd9b89c898c7a4a***2405***c3793c***faf7664269 sha256:e4dc8cd9ecc886f56babec383662506d94a28645c***a3***085deaf7870366ec225 sha256:ce84ba2***2e49beebef47aad***0b***e672eb0532e9***d3***3994f6db7fb***6e***6c7a78 sha256:84f9fa***79c***bf833d4ff2874c30bf4e2aada4***ebba5***548b26be3a2***34aef097 sha256:d399c9dc306f57fe43d9dd6505b38d***883db07c22b04cb***5db***d3dad8b3f56b4 sha256:b624aa2d5ea2cc5b2d6bb2***bda0b89b6***fe653bca8842f0ad***2f2f4c***70a4***52 sha256:d2a99***bcab4d50884e2e89d4659ac766bc8a6f2e29cefcf750385732b298d***55 sha256:382a8a7fa254073e90233c***95f6e0b385673b80fe064fdb***3d07a7656e27***9cd sha256:afc92***b3f***8af0e0778def02ac454***cfeab4f25***a9f24e5f84e67b9b60e***7ee0 sha256:36e49ec5e328bc6cc7e28b2***b2a888db6228e8ec5c59f***dc94d4acb20c5f5f3d sha256:7bc07343f4e4***5dfd4290ca549cd97c774b47be8a2***3c674a75f72adc9f90f48]
+2025-08-17T05:21:23.4580492Z 
+2025-08-17T05:21:23.4705465Z ##[section]Finishing: Build & Push Docker Image
+2025-08-17T05:21:23.4729983Z ##[section]Starting: Create Artifact
+2025-08-17T05:21:23.4735433Z ==============================================================================
+2025-08-17T05:21:23.4735559Z Task         : Command line
+2025-08-17T05:21:23.4735651Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2025-08-17T05:21:23.4735775Z Version      : 2.250.1
+2025-08-17T05:21:23.4736058Z Author       : Microsoft Corporation
+2025-08-17T05:21:23.4736157Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2025-08-17T05:21:23.4736274Z ==============================================================================
+2025-08-17T05:21:23.6377790Z Generating script.
+2025-08-17T05:21:23.6381310Z ========================== Starting Command Output ===========================
+2025-08-17T05:21:23.6401043Z [command]/usr/bin/bash --noprofile --norc /home/nithish/myagent/_temp/ba8dacd6-f920-44c***-87e3-7f7fdc***f9cd***.sh
+2025-08-17T05:21:23.6831106Z artifact:
+2025-08-17T05:21:23.6831747Z app.tar.gz
+2025-08-17T05:21:23.6832452Z dev-deployment.yaml
+2025-08-17T05:21:23.6832815Z production-deployment.yaml
+2025-08-17T05:21:23.6833175Z staging-deployment.yaml
+2025-08-17T05:21:23.6841673Z 
+2025-08-17T05:21:23.6938660Z ##[section]Finishing: Create Artifact
+2025-08-17T05:21:23.6964038Z ##[section]Starting: Publish build artifact
+2025-08-17T05:21:23.6970100Z ==============================================================================
+2025-08-17T05:21:23.6970232Z Task         : Publish build artifacts
+2025-08-17T05:21:23.6970333Z Description  : Publish build artifacts to Azure Pipelines or a Windows file share
+2025-08-17T05:21:23.6970463Z Version      : 1.247.1
+2025-08-17T05:21:23.6970557Z Author       : Microsoft Corporation
+2025-08-17T05:21:23.6970657Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/publish-build-artifacts
+2025-08-17T05:21:23.6970784Z ==============================================================================
+2025-08-17T05:21:23.9442703Z ##[section]Async Command Start: Upload Artifact
+2025-08-17T05:21:23.9443519Z Uploading 4 files
+2025-08-17T05:21:24.4454403Z Using default max parallelism.
+2025-08-17T05:21:24.4454607Z Creating dedup client:
+2025-08-17T05:21:24.4454815Z  - Max dedup parallelism: ***92
+2025-08-17T05:21:24.4455026Z  - Using blobstore domain: 0
+2025-08-17T05:21:24.4455171Z  - Using redirect timeout: 
+2025-08-17T05:21:24.4455318Z  - Hash type: Dedup64K
+2025-08-17T05:21:24.4455454Z Building file tree
+2025-08-17T05:21:24.4455595Z Uploaded 0 out of 43,668 bytes.
+2025-08-17T05:21:24.8867912Z Uploaded 43,668 out of 43,668 bytes.
+2025-08-17T05:21:24.8868111Z Associating files
+2025-08-17T05:21:24.8868292Z Total files: 4 ---- Associated files: 0 (0%)
+2025-08-17T05:21:24.8868508Z File upload succeed.
+2025-08-17T05:21:24.8868721Z Upload '/home/nithish/myagent/4/s/artifact' to file container: '#/75800998/drop'
+2025-08-17T05:21:24.8868938Z Associated artifact 76 with build 246
+2025-08-17T05:21:24.8869149Z ##[section]Async Command End: Upload Artifact
+2025-08-17T05:21:24.8870188Z ##[section]Finishing: Publish build artifact
+2025-08-17T05:21:24.8899261Z ##[section]Starting: Checkout Multi-Stage Project@main to s
+2025-08-17T05:21:24.8903586Z ==============================================================================
+2025-08-17T05:21:24.8903751Z Task         : Get sources
+2025-08-17T05:21:24.8903856Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2025-08-17T05:21:24.8904025Z Version      : 1.0.0
+2025-08-17T05:21:24.8904133Z Author       : Microsoft
+2025-08-17T05:21:24.8904235Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2025-08-17T05:21:24.8904388Z ==============================================================================
+2025-08-17T05:21:25.1671182Z Cleaning any cached credential from repository: Multi-Stage Project (Git)
+2025-08-17T05:21:25.1771707Z ##[section]Finishing: Checkout Multi-Stage Project@main to s
+2025-08-17T05:21:25.1795408Z ##[section]Starting: Finalize Job
+2025-08-17T05:21:25.1808914Z Cleaning up task key
+2025-08-17T05:21:25.1809946Z Start cleaning up orphan processes.
+2025-08-17T05:21:25.2038972Z ##[section]Finishing: Finalize Job
+2025-08-17T05:21:25.2064346Z ##[section]Finishing: Build and Test

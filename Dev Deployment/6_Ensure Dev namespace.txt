@@ -1,0 +1,17 @@
+2025-08-17T05:21:58.4999527Z ##[section]Starting: Ensure Dev namespace
+2025-08-17T05:21:58.5006511Z ==============================================================================
+2025-08-17T05:21:58.5006648Z Task         : Command line
+2025-08-17T05:21:58.5006774Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2025-08-17T05:21:58.5006894Z Version      : 2.250.1
+2025-08-17T05:21:58.5007043Z Author       : Microsoft Corporation
+2025-08-17T05:21:58.5007123Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2025-08-17T05:21:58.5007300Z ==============================================================================
+2025-08-17T05:21:58.6549143Z Generating script.
+2025-08-17T05:21:58.6559324Z Script contents:
+2025-08-17T05:21:58.6568969Z kubectl get ns dev || kubectl create ns dev
+2025-08-17T05:21:58.6569404Z ========================== Starting Command Output ===========================
+2025-08-17T05:21:58.6576078Z [command]/usr/bin/bash --noprofile --norc /home/nithish/myagent/_temp/3ea3b0ac-0868-42d3-8a30-2d46de0e6f03.sh
+2025-08-17T05:21:58.8314648Z NAME   STATUS   AGE
+2025-08-17T05:21:58.8315723Z dev    Active   ***4h
+2025-08-17T05:21:58.8335904Z 
+2025-08-17T05:21:58.8429471Z ##[section]Finishing: Ensure Dev namespace

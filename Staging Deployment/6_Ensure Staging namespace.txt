@@ -1,0 +1,17 @@
+2025-08-17T05:22:23.8001997Z ##[section]Starting: Ensure Staging namespace
+2025-08-17T05:22:23.8007653Z ==============================================================================
+2025-08-17T05:22:23.8007786Z Task         : Command line
+2025-08-17T05:22:23.8007863Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2025-08-17T05:22:23.8007993Z Version      : 2.250.1
+2025-08-17T05:22:23.8008094Z Author       : Microsoft Corporation
+2025-08-17T05:22:23.8008174Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2025-08-17T05:22:23.8008281Z ==============================================================================
+2025-08-17T05:22:23.9599462Z Generating script.
+2025-08-17T05:22:23.9609104Z Script contents:
+2025-08-17T05:22:23.9618962Z kubectl get ns staging || kubectl create ns staging
+2025-08-17T05:22:23.9619349Z ========================== Starting Command Output ===========================
+2025-08-17T05:22:23.9641388Z [command]/usr/bin/bash --noprofile --norc /home/nithish/myagent/_temp/a***63065***-5768-4528-9368-f4dce0***b2264.sh
+2025-08-17T05:22:24.1627510Z NAME      STATUS   AGE
+2025-08-17T05:22:24.1628115Z staging   Active   ***4h
+2025-08-17T05:22:24.1648728Z 
+2025-08-17T05:22:24.1732001Z ##[section]Finishing: Ensure Staging namespace

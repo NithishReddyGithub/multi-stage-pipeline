@@ -1,0 +1,13 @@
+2025-08-17T05:23:08.6046912Z ##[section]Starting: Checkout Multi-Stage Project@main to s
+2025-08-17T05:23:08.6050422Z ==============================================================================
+2025-08-17T05:23:08.6050558Z Task         : Get sources
+2025-08-17T05:23:08.6050648Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2025-08-17T05:23:08.6050760Z Version      : 1.0.0
+2025-08-17T05:23:08.6050881Z Author       : Microsoft
+2025-08-17T05:23:08.6050954Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2025-08-17T05:23:08.6051079Z ==============================================================================
+2025-08-17T05:23:08.9058011Z Cleaning any cached credential from repository: Multi-Stage Project (Git)
+2025-08-17T05:23:08.9215440Z ##[command]git version
+2025-08-17T05:23:08.9583512Z git version 2.25.***
+2025-08-17T05:23:08.9653560Z ##[command]git config --unset-all http.https://nithishp@dev.azure.com/nithishp/Technical%AZP2520Assessment%AZP2520-%AZP2520ABB/_git/Multi-Stage%AZP2520Project.extraheader
+2025-08-17T05:23:08.9779858Z ##[section]Finishing: Checkout Multi-Stage Project@main to s

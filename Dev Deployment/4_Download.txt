@@ -1,0 +1,28 @@
+2025-08-17T05:21:49.0094229Z ##[section]Starting: Download
+2025-08-17T05:21:49.0107881Z ==============================================================================
+2025-08-17T05:21:49.0108147Z Task         : Download build artifacts
+2025-08-17T05:21:49.0108278Z Description  : Download files that were saved as artifacts of a completed build
+2025-08-17T05:21:49.0108448Z Version      : 1.220.0
+2025-08-17T05:21:49.0108662Z Author       : Microsoft Corporation
+2025-08-17T05:21:49.0108805Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/download-build-artifacts
+2025-08-17T05:21:49.0109016Z ==============================================================================
+2025-08-17T05:21:49.3244469Z Download from the specified build: #246
+2025-08-17T05:21:49.3261372Z Download artifact to: /home/nithish/myagent/4/
+2025-08-17T05:21:49.7612503Z Pattern: **
+2025-08-17T05:21:49.7631064Z Minimatch patterns: [**]
+2025-08-17T05:21:49.7633688Z Applying include pattern against original list.
+2025-08-17T05:21:49.7757406Z 5 matches
+2025-08-17T05:21:49.7929980Z 5 final results
+2025-08-17T05:21:49.7977066Z Start downloading FCS artifact- drop
+2025-08-17T05:21:49.8957439Z Using default max parallelism.
+2025-08-17T05:21:49.8957879Z Creating dedup client:
+2025-08-17T05:21:49.8958310Z  - Max dedup parallelism: ***92
+2025-08-17T05:21:49.8958636Z  - Using blobstore domain: 0
+2025-08-17T05:21:49.8958940Z  - Using redirect timeout: 
+2025-08-17T05:21:49.9206485Z  - Hash type: Dedup64K
+2025-08-17T05:21:49.9358908Z Downloading: /home/nithish/myagent/4/drop/dev-deployment.yaml
+2025-08-17T05:21:49.9361507Z Downloading: /home/nithish/myagent/4/drop/app.tar.gz
+2025-08-17T05:21:49.9814848Z Downloading: /home/nithish/myagent/4/drop/staging-deployment.yaml
+2025-08-17T05:21:49.9815354Z Downloading: /home/nithish/myagent/4/drop/production-deployment.yaml
+2025-08-17T05:21:50.1804762Z Downloading artifact finished.
+2025-08-17T05:21:50.1828171Z ##[section]Finishing: Download

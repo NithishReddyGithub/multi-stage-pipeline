@@ -1,0 +1,712 @@
+Template Parameters:
+Begin evaluating template '/azure-pipeline.yml'
+Begin transform: poolDemands
+Evaluating: value
+Result: 'Agent.Name -equals nithish'
+End transform: poolDemands
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'Check Node & npm versions'
+Result: Object
+Evaluating: value['script']
+Result: 'node -v
+npm -v
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'Install dependencies'
+Result: Object
+Evaluating: value['script']
+Result: 'npm install
+npm ci
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'Run unit tests'
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('env', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'env'
+Evaluating: pair['value']
+Result: Object
+Result: Object
+Evaluating: value['script']
+Result: 'npm test'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'ACR Login'
+Result: Object
+Evaluating: value['script']
+Result: 'az acr login --name $(acrName)
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'Create Artifact'
+Result: Object
+Evaluating: value['script']
+Result: 'mkdir -p artifact
+tar -czf artifact/app.tar.gz app.js server.js package.json package-lock.json
+cp -r manifests/*.yaml artifact/ || echo "No manifests found"
+sudo chmod 777 artifact/*
+ls -R artifact
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin transform: jobDependsOn
+Evaluating: value
+Expanded: 'CI'
+Result: True
+Evaluating: value
+Result: 'CI'
+End transform: jobDependsOn
+Begin transform: deploymentEnvironment
+Evaluating: value
+Result: 'dev'
+End transform: deploymentEnvironment
+Begin transform: step
+Evaluating: eq(value['download'], 'none')
+Expanded: eq('current', 'none')
+Result: False
+Evaluating: ne(value['download'], 'none')
+Expanded: ne('current', 'none')
+Result: True
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('download', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('artifact', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Result: Object
+Evaluating: value['download']
+Result: 'current'
+Evaluating: value
+Result: Object
+Evaluating: in(pair['key'], 'artifact', 'patterns')
+Expanded: in('download', 'artifact', 'patterns')
+Result: False
+Evaluating: in(pair['key'], 'artifact', 'patterns')
+Expanded: in('artifact', 'artifact', 'patterns')
+Result: True
+Evaluating: pair['key']
+Result: 'artifact'
+Evaluating: pair['value']
+Result: 'drop'
+End transform: step
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'Ensure Dev namespace'
+Result: Object
+Evaluating: value['script']
+Result: 'kubectl get ns dev || kubectl create ns dev
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'Apply ConfigMap'
+Result: Object
+Evaluating: value['script']
+Result: 'if [ -d configs/dev ]; then
+  kubectl -n dev create configmap app-config \
+    --from-file=configs/dev/ \
+    --dry-run=client -o yaml | kubectl apply -f -
+else
+  echo "No dev config files found, skipping ConfigMap."
+fi
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin transform: step
+Evaluating: eq(value['checkout'], 'none')
+Expanded: eq('self', 'none')
+Result: False
+Evaluating: ne(value['checkout'], 'none')
+Expanded: ne('self', 'none')
+Result: True
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('checkout', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('persistCredentials', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('clean', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Result: Object
+Evaluating: value['checkout']
+Result: 'self'
+Evaluating: value
+Result: Object
+Evaluating: in(pair['key'], 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Expanded: in('checkout', 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Result: False
+Evaluating: in(pair['key'], 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Expanded: in('persistCredentials', 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Result: True
+Evaluating: pair['key']
+Result: 'persistCredentials'
+Evaluating: pair['value']
+Result: 'true'
+Evaluating: in(pair['key'], 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Expanded: in('clean', 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Result: True
+Evaluating: pair['key']
+Result: 'clean'
+Evaluating: pair['value']
+Result: 'true'
+End transform: step
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Result: Object
+Evaluating: value['script']
+Result: 'echo "copying manifests from repo"
+# mkdir -p manifest-files
+ls -R $(Build.SourcesDirectory)/manifests/
+# ls -R manifest-files
+envsubst < $(Build.SourcesDirectory)/manifests/dev-deployment.yaml > $(Build.SourcesDirectory)/manifests/dev-deployment.rendered.yaml
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'Verify Dev rollout'
+Result: Object
+Evaluating: value['script']
+Result: 'kubectl -n dev rollout status deployment/my-app --timeout=60s
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin transform: jobDependsOn
+Evaluating: value
+Expanded: 'Deploy_Dev'
+Result: True
+Evaluating: value
+Result: 'Deploy_Dev'
+End transform: jobDependsOn
+Begin transform: deploymentEnvironment
+Evaluating: value
+Result: 'staging'
+End transform: deploymentEnvironment
+Begin transform: step
+Evaluating: eq(value['download'], 'none')
+Expanded: eq('current', 'none')
+Result: False
+Evaluating: ne(value['download'], 'none')
+Expanded: ne('current', 'none')
+Result: True
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('download', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('artifact', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Result: Object
+Evaluating: value['download']
+Result: 'current'
+Evaluating: value
+Result: Object
+Evaluating: in(pair['key'], 'artifact', 'patterns')
+Expanded: in('download', 'artifact', 'patterns')
+Result: False
+Evaluating: in(pair['key'], 'artifact', 'patterns')
+Expanded: in('artifact', 'artifact', 'patterns')
+Result: True
+Evaluating: pair['key']
+Result: 'artifact'
+Evaluating: pair['value']
+Result: 'drop'
+End transform: step
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'Ensure Staging namespace'
+Result: Object
+Evaluating: value['script']
+Result: 'kubectl get ns staging || kubectl create ns staging
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'Apply ConfigMap'
+Result: Object
+Evaluating: value['script']
+Result: 'if [ -d configs/staging ]; then
+  kubectl -n staging create configmap app-config \
+    --from-file=configs/staging/ \
+    --dry-run=client -o yaml | kubectl apply -f -
+else
+  echo "No staging config files found, skipping ConfigMap."
+fi
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin transform: step
+Evaluating: eq(value['checkout'], 'none')
+Expanded: eq('self', 'none')
+Result: False
+Evaluating: ne(value['checkout'], 'none')
+Expanded: ne('self', 'none')
+Result: True
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('checkout', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('persistCredentials', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('clean', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Result: Object
+Evaluating: value['checkout']
+Result: 'self'
+Evaluating: value
+Result: Object
+Evaluating: in(pair['key'], 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Expanded: in('checkout', 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Result: False
+Evaluating: in(pair['key'], 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Expanded: in('persistCredentials', 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Result: True
+Evaluating: pair['key']
+Result: 'persistCredentials'
+Evaluating: pair['value']
+Result: 'true'
+Evaluating: in(pair['key'], 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Expanded: in('clean', 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Result: True
+Evaluating: pair['key']
+Result: 'clean'
+Evaluating: pair['value']
+Result: 'true'
+End transform: step
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Result: Object
+Evaluating: value['script']
+Result: 'echo "copying manifests from repo"
+# mkdir -p manifest-files
+ls -R $(Build.SourcesDirectory)/manifests/
+# ls -R manifest-files
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'Verify Staging rollout'
+Result: Object
+Evaluating: value['script']
+Result: 'kubectl -n staging rollout status deployment/my-app --timeout=60s
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin transform: jobDependsOn
+Evaluating: value
+Expanded: 'Deploy_Staging'
+Result: True
+Evaluating: value
+Result: 'Deploy_Staging'
+End transform: jobDependsOn
+Begin transform: deploymentEnvironment
+Evaluating: value
+Result: 'production'
+End transform: deploymentEnvironment
+Begin transform: step
+Evaluating: eq(value['download'], 'none')
+Expanded: eq('current', 'none')
+Result: False
+Evaluating: ne(value['download'], 'none')
+Expanded: ne('current', 'none')
+Result: True
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('download', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('artifact', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Result: Object
+Evaluating: value['download']
+Result: 'current'
+Evaluating: value
+Result: Object
+Evaluating: in(pair['key'], 'artifact', 'patterns')
+Expanded: in('download', 'artifact', 'patterns')
+Result: False
+Evaluating: in(pair['key'], 'artifact', 'patterns')
+Expanded: in('artifact', 'artifact', 'patterns')
+Result: True
+Evaluating: pair['key']
+Result: 'artifact'
+Evaluating: pair['value']
+Result: 'drop'
+End transform: step
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'Ensure Production namespace'
+Result: Object
+Evaluating: value['script']
+Result: 'kubectl get ns production || kubectl create ns production
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'Apply ConfigMap'
+Result: Object
+Evaluating: value['script']
+Result: 'if [ -d configs/production ]; then
+  kubectl -n production create configmap app-config \
+    --from-file=configs/production/ \
+    --dry-run=client -o yaml | kubectl apply -f -
+else
+  echo "No production config files found, skipping ConfigMap."
+fi
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin transform: step
+Evaluating: eq(value['checkout'], 'none')
+Expanded: eq('self', 'none')
+Result: False
+Evaluating: ne(value['checkout'], 'none')
+Expanded: ne('self', 'none')
+Result: True
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('checkout', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('persistCredentials', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('clean', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Result: Object
+Evaluating: value['checkout']
+Result: 'self'
+Evaluating: value
+Result: Object
+Evaluating: in(pair['key'], 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Expanded: in('checkout', 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Result: False
+Evaluating: in(pair['key'], 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Expanded: in('persistCredentials', 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Result: True
+Evaluating: pair['key']
+Result: 'persistCredentials'
+Evaluating: pair['value']
+Result: 'true'
+Evaluating: in(pair['key'], 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Expanded: in('clean', 'clean', 'fetchDepth', 'fetchFilter', 'fetchTags', 'lfs', 'persistCredentials', 'submodules', 'path', 'workspaceRepo', 'sparseCheckoutDirectories', 'sparseCheckoutPatterns')
+Result: True
+Evaluating: pair['key']
+Result: 'clean'
+Evaluating: pair['value']
+Result: 'true'
+End transform: step
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Result: Object
+Evaluating: value['script']
+Result: 'echo "copying manifests from repo"
+# mkdir -p manifest-files
+ls -R $(Build.SourcesDirectory)/manifests/
+# ls -R manifest-files
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Begin transform: step
+Evaluating: transform('stepToTaskBaseProperties', value)
+Evaluating: arg0
+Result: Object
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('script', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: False
+Evaluating: in(pair['key'], 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Expanded: in('displayName', 'condition', 'continueOnError', 'displayName', 'target', 'enabled', 'env', 'name', 'timeoutInMinutes', 'retryCountOnTaskFailure')
+Result: True
+Evaluating: pair['key']
+Result: 'displayName'
+Evaluating: pair['value']
+Result: 'Verify Production rollout'
+Result: Object
+Evaluating: value['script']
+Result: 'kubectl -n production rollout status deployment/my-app --timeout=60s
+'
+Evaluating: value['failOnStderr']
+Expanded: Null
+Result: False
+Evaluating: value['workingDirectory']
+Expanded: Null
+Result: False
+End transform: step
+Finished evaluating template '/azure-pipeline.yml'
+Load Time: 00:00:00.0121723
+Estimated Memory: 67,736 bytes (Max: 20,971,520)
+Parser Event Count: 3,145 (Max: 10,000,000)
+Greatest Parser Depth: 19 (Max: 100)
+File Count: 1 (Max: 100)
+Greatest File Size: 10,744 (Max: 1,048,576)

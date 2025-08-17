@@ -1,0 +1,17 @@
+2025-08-17T05:20:36.5607837Z ##[section]Starting: Publish test results (JUnit)
+2025-08-17T05:20:36.5614022Z ==============================================================================
+2025-08-17T05:20:36.5614179Z Task         : Publish Test Results
+2025-08-17T05:20:36.5614264Z Description  : Publish test results to Azure Pipelines
+2025-08-17T05:20:36.5614377Z Version      : 2.254.0
+2025-08-17T05:20:36.5614453Z Author       : Microsoft Corporation
+2025-08-17T05:20:36.5614548Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/test/publish-test-results
+2025-08-17T05:20:36.5614687Z ==============================================================================
+2025-08-17T05:20:37.0736698Z Result Attachments will be stored in LogStore
+2025-08-17T05:20:37.0820456Z Run Attachments will be stored in LogStore
+2025-08-17T05:20:37.1776656Z ##[section]Async Command Start: Publish test results
+2025-08-17T05:20:37.3325448Z Publishing test results to test run '89'.
+2025-08-17T05:20:37.3339269Z TestResults To Publish ***, Test run id:89
+2025-08-17T05:20:37.3366416Z Test results publishing ***, remaining: 0. Test run id: 89
+2025-08-17T05:20:37.9855825Z Published Test Run : https://dev.azure.com/nithishp/Technical%20Assessment%20-%20ABB/_TestManagement/Runs?runId=89&_a=runCharts
+2025-08-17T05:20:38.0104407Z ##[section]Async Command End: Publish test results
+2025-08-17T05:20:38.0105640Z ##[section]Finishing: Publish test results (JUnit)

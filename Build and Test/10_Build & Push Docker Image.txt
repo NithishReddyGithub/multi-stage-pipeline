@@ -1,0 +1,236 @@
+2025-08-17T05:20:40.3291609Z ##[section]Starting: Build & Push Docker Image
+2025-08-17T05:20:40.3297804Z ==============================================================================
+2025-08-17T05:20:40.3297942Z Task         : Docker
+2025-08-17T05:20:40.3298032Z Description  : Build or push Docker images, login or logout, start or stop containers, or run a Docker command
+2025-08-17T05:20:40.3298166Z Version      : 2.259.0
+2025-08-17T05:20:40.3298258Z Author       : Microsoft Corporation
+2025-08-17T05:20:40.3298341Z Help         : https://aka.ms/azpipes-docker-tsg
+2025-08-17T05:20:40.3298445Z ==============================================================================
+2025-08-17T05:20:40.7306075Z [command]/usr/bin/docker pull node:***8
+2025-08-17T05:20:42.9601946Z ***8: Pulling from library/node
+2025-08-17T05:20:42.9602364Z Digest: sha256:c6ae79e38498325db67***93d39***e6ec***d224d96c693a8a4d9434985567***6d3783
+2025-08-17T05:20:42.9602664Z Status: Image is up to date for node:***8
+2025-08-17T05:20:42.9602893Z docker.io/library/node:***8
+2025-08-17T05:20:42.9606011Z [command]/usr/bin/docker inspect node:***8
+2025-08-17T05:20:42.9798832Z [
+2025-08-17T05:20:42.9799728Z     {
+2025-08-17T05:20:42.9800869Z         "Id": "sha256:b50082bc3670d0396b2d90e4b0e5bb***0265ba5d0ee***6bf40f9a505f7045ee563",
+2025-08-17T05:20:42.9801356Z         "RepoTags": [
+2025-08-17T05:20:42.9802175Z             "node:***8"
+2025-08-17T05:20:42.9802447Z         ],
+2025-08-17T05:20:42.9802632Z         "RepoDigests": [
+2025-08-17T05:20:42.9802932Z             "node@sha256:c6ae79e38498325db67***93d39***e6ec***d224d96c693a8a4d9434985567***6d3783"
+2025-08-17T05:20:42.9803234Z         ],
+2025-08-17T05:20:42.9803411Z         "Parent": "",
+2025-08-17T05:20:42.9803615Z         "Comment": "buildkit.dockerfile.v0",
+2025-08-17T05:20:42.9803895Z         "Created": "2025-03-27T***4:23:08Z",
+2025-08-17T05:20:42.9804125Z         "DockerVersion": "",
+2025-08-17T05:20:42.9804309Z         "Author": "",
+2025-08-17T05:20:42.9804489Z         "Config": {
+2025-08-17T05:20:42.9804693Z             "Hostname": "",
+2025-08-17T05:20:42.9804887Z             "Domainname": "",
+2025-08-17T05:20:42.9805082Z             "User": "",
+2025-08-17T05:20:42.9805271Z             "AttachStdin": false,
+2025-08-17T05:20:42.9805479Z             "AttachStdout": false,
+2025-08-17T05:20:42.9805675Z             "AttachStderr": false,
+2025-08-17T05:20:42.9805884Z             "Tty": false,
+2025-08-17T05:20:42.9806076Z             "OpenStdin": false,
+2025-08-17T05:20:42.9806284Z             "StdinOnce": false,
+2025-08-17T05:20:42.9806466Z             "Env": [
+2025-08-17T05:20:42.9806700Z                 "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+2025-08-17T05:20:42.9806939Z                 "NODE_VERSION=***8.20.8",
+2025-08-17T05:20:42.9807572Z                 "YARN_VERSION=***.22.22"
+2025-08-17T05:20:42.9807767Z             ],
+2025-08-17T05:20:42.9807969Z             "Cmd": [
+2025-08-17T05:20:42.9808152Z                 "node"
+2025-08-17T05:20:42.9808349Z             ],
+2025-08-17T05:20:42.9808527Z             "Image": "",
+2025-08-17T05:20:42.9808727Z             "Volumes": null,
+2025-08-17T05:20:42.9808913Z             "WorkingDir": "",
+2025-08-17T05:20:42.9809111Z             "Entrypoint": [
+2025-08-17T05:20:42.9809301Z                 "docker-entrypoint.sh"
+2025-08-17T05:20:42.9809496Z             ],
+2025-08-17T05:20:42.9809674Z             "OnBuild": null,
+2025-08-17T05:20:42.9809857Z             "Labels": null
+2025-08-17T05:20:42.9810048Z         },
+2025-08-17T05:20:42.9810228Z         "Architecture": "amd64",
+2025-08-17T05:20:42.9810437Z         "Os": "linux",
+2025-08-17T05:20:42.9810649Z         "Size": ***089055639,
+2025-08-17T05:20:42.9810854Z         "GraphDriver": {
+2025-08-17T05:20:42.9811038Z             "Data": {
+2025-08-17T05:20:42.9811859Z                 "LowerDir": "/var/lib/docker/overlay2/fa528bf3858***923bf***d3e6***2c4***0807ebf0e27bd68d6faf47fbe3354c203356/diff:/var/lib/docker/overlay2/78dbbaf5ee02a5***22***c73b73***bc4***a96be57***0e9702befca***8b770b755477fb9/diff:/var/lib/docker/overlay2/e4dadc0e***d4bbcbde***75b2eaaf83305dabe85f56629a***4b9c9463***97b***93f8c4/diff:/var/lib/docker/overlay2/f966c97***02dcbc0789ecbb87bf003642dd798e887536e055622909c6382cec0a/diff:/var/lib/docker/overlay2/d04***b2a47e76bfa57b4b5e76***6a0c8ea7006cf8***3025fbcd8a***783848deaa492/diff:/var/lib/docker/overlay2/f6fcc7f9f***6804***9b4fcd39***7574a98c7ced5235b0a9***52da3fe39cdd0f0aad8/diff:/var/lib/docker/overlay2/526cc3bc2***b4252534aeac9cffc6fb090995***f6895ff58edbe2587c0a3***24a7***/diff",
+2025-08-17T05:20:42.9812990Z                 "MergedDir": "/var/lib/docker/overlay2/62007b0d732088b9***e78b08feb6cda7d0af36a96a948baf33484b7a***c***5***c***f3/merged",
+2025-08-17T05:20:42.9813360Z                 "UpperDir": "/var/lib/docker/overlay2/62007b0d732088b9***e78b08feb6cda7d0af36a96a948baf33484b7a***c***5***c***f3/diff",
+2025-08-17T05:20:42.9813717Z                 "WorkDir": "/var/lib/docker/overlay2/62007b0d732088b9***e78b08feb6cda7d0af36a96a948baf33484b7a***c***5***c***f3/work"
+2025-08-17T05:20:42.9813983Z             },
+2025-08-17T05:20:42.9814167Z             "Name": "overlay2"
+2025-08-17T05:20:42.9814356Z         },
+2025-08-17T05:20:42.9814527Z         "RootFS": {
+2025-08-17T05:20:42.9814709Z             "Type": "layers",
+2025-08-17T05:20:42.9814904Z             "Layers": [
+2025-08-17T05:20:42.9815169Z                 "sha256:2f7436e79a0bc6cdec6536da54ae6a5863c8e3b5f***45e0f8ac0b96306baddbc9",
+2025-08-17T05:20:42.9815480Z                 "sha256:6428cc293366f93395949a2d***efd9b89c898c7a4a***2405***c3793c***faf7664269",
+2025-08-17T05:20:42.9815799Z                 "sha256:e4dc8cd9ecc886f56babec383662506d94a28645c***a3***085deaf7870366ec225",
+2025-08-17T05:20:42.9816124Z                 "sha256:ce84ba2***2e49beebef47aad***0b***e672eb0532e9***d3***3994f6db7fb***6e***6c7a78",
+2025-08-17T05:20:42.9816676Z                 "sha256:84f9fa***79c***bf833d4ff2874c30bf4e2aada4***ebba5***548b26be3a2***34aef097",
+2025-08-17T05:20:42.9817002Z                 "sha256:d399c9dc306f57fe43d9dd6505b38d***883db07c22b04cb***5db***d3dad8b3f56b4",
+2025-08-17T05:20:42.9817315Z                 "sha256:b624aa2d5ea2cc5b2d6bb2***bda0b89b6***fe653bca8842f0ad***2f2f4c***70a4***52",
+2025-08-17T05:20:42.9817634Z                 "sha256:d2a99***bcab4d50884e2e89d4659ac766bc8a6f2e29cefcf750385732b298d***55"
+2025-08-17T05:20:42.9817876Z             ]
+2025-08-17T05:20:42.9818041Z         },
+2025-08-17T05:20:42.9818216Z         "Metadata": {
+2025-08-17T05:20:42.9818457Z             "LastTagTime": "000***-0***-0***T00:00:00Z"
+2025-08-17T05:20:42.9818674Z         }
+2025-08-17T05:20:42.9818839Z     }
+2025-08-17T05:20:42.9819012Z ]
+2025-08-17T05:20:42.9850042Z [command]/usr/bin/docker build -f /home/nithish/myagent/4/s/*** --label com.azure.dev.image.system.teamfoundationcollectionuri=https://dev.azure.com/nithishp/ --label com.azure.dev.image.system.teamproject=Technical Assessment - ABB --label com.azure.dev.image.build.repository.name=Multi-Stage Project --label com.azure.dev.image.build.sourceversion=a04da729027ebd9025e8feacd4e***58b0f***3be***c4 --label com.azure.dev.image.build.repository.uri=https://nithishp@dev.azure.com/nithishp/Technical%20Assessment%20-%20ABB/_git/Multi-Stage%20Project --label com.azure.dev.image.build.sourcebranchname=main --label com.azure.dev.image.build.definitionname=Multi-Stage Project --label com.azure.dev.image.build.buildnumber=Multi-Stage Project_202508***7.***4 --label com.azure.dev.image.build.builduri=vstfs:///Build/Build/246 --label image.base.ref.name=node:***8 --label image.base.digest=sha256:c6ae79e38498325db67***93d39***e6ec***d224d96c693a8a4d9434985567***6d3783 -t ***/***:v*** /home/nithish/myagent/4/s
+2025-08-17T05:20:42.9987605Z DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+2025-08-17T05:20:42.9988280Z             Install the buildx component to build images with BuildKit:
+2025-08-17T05:20:42.9988741Z             https://docs.docker.com/go/buildx/
+2025-08-17T05:20:42.9989160Z 
+2025-08-17T05:20:43.7345076Z Sending build context to Docker daemon  32.55MB
+2025-08-17T05:20:43.7345823Z 
+2025-08-17T05:20:43.7410375Z Step ***/***8 : FROM node:***8
+2025-08-17T05:20:43.7418858Z  ---> b50082bc3670
+2025-08-17T05:20:43.7419390Z Step 2/***8 : WORKDIR /usr/src/app
+2025-08-17T05:20:43.7428436Z  ---> Using cache
+2025-08-17T05:20:43.7428894Z  ---> ***26efba2608
+2025-08-17T05:20:43.7433979Z Step 3/***8 : COPY package*.json ./
+2025-08-17T05:20:43.7679027Z  ---> Using cache
+2025-08-17T05:20:43.7684256Z  ---> e34***494aabf0
+2025-08-17T05:20:43.7691201Z Step 4/***8 : RUN npm install --production
+2025-08-17T05:20:43.7697356Z  ---> Using cache
+2025-08-17T05:20:43.7701168Z  ---> 09a2755***5b95
+2025-08-17T05:20:43.7706948Z Step 5/***8 : COPY . .
+2025-08-17T05:20:51.4205377Z  ---> 345b07de***5e3
+2025-08-17T05:20:51.4205700Z Step 6/***8 : EXPOSE 3000
+2025-08-17T05:20:51.6389600Z  ---> Running in ca***0ee2e6a6c
+2025-08-17T05:20:53.4034333Z  ---> Removed intermediate container ca***0ee2e6a6c
+2025-08-17T05:20:53.4034723Z  ---> 2309c63fbc48
+2025-08-17T05:20:53.4034941Z Step 7/***8 : CMD ["node", "server.js"]
+2025-08-17T05:20:53.6180004Z  ---> Running in 3e6899396***32
+2025-08-17T05:20:55.3077173Z  ---> Removed intermediate container 3e6899396***32
+2025-08-17T05:20:55.3077827Z  ---> 40bef946c4ea
+2025-08-17T05:20:55.3081303Z Step 8/***8 : LABEL com.azure.dev.image.build.buildnumber=Multi-Stage Project_202508***7.***4
+2025-08-17T05:20:55.6580652Z  ---> Running in d5f7d893e3db
+2025-08-17T05:20:57.4505757Z  ---> Removed intermediate container d5f7d893e3db
+2025-08-17T05:20:57.4506101Z  ---> 9cf5ceff0945
+2025-08-17T05:20:57.4506498Z Step 9/***8 : LABEL com.azure.dev.image.build.builduri=vstfs:///Build/Build/246
+2025-08-17T05:20:57.6643555Z  ---> Running in c200c3b3b6d7
+2025-08-17T05:20:59.3814043Z  ---> Removed intermediate container c200c3b3b6d7
+2025-08-17T05:20:59.3814538Z  ---> 4952f64fa50***
+2025-08-17T05:20:59.3814862Z Step ***0/***8 : LABEL com.azure.dev.image.build.definitionname=Multi-Stage Project
+2025-08-17T05:20:59.6262759Z  ---> Running in e4a7950d204f
+2025-08-17T05:21:01.3493242Z  ---> Removed intermediate container e4a7950d204f
+2025-08-17T05:21:01.3493616Z  ---> 7e3b3685f756
+2025-08-17T05:21:01.3494043Z Step ***/***8 : LABEL com.azure.dev.image.build.repository.name=Multi-Stage Project
+2025-08-17T05:21:01.5438551Z  ---> Running in 877e8027e4ce
+2025-08-17T05:21:03.3764086Z  ---> Removed intermediate container 877e8027e4ce
+2025-08-17T05:21:04.3769830Z  ---> f4a6bfe8***a50
+2025-08-17T05:21:04.3775974Z Step ***2/***8 : LABEL com.azure.dev.image.build.repository.uri=https://nithishp@dev.azure.com/nithishp/Technical%20Assessment%20-%20ABB/_git/Multi-Stage%20Project
+2025-08-17T05:21:04.3912006Z  ---> Running in 9***88d5ab6f80
+2025-08-17T05:21:05.2418962Z  ---> Removed intermediate container 9***88d5ab6f80
+2025-08-17T05:21:05.2419736Z  ---> 83c3***b9***9b4***
+2025-08-17T05:21:05.2420043Z Step ***3/***8 : LABEL com.azure.dev.image.build.sourcebranchname=main
+2025-08-17T05:21:05.4378817Z  ---> Running in b563829e3adc
+2025-08-17T05:21:07.1512747Z  ---> Removed intermediate container b563829e3adc
+2025-08-17T05:21:07.1513255Z  ---> 9e07a562***677
+2025-08-17T05:21:07.1513621Z Step ***4/***8 : LABEL com.azure.dev.image.build.sourceversion=a04da729027ebd9025e8feacd4e***58b0f***3be***c4
+2025-08-17T05:21:07.4223499Z  ---> Running in 53f5b36f4f8b
+2025-08-17T05:21:09.1396057Z  ---> Removed intermediate container 53f5b36f4f8b
+2025-08-17T05:21:09.1396493Z  ---> ffe7***57f0f33
+2025-08-17T05:21:09.1397076Z Step ***5/***8 : LABEL com.azure.dev.image.system.teamfoundationcollectionuri=https://dev.azure.com/nithishp/
+2025-08-17T05:21:09.3210098Z  ---> Running in 5883c57bb4b0
+2025-08-17T05:21:11.8669770Z  ---> Removed intermediate container 5883c57bb4b0
+2025-08-17T05:21:11.8670175Z  ---> f642e6704f9a
+2025-08-17T05:21:11.8670580Z Step ***6/***8 : LABEL com.azure.dev.image.system.teamproject=Technical Assessment - ABB
+2025-08-17T05:21:12.2603619Z  ---> Running in ***02d2f4a2be9
+2025-08-17T05:21:13.9876111Z  ---> Removed intermediate container ***02d2f4a2be9
+2025-08-17T05:21:13.9876527Z  ---> 4c762e2d***4af
+2025-08-17T05:21:13.9877176Z Step ***7/***8 : LABEL image.base.digest=sha256:c6ae79e38498325db67***93d39***e6ec***d224d96c693a8a4d9434985567***6d3783
+2025-08-17T05:21:14.2191137Z  ---> Running in fbd7a58009b0
+2025-08-17T05:21:15.8889465Z  ---> Removed intermediate container fbd7a58009b0
+2025-08-17T05:21:15.8889896Z  ---> ***3cc***d720b***e
+2025-08-17T05:21:15.8890158Z Step ***8/***8 : LABEL image.base.ref.name=node:***8
+2025-08-17T05:21:16.2076066Z  ---> Running in ***7c883***fbe9c
+2025-08-17T05:21:17.9445500Z  ---> Removed intermediate container ***7c883***fbe9c
+2025-08-17T05:21:17.9445851Z  ---> 84255***7a***ac8
+2025-08-17T05:21:18.0583307Z Successfully built 84255***7a***ac8
+2025-08-17T05:21:18.0914850Z Successfully tagged ***/***:v***
+2025-08-17T05:21:18.0939639Z 
+2025-08-17T05:21:18.1068211Z [command]/usr/bin/docker images
+2025-08-17T05:21:18.1109929Z [command]/usr/bin/docker push ***/***:v***
+2025-08-17T05:21:18.1333002Z REPOSITORY                          TAG       IMAGE ID       CREATED         SIZE
+2025-08-17T05:21:18.1333481Z ***/***   v***        84255***7a***ac8   *** second ago    ***.***2GB
+2025-08-17T05:21:18.1333968Z ***/***   <none>    44***b0e98fbeb   8 minutes ago   ***.***2GB
+2025-08-17T05:21:18.1334327Z node                                ***8        b50082bc3670   4 months ago    ***.09GB
+2025-08-17T05:21:18.1349061Z 
+2025-08-17T05:21:18.1442082Z The push refers to repository [***/***]
+2025-08-17T05:21:18.1571440Z 7bc07343f4e4: Preparing
+2025-08-17T05:21:18.1576076Z 36e49ec5e328: Preparing
+2025-08-17T05:21:18.1576747Z afc92***b3f***8a: Preparing
+2025-08-17T05:21:18.1577197Z 382a8a7fa254: Preparing
+2025-08-17T05:21:18.1579453Z d2a99***bcab4d: Preparing
+2025-08-17T05:21:18.1580191Z b624aa2d5ea2: Preparing
+2025-08-17T05:21:18.1580573Z d399c9dc306f: Preparing
+2025-08-17T05:21:18.1580855Z 84f9fa***79c***b: Preparing
+2025-08-17T05:21:18.1581080Z ce84ba2***2e49: Preparing
+2025-08-17T05:21:18.1581276Z e4dc8cd9ecc8: Preparing
+2025-08-17T05:21:18.1581471Z 6428cc293366: Preparing
+2025-08-17T05:21:18.1581679Z 2f7436e79a0b: Preparing
+2025-08-17T05:21:18.1581889Z b624aa2d5ea2: Waiting
+2025-08-17T05:21:18.1582094Z d399c9dc306f: Waiting
+2025-08-17T05:21:18.1582294Z 84f9fa***79c***b: Waiting
+2025-08-17T05:21:18.1582507Z ce84ba2***2e49: Waiting
+2025-08-17T05:21:18.1587045Z e4dc8cd9ecc8: Waiting
+2025-08-17T05:21:18.1587376Z 6428cc293366: Waiting
+2025-08-17T05:21:18.1587706Z 2f7436e79a0b: Waiting
+2025-08-17T05:21:18.4643131Z afc92***b3f***8a: Layer already exists
+2025-08-17T05:21:18.4821844Z 36e49ec5e328: Layer already exists
+2025-08-17T05:21:18.5379481Z d399c9dc306f: Layer already exists
+2025-08-17T05:21:18.5536762Z b624aa2d5ea2: Layer already exists
+2025-08-17T05:21:18.6060718Z ce84ba2***2e49: Layer already exists
+2025-08-17T05:21:18.6597812Z e4dc8cd9ecc8: Layer already exists
+2025-08-17T05:21:18.7093396Z 6428cc293366: Layer already exists
+2025-08-17T05:21:20.1153049Z 7bc07343f4e4: Pushed
+2025-08-17T05:21:22.4961475Z 382a8a7fa254: Layer already exists
+2025-08-17T05:21:22.5152594Z d2a99***bcab4d: Layer already exists
+2025-08-17T05:21:22.5164252Z 84f9fa***79c***b: Layer already exists
+2025-08-17T05:21:22.5198270Z 2f7436e79a0b: Layer already exists
+2025-08-17T05:21:23.3893676Z v***: digest: sha256:72954599de6f0b394be945***df***e6f8a99***e9b5ba38***5ba59b***b7052330d3b77b size: 2843
+2025-08-17T05:21:23.4010313Z 
+2025-08-17T05:21:23.4041433Z [command]/usr/bin/docker history --format createdAt:{{.CreatedAt}}; layerSize:{{.Size}}; createdBy:{{.CreatedBy}}; layerId:{{.ID}} --no-trunc ***/***:v***
+2025-08-17T05:21:23.4345246Z createdAt:2025-08-***7T05:2***:***7Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL image.base.ref.name=node:***8; layerId:sha256:84255***7a***ac8***24cd6007f6***3e42c92e4ae6bb46e0250995b46cbfde4ff5c6e6
+2025-08-17T05:21:23.4345984Z createdAt:2025-08-***7T05:2***:***5Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL image.base.digest=sha256:c6ae79e38498325db67***93d39***e6ec***d224d96c693a8a4d9434985567***6d3783; layerId:sha256:***3cc***d720b***e3a2eecbd***e8a***e30e96***2f468***bfea***3cae464cbb779e53a3***63
+2025-08-17T05:21:23.4346980Z createdAt:2025-08-***7T05:2***:***3Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.system.teamproject=Technical Assessment - ABB; layerId:sha256:4c762e2d***4af202e***ae93fa24333b9b4df0b54778702347e63***f5ac***26bd89***0
+2025-08-17T05:21:23.4347607Z createdAt:2025-08-***7T05:2***:***Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.system.teamfoundationcollectionuri=https://dev.azure.com/nithishp/; layerId:sha256:f642e6704f9a8ff469***fe2cc6d49e4b537ccdc72062c7494c356c***9572429909
+2025-08-17T05:21:23.4348227Z createdAt:2025-08-***7T05:2***:08Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.sourceversion=a04da729027ebd9025e8feacd4e***58b0f***3be***c4; layerId:sha256:ffe7***57f0f332a3798604a57e***276f9a98952***e84***772c0bc***a70d0ead63b7e6
+2025-08-17T05:21:23.4348842Z createdAt:2025-08-***7T05:2***:06Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.sourcebranchname=main; layerId:sha256:9e07a562***677b388d3ed7cea34d055***957ea858625440473e903***f8f7c9459a9
+2025-08-17T05:21:23.4349473Z createdAt:2025-08-***7T05:2***:05Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.repository.uri=https://nithishp@dev.azure.com/nithishp/Technical%20Assessment%20-%20ABB/_git/Multi-Stage%20Project; layerId:sha256:83c3***b9***9b4***de75075867a560445de8e340e6880b855032775d***69a***3040f0b
+2025-08-17T05:21:23.4350111Z createdAt:2025-08-***7T05:2***:03Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.repository.name=Multi-Stage Project; layerId:sha256:f4a6bfe8***a507b553adc255000028a2eab6efd4d04f84d9f076fb4b7a9d4da42
+2025-08-17T05:21:23.4350688Z createdAt:2025-08-***7T05:2***:0***Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.definitionname=Multi-Stage Project; layerId:sha256:7e3b3685f756088d6ac8e057***a50cbe5***f93665204a7***9***6d***9bad3426448a3e
+2025-08-17T05:21:23.4351256Z createdAt:2025-08-***7T05:20:59Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.builduri=vstfs:///Build/Build/246; layerId:sha256:4952f64fa50***c263035cc78ec6fb54ded33dc553ff2ca5***e42a7986e3fc9cd8***
+2025-08-17T05:21:23.4351827Z createdAt:2025-08-***7T05:20:57Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.buildnumber=Multi-Stage Project_202508***7.***4; layerId:sha256:9cf5ceff09450e506dbe54f07f5538a6cb7f554***0d3eb0e***44f0035fd0c***f2ee
+2025-08-17T05:21:23.4352373Z createdAt:2025-08-***7T05:20:55Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  CMD ["node" "server.js"]; layerId:sha256:40bef946c4eaa3e***363d0fe2fa6984aa97675a3bb33bdc5f8dd406ce29f83234
+2025-08-17T05:21:23.4352844Z createdAt:2025-08-***7T05:20:53Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  EXPOSE 3000; layerId:sha256:2309c63fbc48047a7829230afee49cf08c9bcc0c60888f6c6878620ab8d805c***
+2025-08-17T05:21:23.4353499Z createdAt:2025-08-***7T05:20:48Z; layerSize:27.8MB; createdBy:/bin/sh -c #(nop) COPY dir:eb7b69c3e3b***a69223***e58b02***7efabf844766***83***eb525c6cf74d33823c***e94 in . ; layerId:sha256:345b07de***5e32***e44dfaabd2285c2e25f2ee68***ca93054f26a3a8bbf***efcf22
+2025-08-17T05:21:23.4354075Z createdAt:2025-08-***7T05:***2:36Z; layerSize:3.23MB; createdBy:/bin/sh -c npm install --production; layerId:sha256:09a2755***5b95***4c4b89c878387dd***8968b76c9f***d***60abe632***ba***d36bb0a75
+2025-08-17T05:21:23.4354632Z createdAt:2025-08-***7T05:***2:3***Z; layerSize:***7***kB; createdBy:/bin/sh -c #(nop) COPY multi:c67c6f696073d94da0e0d93b567cec9bd79cb5d6df9922423875aa3***4947df63 in ./ ; layerId:sha256:e34***494aabf0d0efc8a059bc7d9c543303cde97d***ccf03af8***5e***c675507***89d
+2025-08-17T05:21:23.4355173Z createdAt:2025-08-***7T05:***2:30Z; layerSize:0B; createdBy:/bin/sh -c #(nop) WORKDIR /usr/src/app; layerId:sha256:***26efba26085a92f3f38c66733098bb***65bf294548bc6afbcc8da2240fcfde9
+2025-08-17T05:21:23.4355643Z createdAt:2025-03-27T***4:23:08Z; layerSize:0B; createdBy:CMD ["node"]; layerId:sha256:b50082bc3670d0396b2d90e4b0e5bb***0265ba5d0ee***6bf40f9a505f7045ee563
+2025-08-17T05:21:23.4356118Z createdAt:2025-03-27T***4:23:08Z; layerSize:0B; createdBy:ENTRYPOINT ["docker-entrypoint.sh"]; layerId:<missing>
+2025-08-17T05:21:23.4356493Z createdAt:2025-03-27T***4:23:08Z; layerSize:388B; createdBy:COPY docker-entrypoint.sh /usr/local/bin/ # buildkit; layerId:<missing>
+2025-08-17T05:21:23.4357659Z createdAt:2025-03-27T***4:23:08Z; layerSize:5.34MB; createdBy:RUN /bin/sh -c set -ex   && export GNUPGHOME="$(mktemp -d)"   && for key in     6A0***0C5***66006599AA***7F08***46C2***30DFD2497F5   ; do     gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz"   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc"   && gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && gpgconf --kill all   && rm -rf "$GNUPGHOME"   && mkdir -p /opt   && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && yarn --version   && rm -rf /tmp/* # buildkit; layerId:<missing>
+2025-08-17T05:21:23.4358615Z createdAt:2025-03-27T***4:23:08Z; layerSize:0B; createdBy:ENV YARN_VERSION=***.22.22; layerId:<missing>
+2025-08-17T05:21:23.4360154Z createdAt:2025-03-27T***4:23:08Z; layerSize:***54MB; createdBy:RUN /bin/sh -c ARCH= && dpkgArch="$(dpkg --print-architecture)"   && case "${dpkgArch##*-}" in     amd64) ARCH='x64';;     ppc64el) ARCH='ppc64le';;     s390x) ARCH='s390x';;     arm64) ARCH='arm64';;     armhf) ARCH='armv7l';;     i386) ARCH='x86';;     *) echo "unsupported architecture"; exit *** ;;   esac   && export GNUPGHOME="$(mktemp -d)"   && set -ex   && for key in     C0D6248439F***D5604AAFFB402***D900FFDB233756     DD792F5973C6DE52C432CBDAC77ABFA00DDBF2B7     CC68F5A3***06FF448322E48ED27F5E38D5B0A2***5F     8FCCA***3FEF***D0C2E9***008E09770F7A9A5AE***5600     890C08DB8579***62FEE0DF9DB8BEAB4DFCF555EF4     C82FA3AE***CBEDC6BE46B9360C43CEC45C***7AB93C     ***08F52B48DB57BB0CC439B2997B0***4***9BD92F80A     A363A49929***CBBC940DD62E4***F***0027AF002F8B0   ; do       gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||       gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH.tar.xz"   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc"   && gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc   && gpgconf --kill all   && rm -rf "$GNUPGHOME"   && grep " node-v$NODE_VERSION-linux-$ARCH.tar.xz\$" SHASUMS256.txt | sha256sum -c -   && tar -xJf "node-v$NODE_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=*** --no-same-owner   && rm "node-v$NODE_VERSION-linux-$ARCH.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt   && ln -s /usr/local/bin/node /usr/local/bin/nodejs   && node --version   && npm --version # buildkit; layerId:<missing>
+2025-08-17T05:21:23.4361609Z createdAt:2025-03-27T***4:23:08Z; layerSize:0B; createdBy:ENV NODE_VERSION=***8.20.8; layerId:<missing>
+2025-08-17T05:21:23.4362048Z createdAt:2025-03-27T***4:23:08Z; layerSize:8.94kB; createdBy:RUN /bin/sh -c groupadd --gid ***000 node   && useradd --uid ***000 --gid node --shell /bin/bash --create-home node # buildkit; layerId:<missing>
+2025-08-17T05:21:23.4362904Z createdAt:2024-0***-09T0***:***4:25Z; layerSize:588MB; createdBy:RUN /bin/sh -c set -ex;  apt-get update;  apt-get install -y --no-install-recommends   autoconf   automake   bzip2   default-libmysqlclient-dev   dpkg-dev   file   g++   gcc   imagemagick   libbz2-dev   libc6-dev   libcurl4-openssl-dev   libdb-dev   libevent-dev   libffi-dev   libgdbm-dev   libglib2.0-dev   libgmp-dev   libjpeg-dev   libkrb5-dev   liblzma-dev   libmagickcore-dev   libmagickwand-dev   libmaxminddb-dev   libncurses5-dev   libncursesw5-dev   libpng-dev   libpq-dev   libreadline-dev   libsqlite3-dev   libssl-dev   libtool   libwebp-dev   libxml2-dev   libxslt-dev   libyaml-dev   make   patch   unzip   xz-utils   zlib***g-dev  ;  rm -rf /var/lib/apt/lists/* # buildkit; layerId:<missing>
+2025-08-17T05:21:23.4363870Z createdAt:2024-0***-09T0***:***4:25Z; layerSize:***77MB; createdBy:RUN /bin/sh -c set -eux;  apt-get update;  apt-get install -y --no-install-recommends   git   mercurial   openssh-client   subversion     procps  ;  rm -rf /var/lib/apt/lists/* # buildkit; layerId:<missing>
+2025-08-17T05:21:23.4364649Z createdAt:2023-05-***0T23:29:59Z; layerSize:48.4MB; createdBy:RUN /bin/sh -c set -eux;  apt-get update;  apt-get install -y --no-install-recommends   ca-certificates   curl   gnupg   netbase   sq   wget  ;  rm -rf /var/lib/apt/lists/* # buildkit; layerId:<missing>
+2025-08-17T05:21:23.4365340Z createdAt:2023-05-***0T23:29:59Z; layerSize:***7MB; createdBy:# debian.sh --arch 'amd64' out/ 'bookworm' '@***747699200'; layerId:<missing>
+2025-08-17T05:21:23.4369721Z 
+2025-08-17T05:21:23.4401167Z [command]/usr/bin/docker inspect 84255***7a***ac8***24cd6007f6***3e42c92e4ae6bb46e0250995b46cbfde4ff5c6e6 -f {{.RootFS.Layers}}
+2025-08-17T05:21:23.4563419Z [sha256:2f7436e79a0bc6cdec6536da54ae6a5863c8e3b5f***45e0f8ac0b96306baddbc9 sha256:6428cc293366f93395949a2d***efd9b89c898c7a4a***2405***c3793c***faf7664269 sha256:e4dc8cd9ecc886f56babec383662506d94a28645c***a3***085deaf7870366ec225 sha256:ce84ba2***2e49beebef47aad***0b***e672eb0532e9***d3***3994f6db7fb***6e***6c7a78 sha256:84f9fa***79c***bf833d4ff2874c30bf4e2aada4***ebba5***548b26be3a2***34aef097 sha256:d399c9dc306f57fe43d9dd6505b38d***883db07c22b04cb***5db***d3dad8b3f56b4 sha256:b624aa2d5ea2cc5b2d6bb2***bda0b89b6***fe653bca8842f0ad***2f2f4c***70a4***52 sha256:d2a99***bcab4d50884e2e89d4659ac766bc8a6f2e29cefcf750385732b298d***55 sha256:382a8a7fa254073e90233c***95f6e0b385673b80fe064fdb***3d07a7656e27***9cd sha256:afc92***b3f***8af0e0778def02ac454***cfeab4f25***a9f24e5f84e67b9b60e***7ee0 sha256:36e49ec5e328bc6cc7e28b2***b2a888db6228e8ec5c59f***dc94d4acb20c5f5f3d sha256:7bc07343f4e4***5dfd4290ca549cd97c774b47be8a2***3c674a75f72adc9f90f48]
+2025-08-17T05:21:23.4580462Z 
+2025-08-17T05:21:23.4705432Z ##[section]Finishing: Build & Push Docker Image

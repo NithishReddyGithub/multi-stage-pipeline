@@ -1,0 +1,117 @@
+2025-08-17T05:22:00.1300934Z ##[section]Starting: Deploy to Dev
+2025-08-17T05:22:00.1311061Z ==============================================================================
+2025-08-17T05:22:00.1311184Z Task         : Kubectl
+2025-08-17T05:22:00.1311262Z Description  : Deploy, configure, update a Kubernetes cluster in Azure Container Service by running kubectl commands
+2025-08-17T05:22:00.1311423Z Version      : 1.259.3
+2025-08-17T05:22:00.1311541Z Author       : Microsoft Corporation
+2025-08-17T05:22:00.1311626Z Help         : https://aka.ms/azpipes-kubectl-tsg
+2025-08-17T05:22:00.1311702Z ==============================================================================
+2025-08-17T05:22:01.7137807Z Prepending PATH environment variable with directory: /usr/bin
+2025-08-17T05:22:01.8557822Z ==============================================================================
+2025-08-17T05:22:01.8558753Z 			Kubectl Client Version: v***.33.3
+2025-08-17T05:22:01.8559101Z 			Kubectl Server Version: v***.32.6
+2025-08-17T05:22:01.8559411Z ==============================================================================
+2025-08-17T05:22:01.8758674Z [command]/usr/bin/kubectl apply -n dev -f /home/nithish/myagent/4/s/manifests/dev-deployment.rendered.yaml -o json
+2025-08-17T05:22:02.2156382Z {
+2025-08-17T05:22:02.2157636Z     "apiVersion": "apps/v***",
+2025-08-17T05:22:02.2157922Z     "kind": "Deployment",
+2025-08-17T05:22:02.2158205Z     "metadata": {
+2025-08-17T05:22:02.2158445Z         "annotations": {
+2025-08-17T05:22:02.2158720Z             "deployment.kubernetes.io/revision": "***",
+2025-08-17T05:22:02.2159462Z             "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v***\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{},\"name\":\"***\",\"namespace\":\"dev\"},\"spec\":{\"replicas\":null,\"selector\":{\"matchLabels\":{\"app\":\"***\"}},\"template\":{\"metadata\":{\"labels\":{\"app\":\"***\"}},\"spec\":{\"containers\":[{\"image\":\"nithishacrm3wx2.azurecr.io/***:v***\",\"imagePullPolicy\":\"IfNotPresent\",\"name\":\"***\",\"ports\":[{\"containerPort\":3000}]}],\"imagePullSecrets\":[{\"name\":\"acr-dev\"}],\"tolerations\":[{\"effect\":\"NoSchedule\",\"key\":\"CriticalAddonsOnly\",\"operator\":\"Exists\"}]}}}}\n"
+2025-08-17T05:22:02.2160152Z         },
+2025-08-17T05:22:02.2160453Z         "creationTimestamp": "2025-08-***6T***5:07:25Z",
+2025-08-17T05:22:02.2160729Z         "generation": 2,
+2025-08-17T05:22:02.2160976Z         "name": "***",
+2025-08-17T05:22:02.2161227Z         "namespace": "dev",
+2025-08-17T05:22:02.2161492Z         "resourceVersion": "***36***53",
+2025-08-17T05:22:02.2161764Z         "uid": "84affb87-cd65-46b9-9b56-fbbb87502084"
+2025-08-17T05:22:02.2162023Z     },
+2025-08-17T05:22:02.2162246Z     "spec": {
+2025-08-17T05:22:02.2162491Z         "progressDeadlineSeconds": 600,
+2025-08-17T05:22:02.2162762Z         "replicas": ***,
+2025-08-17T05:22:02.2163014Z         "revisionHistoryLimit": ***0,
+2025-08-17T05:22:02.2163258Z         "selector": {
+2025-08-17T05:22:02.2163506Z             "matchLabels": {
+2025-08-17T05:22:02.2163756Z                 "app": "***"
+2025-08-17T05:22:02.2163993Z             }
+2025-08-17T05:22:02.2164213Z         },
+2025-08-17T05:22:02.2164441Z         "strategy": {
+2025-08-17T05:22:02.2164674Z             "rollingUpdate": {
+2025-08-17T05:22:02.2164936Z                 "maxSurge": "25%",
+2025-08-17T05:22:02.2165191Z                 "maxUnavailable": "25%"
+2025-08-17T05:22:02.2165423Z             },
+2025-08-17T05:22:02.2165674Z             "type": "RollingUpdate"
+2025-08-17T05:22:02.2165908Z         },
+2025-08-17T05:22:02.2166135Z         "template": {
+2025-08-17T05:22:02.2166384Z             "metadata": {
+2025-08-17T05:22:02.2166632Z                 "creationTimestamp": null,
+2025-08-17T05:22:02.2166877Z                 "labels": {
+2025-08-17T05:22:02.2167136Z                     "app": "***"
+2025-08-17T05:22:02.2167366Z                 }
+2025-08-17T05:22:02.2167587Z             },
+2025-08-17T05:22:02.2167817Z             "spec": {
+2025-08-17T05:22:02.2168067Z                 "containers": [
+2025-08-17T05:22:02.2168598Z                     {
+2025-08-17T05:22:02.2168896Z                         "image": "nithishacrm3wx2.azurecr.io/***:v***",
+2025-08-17T05:22:02.2169183Z                         "imagePullPolicy": "IfNotPresent",
+2025-08-17T05:22:02.2169456Z                         "name": "***",
+2025-08-17T05:22:02.2169710Z                         "ports": [
+2025-08-17T05:22:02.2169936Z                             {
+2025-08-17T05:22:02.2170174Z                                 "containerPort": 3000,
+2025-08-17T05:22:02.2170460Z                                 "protocol": "TCP"
+2025-08-17T05:22:02.2170696Z                             }
+2025-08-17T05:22:02.2170919Z                         ],
+2025-08-17T05:22:02.2171166Z                         "resources": {},
+2025-08-17T05:22:02.2171431Z                         "terminationMessagePath": "/dev/termination-log",
+2025-08-17T05:22:02.2171715Z                         "terminationMessagePolicy": "File"
+2025-08-17T05:22:02.2171976Z                     }
+2025-08-17T05:22:02.2172202Z                 ],
+2025-08-17T05:22:02.2172451Z                 "dnsPolicy": "ClusterFirst",
+2025-08-17T05:22:02.2172704Z                 "imagePullSecrets": [
+2025-08-17T05:22:02.2172956Z                     {
+2025-08-17T05:22:02.2173286Z                         "name": "acr-dev"
+2025-08-17T05:22:02.2173516Z                     }
+2025-08-17T05:22:02.2173755Z                 ],
+2025-08-17T05:22:02.2174000Z                 "restartPolicy": "Always",
+2025-08-17T05:22:02.2174269Z                 "schedulerName": "default-scheduler",
+2025-08-17T05:22:02.2174549Z                 "securityContext": {},
+2025-08-17T05:22:02.2174810Z                 "terminationGracePeriodSeconds": 30,
+2025-08-17T05:22:02.2175253Z                 "tolerations": [
+2025-08-17T05:22:02.2175484Z                     {
+2025-08-17T05:22:02.2175723Z                         "effect": "NoSchedule",
+2025-08-17T05:22:02.2175987Z                         "key": "CriticalAddonsOnly",
+2025-08-17T05:22:02.2176261Z                         "operator": "Exists"
+2025-08-17T05:22:02.2176504Z                     }
+2025-08-17T05:22:02.2176725Z                 ]
+2025-08-17T05:22:02.2176956Z             }
+2025-08-17T05:22:02.2177173Z         }
+2025-08-17T05:22:02.2177390Z     },
+2025-08-17T05:22:02.2177632Z     "status": {
+2025-08-17T05:22:02.2177898Z         "availableReplicas": ***,
+2025-08-17T05:22:02.2178150Z         "conditions": [
+2025-08-17T05:22:02.2178393Z             {
+2025-08-17T05:22:02.2178669Z                 "lastTransitionTime": "2025-08-***6T***5:07:26Z",
+2025-08-17T05:22:02.2178996Z                 "lastUpdateTime": "2025-08-***6T***5:07:26Z",
+2025-08-17T05:22:02.2179295Z                 "message": "Deployment has minimum availability.",
+2025-08-17T05:22:02.2179574Z                 "reason": "MinimumReplicasAvailable",
+2025-08-17T05:22:02.2179843Z                 "status": "True",
+2025-08-17T05:22:02.2180083Z                 "type": "Available"
+2025-08-17T05:22:02.2180315Z             },
+2025-08-17T05:22:02.2180558Z             {
+2025-08-17T05:22:02.2180832Z                 "lastTransitionTime": "2025-08-***6T***5:07:25Z",
+2025-08-17T05:22:02.2181141Z                 "lastUpdateTime": "2025-08-***6T***5:07:26Z",
+2025-08-17T05:22:02.2181470Z                 "message": "ReplicaSet \"***-86455b6d56\" has successfully progressed.",
+2025-08-17T05:22:02.2181771Z                 "reason": "NewReplicaSetAvailable",
+2025-08-17T05:22:02.2182115Z                 "status": "True",
+2025-08-17T05:22:02.2182702Z                 "type": "Progressing"
+2025-08-17T05:22:02.2183215Z             }
+2025-08-17T05:22:02.2183877Z         ],
+2025-08-17T05:22:02.2184550Z         "observedGeneration": 2,
+2025-08-17T05:22:02.2184748Z         "readyReplicas": ***,
+2025-08-17T05:22:02.2185206Z         "replicas": ***,
+2025-08-17T05:22:02.2185390Z         "updatedReplicas": ***
+2025-08-17T05:22:02.2185555Z     }
+2025-08-17T05:22:02.2185702Z }
+2025-08-17T05:22:02.2185992Z 
+2025-08-17T05:22:02.5439596Z ##[section]Finishing: Deploy to Dev

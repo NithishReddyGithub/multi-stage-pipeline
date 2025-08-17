@@ -1,0 +1,26 @@
+2025-08-17T05:21:23.6964027Z ##[section]Starting: Publish build artifact
+2025-08-17T05:21:23.6970089Z ==============================================================================
+2025-08-17T05:21:23.6970229Z Task         : Publish build artifacts
+2025-08-17T05:21:23.6970329Z Description  : Publish build artifacts to Azure Pipelines or a Windows file share
+2025-08-17T05:21:23.6970446Z Version      : 1.247.1
+2025-08-17T05:21:23.6970555Z Author       : Microsoft Corporation
+2025-08-17T05:21:23.6970653Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/publish-build-artifacts
+2025-08-17T05:21:23.6970781Z ==============================================================================
+2025-08-17T05:21:23.9442677Z ##[section]Async Command Start: Upload Artifact
+2025-08-17T05:21:23.9443513Z Uploading 4 files
+2025-08-17T05:21:24.4454368Z Using default max parallelism.
+2025-08-17T05:21:24.4454604Z Creating dedup client:
+2025-08-17T05:21:24.4454811Z  - Max dedup parallelism: ***92
+2025-08-17T05:21:24.4454972Z  - Using blobstore domain: 0
+2025-08-17T05:21:24.4455169Z  - Using redirect timeout: 
+2025-08-17T05:21:24.4455315Z  - Hash type: Dedup64K
+2025-08-17T05:21:24.4455452Z Building file tree
+2025-08-17T05:21:24.4455592Z Uploaded 0 out of 43,668 bytes.
+2025-08-17T05:21:24.8867867Z Uploaded 43,668 out of 43,668 bytes.
+2025-08-17T05:21:24.8868107Z Associating files
+2025-08-17T05:21:24.8868288Z Total files: 4 ---- Associated files: 0 (0%)
+2025-08-17T05:21:24.8868505Z File upload succeed.
+2025-08-17T05:21:24.8868712Z Upload '/home/nithish/myagent/4/s/artifact' to file container: '#/75800998/drop'
+2025-08-17T05:21:24.8868935Z Associated artifact 76 with build 246
+2025-08-17T05:21:24.8869146Z ##[section]Async Command End: Upload Artifact
+2025-08-17T05:21:24.8870184Z ##[section]Finishing: Publish build artifact

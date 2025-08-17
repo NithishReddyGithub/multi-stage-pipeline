@@ -1,0 +1,17 @@
+2025-08-17T05:23:03.9954209Z ##[section]Starting: Ensure Production namespace
+2025-08-17T05:23:03.9963233Z ==============================================================================
+2025-08-17T05:23:03.9963463Z Task         : Command line
+2025-08-17T05:23:03.9963537Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2025-08-17T05:23:03.9963712Z Version      : 2.250.1
+2025-08-17T05:23:03.9963819Z Author       : Microsoft Corporation
+2025-08-17T05:23:03.9964002Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2025-08-17T05:23:03.9964167Z ==============================================================================
+2025-08-17T05:23:04.2613154Z Generating script.
+2025-08-17T05:23:04.2629093Z Script contents:
+2025-08-17T05:23:04.2635203Z kubectl get ns production || kubectl create ns production
+2025-08-17T05:23:04.2635481Z ========================== Starting Command Output ===========================
+2025-08-17T05:23:04.2667879Z [command]/usr/bin/bash --noprofile --norc /home/nithish/myagent/_temp/da7a4cc9-f4fa-46f6-90f0-759b***54bee7.sh
+2025-08-17T05:23:04.4308922Z NAME         STATUS   AGE
+2025-08-17T05:23:04.4319705Z production   Active   ***4h
+2025-08-17T05:23:04.4355726Z 
+2025-08-17T05:23:04.4462336Z ##[section]Finishing: Ensure Production namespace

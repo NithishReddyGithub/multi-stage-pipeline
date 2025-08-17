@@ -1,0 +1,383 @@
+2025-08-17T05:22:12.6821438Z ##[section]Starting: Staging Deployment
+2025-08-17T05:22:12.8177706Z ##[section]Starting: Initialize job
+2025-08-17T05:22:12.8180599Z Agent name: 'nithish'
+2025-08-17T05:22:12.8181073Z Agent machine name: 'linux-vm'
+2025-08-17T05:22:12.8181317Z Current agent version: '4.260.0'
+2025-08-17T05:22:12.9163338Z Agent running as: 'nithish'
+2025-08-17T05:22:12.9211384Z Prepare build directory.
+2025-08-17T05:22:12.9519774Z Set build variables.
+2025-08-17T05:22:12.9537219Z Download all required tasks.
+2025-08-17T05:22:13.0481038Z Checking job knob settings.
+2025-08-17T05:22:13.0485090Z    Knob: DockerActionRetries = true Source: $(VSTSAGENT_DOCKER_ACTION_RETRIES) 
+2025-08-17T05:22:13.0486725Z    Knob: UseGitLongPaths = true Source: $(USE_GIT_LONG_PATHS) 
+2025-08-17T05:22:13.0488894Z    Knob: EnableIssueSourceValidation = true Source: $(ENABLE_ISSUE_SOURCE_VALIDATION) 
+2025-08-17T05:22:13.0489867Z    Knob: AgentEnablePipelineArtifactLargeChunkSize = true Source: $(AGENT_ENABLE_PIPELINEARTIFACT_LARGE_CHUNK_SIZE) 
+2025-08-17T05:22:13.0492639Z    Knob: ContinueAfterCancelProcessTreeKillAttempt = true Source: $(VSTSAGENT_CONTINUE_AFTER_CANCEL_PROCESSTREEKILL_ATTEMPT) 
+2025-08-17T05:22:13.0493459Z    Knob: ProcessHandlerSecureArguments = false Source: $(AZP_75787_ENABLE_NEW_LOGIC) 
+2025-08-17T05:22:13.0494015Z    Knob: ProcessHandlerSecureArguments = false Source: $(AZP_75787_ENABLE_NEW_LOGIC_LOG) 
+2025-08-17T05:22:13.0494547Z    Knob: ProcessHandlerTelemetry = true Source: $(AZP_75787_ENABLE_COLLECT) 
+2025-08-17T05:22:13.0495122Z    Knob: UseNewNodeHandlerTelemetry = True Source: $(DistributedTask.Agent.USENEWNODEHANDLERTELEMETRY) 
+2025-08-17T05:22:13.0495711Z    Knob: ProcessHandlerEnableNewLogic = true Source: $(AZP_75787_ENABLE_NEW_PH_LOGIC) 
+2025-08-17T05:22:13.0496531Z    Knob: EnableResourceMonitorDebugOutput = true Source: $(AZP_ENABLE_RESOURCE_MONITOR_DEBUG_OUTPUT) 
+2025-08-17T05:22:13.0497136Z    Knob: EnableResourceUtilizationWarnings = true Source: $(AZP_ENABLE_RESOURCE_UTILIZATION_WARNINGS) 
+2025-08-17T05:22:13.0497955Z    Knob: IgnoreVSTSTaskLib = true Source: $(AZP_AGENT_IGNORE_VSTSTASKLIB) 
+2025-08-17T05:22:13.0498454Z    Knob: FailJobWhenAgentDies = true Source: $(FAIL_JOB_WHEN_AGENT_DIES) 
+2025-08-17T05:22:13.0499130Z    Knob: CheckForTaskDeprecation = true Source: $(AZP_AGENT_CHECK_FOR_TASK_DEPRECATION) 
+2025-08-17T05:22:13.0499862Z    Knob: CheckIfTaskNodeRunnerIsDeprecated246 = True Source: $(DistributedTask.Agent.CheckIfTaskNodeRunnerIsDeprecated246) 
+2025-08-17T05:22:13.0500951Z    Knob: LogTaskNameInUserAgent = true Source: $(AZP_AGENT_LOG_TASKNAME_IN_USERAGENT) 
+2025-08-17T05:22:13.0501492Z    Knob: UseFetchFilterInCheckoutTask = true Source: $(AGENT_USE_FETCH_FILTER_IN_CHECKOUT_TASK) 
+2025-08-17T05:22:13.0502146Z    Knob: Rosetta2Warning = true Source: $(ROSETTA2_WARNING) 
+2025-08-17T05:22:13.0503656Z    Knob: UseSparseCheckoutInCheckoutTask = true Source: $(AGENT_USE_SPARSE_CHECKOUT_IN_CHECKOUT_TASK) 
+2025-08-17T05:22:13.0504411Z    Knob: AgentCDNConnectivityFailWarning = False Source: $(DistributedTask.Agent.AgentCDNConnectivityFailWarning) 
+2025-08-17T05:22:13.0504727Z Finished checking job knob settings.
+2025-08-17T05:22:13.0880225Z Start tracking orphan processes.
+2025-08-17T05:22:13.1096594Z ##[section]Finishing: Initialize job
+2025-08-17T05:22:13.1166321Z ##[section]Async Command Start: DetectDockerContainer
+2025-08-17T05:22:13.1166952Z ##[section]Async Command End: DetectDockerContainer
+2025-08-17T05:22:13.1167991Z ##[section]Async Command Start: DetectDockerContainer
+2025-08-17T05:22:13.1168367Z ##[section]Async Command End: DetectDockerContainer
+2025-08-17T05:22:13.1315804Z ##[section]Starting: Download secrets: nithish-vault-demo
+2025-08-17T05:22:13.1421788Z ==============================================================================
+2025-08-17T05:22:13.1423102Z Task         : Azure Key Vault
+2025-08-17T05:22:13.1423540Z Description  : Download Azure Key Vault secrets
+2025-08-17T05:22:13.1423706Z Version      : 2.259.2
+2025-08-17T05:22:13.1424006Z Author       : Microsoft Corporation
+2025-08-17T05:22:13.1424632Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/deploy/azure-key-vault
+2025-08-17T05:22:13.1424841Z ==============================================================================
+2025-08-17T05:22:13.5855361Z ##[section]Finishing: Download secrets: nithish-vault-demo
+2025-08-17T05:22:13.5921707Z ##[section]Starting: Download secrets: nithish-vault-demo
+2025-08-17T05:22:13.5935174Z ==============================================================================
+2025-08-17T05:22:13.5935639Z Task         : Azure Key Vault
+2025-08-17T05:22:13.5935914Z Description  : Download Azure Key Vault secrets
+2025-08-17T05:22:13.5936228Z Version      : 2.259.2
+2025-08-17T05:22:13.5936484Z Author       : Microsoft Corporation
+2025-08-17T05:22:13.5936764Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/deploy/azure-key-vault
+2025-08-17T05:22:13.5937184Z ==============================================================================
+2025-08-17T05:22:14.0428794Z SubscriptionId: c4c0a9c0-532c-47f2-ba91-33d673835ff4.
+2025-08-17T05:22:14.0429950Z Key vault name: nithish-vault-demo.
+2025-08-17T05:22:14.0445241Z Downloading secret value for: imageName.
+2025-08-17T05:22:14.0446517Z Downloading secret value for: DockerfileName.
+2025-08-17T05:22:14.0447821Z Downloading secret value for: REPLICAS.
+2025-08-17T05:22:14.4966640Z ##[section]Finishing: Download secrets: nithish-vault-demo
+2025-08-17T05:22:14.5015817Z ##[section]Starting: Download
+2025-08-17T05:22:14.5029658Z ==============================================================================
+2025-08-17T05:22:14.5029975Z Task         : Download build artifacts
+2025-08-17T05:22:14.5030185Z Description  : Download files that were saved as artifacts of a completed build
+2025-08-17T05:22:14.5030456Z Version      : 1.220.0
+2025-08-17T05:22:14.5030811Z Author       : Microsoft Corporation
+2025-08-17T05:22:14.5031036Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/download-build-artifacts
+2025-08-17T05:22:14.5031328Z ==============================================================================
+2025-08-17T05:22:14.8184783Z Download from the specified build: #246
+2025-08-17T05:22:14.8188811Z Download artifact to: /home/nithish/myagent/4/
+2025-08-17T05:22:15.2395540Z Pattern: **
+2025-08-17T05:22:15.2396366Z Minimatch patterns: [**]
+2025-08-17T05:22:15.2404797Z Applying include pattern against original list.
+2025-08-17T05:22:15.2533485Z 5 matches
+2025-08-17T05:22:15.2772525Z 5 final results
+2025-08-17T05:22:15.2785450Z Start downloading FCS artifact- drop
+2025-08-17T05:22:15.3790482Z Using default max parallelism.
+2025-08-17T05:22:15.3796379Z Creating dedup client:
+2025-08-17T05:22:15.3797948Z  - Max dedup parallelism: ***92
+2025-08-17T05:22:15.3798929Z  - Using blobstore domain: 0
+2025-08-17T05:22:15.3803207Z  - Using redirect timeout: 
+2025-08-17T05:22:15.4070739Z  - Hash type: Dedup64K
+2025-08-17T05:22:15.4205455Z Downloading: /home/nithish/myagent/4/drop/app.tar.gz
+2025-08-17T05:22:15.4209184Z Downloading: /home/nithish/myagent/4/drop/staging-deployment.yaml
+2025-08-17T05:22:15.4212500Z Downloading: /home/nithish/myagent/4/drop/production-deployment.yaml
+2025-08-17T05:22:15.4220354Z Downloading: /home/nithish/myagent/4/drop/dev-deployment.yaml
+2025-08-17T05:22:15.6675371Z Downloading artifact finished.
+2025-08-17T05:22:15.6694166Z ##[section]Finishing: Download
+2025-08-17T05:22:15.6738182Z ##[section]Starting: Authenticate with AKS
+2025-08-17T05:22:15.6751928Z ==============================================================================
+2025-08-17T05:22:15.6752192Z Task         : Azure CLI
+2025-08-17T05:22:15.6752361Z Description  : Run Azure CLI commands against an Azure subscription in a PowerShell Core/Shell script when running on Linux agent or PowerShell/PowerShell Core/Batch script when running on Windows agent.
+2025-08-17T05:22:15.6752701Z Version      : 2.259.1
+2025-08-17T05:22:15.6752952Z Author       : Microsoft Corporation
+2025-08-17T05:22:15.6753133Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/deploy/azure-cli
+2025-08-17T05:22:15.6753628Z ==============================================================================
+2025-08-17T05:22:16.0882554Z [command]/usr/bin/az --version
+2025-08-17T05:22:17.0679034Z WARNING: You have 2 update(s) available. Consider updating your CLI installation with 'az upgrade'
+2025-08-17T05:22:17.0679479Z azure-cli                         2.72.0 *
+2025-08-17T05:22:17.0679596Z 
+2025-08-17T05:22:17.0679780Z core                              2.72.0 *
+2025-08-17T05:22:17.0680152Z telemetry                          ***.***.0
+2025-08-17T05:22:17.0680248Z 
+2025-08-17T05:22:17.0680419Z Dependencies:
+2025-08-17T05:22:17.0680627Z msal                              ***.32.3
+2025-08-17T05:22:17.0680858Z azure-mgmt-resource               23.***.***
+2025-08-17T05:22:17.0680956Z 
+2025-08-17T05:22:17.0681153Z Python location '/opt/az/bin/python3'
+2025-08-17T05:22:17.0681378Z Config directory '/home/nithish/.azure'
+2025-08-17T05:22:17.0681615Z Extensions directory '/home/nithish/.azure/cliextensions'
+2025-08-17T05:22:17.0681735Z 
+2025-08-17T05:22:17.0682122Z Python (Linux) 3.***2.8 (main, Apr 28 2025, 09:24:09) [GCC 9.4.0]
+2025-08-17T05:22:17.0682293Z 
+2025-08-17T05:22:17.0682497Z Legal docs and information: aka.ms/AzureCliLegal
+2025-08-17T05:22:17.0682619Z 
+2025-08-17T05:22:17.0682679Z 
+2025-08-17T05:22:17.0685320Z Setting AZURE_CONFIG_DIR env variable to: /home/nithish/myagent/_temp/.azclitask
+2025-08-17T05:22:17.0687170Z Setting active cloud to: AzureCloud
+2025-08-17T05:22:17.0693001Z [command]/usr/bin/az cloud set -n AzureCloud
+2025-08-17T05:22:20.1995602Z [command]/usr/bin/az login --service-principal -u *** --tenant 43479cab-e5***a-4a2a-8e3f-f636af78c0ac --allow-no-subscriptions --federated-token ***
+2025-08-17T05:22:21.3518762Z [
+2025-08-17T05:22:21.3519454Z   {
+2025-08-17T05:22:21.3520120Z     "cloudName": "AzureCloud",
+2025-08-17T05:22:21.3520712Z     "homeTenantId": "43479cab-e5***a-4a2a-8e3f-f636af78c0ac",
+2025-08-17T05:22:21.3527669Z     "id": "c4c0a9c0-532c-47f2-ba9***-33d673835ff4",
+2025-08-17T05:22:21.3528004Z     "isDefault": true,
+2025-08-17T05:22:21.3528224Z     "managedByTenants": [],
+2025-08-17T05:22:21.3528499Z     "name": "Azure subscription ***",
+2025-08-17T05:22:21.3528684Z     "state": "Enabled",
+2025-08-17T05:22:21.3528891Z     "tenantId": "43479cab-e5***a-4a2a-8e3f-f636af78c0ac",
+2025-08-17T05:22:21.3529105Z     "user": {
+2025-08-17T05:22:21.3529361Z       "name": "***",
+2025-08-17T05:22:21.3529541Z       "type": "servicePrincipal"
+2025-08-17T05:22:21.3529709Z     }
+2025-08-17T05:22:21.3529872Z   }
+2025-08-17T05:22:21.3530014Z ]
+2025-08-17T05:22:21.3534386Z [command]/usr/bin/az account set --subscription c4c0a9c0-532c-47f2-ba9***-33d673835ff4
+2025-08-17T05:22:21.8277032Z [command]/usr/bin/bash /home/nithish/myagent/_temp/azureclitaskscript***755408***36080.sh
+2025-08-17T05:22:23.0278894Z WARNING: Merged "nithish-aks-aks" as current context in /home/nithish/.kube/config
+2025-08-17T05:22:23.1895447Z 
+2025-08-17T05:22:23.1957130Z [command]/usr/bin/az account clear
+2025-08-17T05:22:23.7978098Z ##[section]Finishing: Authenticate with AKS
+2025-08-17T05:22:23.8002009Z ##[section]Starting: Ensure Staging namespace
+2025-08-17T05:22:23.8007664Z ==============================================================================
+2025-08-17T05:22:23.8007789Z Task         : Command line
+2025-08-17T05:22:23.8007880Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2025-08-17T05:22:23.8007996Z Version      : 2.250.1
+2025-08-17T05:22:23.8008098Z Author       : Microsoft Corporation
+2025-08-17T05:22:23.8008177Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2025-08-17T05:22:23.8008298Z ==============================================================================
+2025-08-17T05:22:23.9599494Z Generating script.
+2025-08-17T05:22:23.9609111Z Script contents:
+2025-08-17T05:22:23.9618966Z kubectl get ns staging || kubectl create ns staging
+2025-08-17T05:22:23.9619353Z ========================== Starting Command Output ===========================
+2025-08-17T05:22:23.9641489Z [command]/usr/bin/bash --noprofile --norc /home/nithish/myagent/_temp/a***63065***-5768-4528-9368-f4dce0***b2264.sh
+2025-08-17T05:22:24.1627552Z NAME      STATUS   AGE
+2025-08-17T05:22:24.1628120Z staging   Active   ***4h
+2025-08-17T05:22:24.1648771Z 
+2025-08-17T05:22:24.1732012Z ##[section]Finishing: Ensure Staging namespace
+2025-08-17T05:22:24.1759402Z ##[section]Starting: Apply ConfigMap
+2025-08-17T05:22:24.1765603Z ==============================================================================
+2025-08-17T05:22:24.1765727Z Task         : Command line
+2025-08-17T05:22:24.1765858Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2025-08-17T05:22:24.1765974Z Version      : 2.250.1
+2025-08-17T05:22:24.1766125Z Author       : Microsoft Corporation
+2025-08-17T05:22:24.1766205Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2025-08-17T05:22:24.1766373Z ==============================================================================
+2025-08-17T05:22:24.3348919Z Generating script.
+2025-08-17T05:22:24.3359841Z ========================== Starting Command Output ===========================
+2025-08-17T05:22:24.3388574Z [command]/usr/bin/bash --noprofile --norc /home/nithish/myagent/_temp/***75dbfcf-5d53-4647-972e-eb2d53473549.sh
+2025-08-17T05:22:24.3446879Z No staging config files found, skipping ConfigMap.
+2025-08-17T05:22:24.3456644Z 
+2025-08-17T05:22:24.3517162Z ##[section]Finishing: Apply ConfigMap
+2025-08-17T05:22:24.3538782Z ##[section]Starting: Checkout Multi-Stage Project@main to s
+2025-08-17T05:22:24.3552789Z ==============================================================================
+2025-08-17T05:22:24.3552944Z Task         : Get sources
+2025-08-17T05:22:24.3553034Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2025-08-17T05:22:24.3553162Z Version      : 1.0.0
+2025-08-17T05:22:24.3553253Z Author       : Microsoft
+2025-08-17T05:22:24.3553945Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2025-08-17T05:22:24.3554070Z ==============================================================================
+2025-08-17T05:22:24.6739547Z Syncing repository: Multi-Stage Project (Git)
+2025-08-17T05:22:24.6828899Z ##[command]git version
+2025-08-17T05:22:24.7199926Z git version 2.25.***
+2025-08-17T05:22:24.7300458Z ##[command]git config --get remote.origin.url
+2025-08-17T05:22:24.7368640Z ##[command]git clean -ffdx
+2025-08-17T05:22:24.7404749Z Removing manifests/dev-deployment.rendered.yaml
+2025-08-17T05:22:24.7409228Z ##[command]git reset --hard HEAD
+2025-08-17T05:22:24.7455026Z HEAD is now at a04da72 Updated azure-pipeline.yml
+2025-08-17T05:22:24.7473515Z ##[command]git sparse-checkout disable
+2025-08-17T05:22:24.7524052Z ##[command]git config gc.auto 0
+2025-08-17T05:22:24.7594101Z ##[command]git config core.longpaths true
+2025-08-17T05:22:24.7622461Z ##[command]git config --get-all http.https://nithishp@dev.azure.com/nithishp/Technical%AZP2520Assessment%AZP2520-%AZP2520ABB/_git/Multi-Stage%AZP2520Project.extraheader
+2025-08-17T05:22:24.7659520Z ##[command]git config --get-all http.extraheader
+2025-08-17T05:22:24.7716024Z ##[command]git config --get-regexp .*extraheader
+2025-08-17T05:22:24.7864630Z ##[command]git config --get-all http.proxy
+2025-08-17T05:22:24.7890541Z ##[command]git config http.version HTTP/***.***
+2025-08-17T05:22:24.7961990Z ##[command]git -c http.extraheader="AUTHORIZATION: bearer *** fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=***  +a04da729027ebd9025e8feacd4e***58b0f***3be***c4:refs/remotes/origin/a04da729027ebd9025e8feacd4e***58b0f***3be***c4
+2025-08-17T05:22:24.9008400Z remote: Azure Repos        
+2025-08-17T05:22:24.9051911Z remote: We noticed you're using an older version of Git. For the best experience, upgrade to a newer version.        
+2025-08-17T05:22:24.9052399Z remote: 
+2025-08-17T05:22:24.9052916Z remote: Found 0 objects to send. (0 ms)        
+2025-08-17T05:22:24.9457487Z ##[command]git -c http.extraheader="AUTHORIZATION: bearer *** fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=***  +a04da729027ebd9025e8feacd4e***58b0f***3be***c4
+2025-08-17T05:22:25.0192154Z remote: Azure Repos        
+2025-08-17T05:22:25.0195946Z remote: We noticed you're using an older version of Git. For the best experience, upgrade to a newer version.        
+2025-08-17T05:22:25.0200189Z remote: 
+2025-08-17T05:22:25.0201426Z remote: Found 0 objects to send. (0 ms)        
+2025-08-17T05:22:25.0318513Z From https://dev.azure.com/nithishp/Technical%20Assessment%20-%20ABB/_git/Multi-Stage%20Project
+2025-08-17T05:22:25.0319757Z  * branch            a04da729027ebd9025e8feacd4e***58b0f***3be***c4 -> FETCH_HEAD
+2025-08-17T05:22:25.0832165Z ##[command]git checkout --progress --force refs/remotes/origin/a04da729027ebd9025e8feacd4e***58b0f***3be***c4
+2025-08-17T05:22:25.0838986Z HEAD is now at a04da72 Updated azure-pipeline.yml
+2025-08-17T05:22:25.0840865Z ##[command]git config http.https://nithishp@dev.azure.com/nithishp/Technical%AZP2520Assessment%AZP2520-%AZP2520ABB/_git/Multi-Stage%AZP2520Project.extraheader "AUTHORIZATION: placeholder_6237***44b-34d9-40a0-ab6a-***234cab0ac74"
+2025-08-17T05:22:25.0861454Z ##[section]Finishing: Checkout Multi-Stage Project@main to s
+2025-08-17T05:22:25.0883846Z ##[section]Starting: CmdLine3
+2025-08-17T05:22:25.0889042Z ==============================================================================
+2025-08-17T05:22:25.0889181Z Task         : Command line
+2025-08-17T05:22:25.0889255Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2025-08-17T05:22:25.0889392Z Version      : 2.250.1
+2025-08-17T05:22:25.0889480Z Author       : Microsoft Corporation
+2025-08-17T05:22:25.0889576Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2025-08-17T05:22:25.0889686Z ==============================================================================
+2025-08-17T05:22:25.2485531Z Generating script.
+2025-08-17T05:22:25.2505155Z ========================== Starting Command Output ===========================
+2025-08-17T05:22:25.2528312Z [command]/usr/bin/bash --noprofile --norc /home/nithish/myagent/_temp/74af***8a9-ef2f-4f***e-bdaa-28e***cf528ec.sh
+2025-08-17T05:22:25.2586509Z copying manifests from repo
+2025-08-17T05:22:25.2588961Z /home/nithish/myagent/4/s/manifests/:
+2025-08-17T05:22:25.2589158Z dev-deployment.yaml
+2025-08-17T05:22:25.2589362Z production-deployment.yaml
+2025-08-17T05:22:25.2589550Z staging-deployment.yaml
+2025-08-17T05:22:25.2598015Z 
+2025-08-17T05:22:25.2694470Z ##[section]Finishing: CmdLine3
+2025-08-17T05:22:25.2716851Z ##[section]Starting: Deploy to Staging
+2025-08-17T05:22:25.2724388Z ==============================================================================
+2025-08-17T05:22:25.2724519Z Task         : Kubectl
+2025-08-17T05:22:25.2724607Z Description  : Deploy, configure, update a Kubernetes cluster in Azure Container Service by running kubectl commands
+2025-08-17T05:22:25.2724759Z Version      : 1.259.3
+2025-08-17T05:22:25.2724863Z Author       : Microsoft Corporation
+2025-08-17T05:22:25.2724958Z Help         : https://aka.ms/azpipes-kubectl-tsg
+2025-08-17T05:22:25.2725046Z ==============================================================================
+2025-08-17T05:22:26.4854240Z Prepending PATH environment variable with directory: /usr/bin
+2025-08-17T05:22:26.6364515Z ==============================================================================
+2025-08-17T05:22:26.6365264Z 			Kubectl Client Version: v***.33.3
+2025-08-17T05:22:26.6365744Z 			Kubectl Server Version: v***.32.6
+2025-08-17T05:22:26.6366176Z ==============================================================================
+2025-08-17T05:22:26.6625370Z [command]/usr/bin/kubectl apply -n staging -f /home/nithish/myagent/4/s/manifests/staging-deployment.yaml -o json
+2025-08-17T05:22:26.9291084Z {
+2025-08-17T05:22:26.9291581Z     "apiVersion": "apps/v***",
+2025-08-17T05:22:26.9292313Z     "kind": "Deployment",
+2025-08-17T05:22:26.9292633Z     "metadata": {
+2025-08-17T05:22:26.9292928Z         "annotations": {
+2025-08-17T05:22:26.9293332Z             "deployment.kubernetes.io/revision": "***",
+2025-08-17T05:22:26.9294108Z             "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v***\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{},\"name\":\"***\",\"namespace\":\"staging\"},\"spec\":{\"replicas\":***,\"selector\":{\"matchLabels\":{\"app\":\"***\"}},\"template\":{\"metadata\":{\"labels\":{\"app\":\"***\"}},\"spec\":{\"containers\":[{\"image\":\"nithishacrm3wx2.azurecr.io/***:v***\",\"imagePullPolicy\":\"IfNotPresent\",\"name\":\"***\",\"ports\":[{\"containerPort\":3000}]}],\"imagePullSecrets\":[{\"name\":\"acr-staging\"}],\"tolerations\":[{\"effect\":\"NoSchedule\",\"key\":\"CriticalAddonsOnly\",\"operator\":\"Exists\"}]}}}}\n"
+2025-08-17T05:22:26.9294755Z         },
+2025-08-17T05:22:26.9295053Z         "creationTimestamp": "2025-08-***6T***5:07:57Z",
+2025-08-17T05:22:26.9295378Z         "generation": ***,
+2025-08-17T05:22:26.9295753Z         "name": "***",
+2025-08-17T05:22:26.9296017Z         "namespace": "staging",
+2025-08-17T05:22:26.9296285Z         "resourceVersion": "9***5***49",
+2025-08-17T05:22:26.9296622Z         "uid": "48228044-9a8b-46c4-832e-bd2e3823a629"
+2025-08-17T05:22:26.9296990Z     },
+2025-08-17T05:22:26.9297236Z     "spec": {
+2025-08-17T05:22:26.9297516Z         "progressDeadlineSeconds": 600,
+2025-08-17T05:22:26.9349021Z         "replicas": ***,
+2025-08-17T05:22:26.9349237Z         "revisionHistoryLimit": ***0,
+2025-08-17T05:22:26.9349425Z         "selector": {
+2025-08-17T05:22:26.9349632Z             "matchLabels": {
+2025-08-17T05:22:26.9349817Z                 "app": "***"
+2025-08-17T05:22:26.9349978Z             }
+2025-08-17T05:22:26.9350135Z         },
+2025-08-17T05:22:26.9350313Z         "strategy": {
+2025-08-17T05:22:26.9350487Z             "rollingUpdate": {
+2025-08-17T05:22:26.9350661Z                 "maxSurge": "25%",
+2025-08-17T05:22:26.9350849Z                 "maxUnavailable": "25%"
+2025-08-17T05:22:26.9351031Z             },
+2025-08-17T05:22:26.9351202Z             "type": "RollingUpdate"
+2025-08-17T05:22:26.9351372Z         },
+2025-08-17T05:22:26.9351534Z         "template": {
+2025-08-17T05:22:26.9351718Z             "metadata": {
+2025-08-17T05:22:26.9351900Z                 "creationTimestamp": null,
+2025-08-17T05:22:26.9352079Z                 "labels": {
+2025-08-17T05:22:26.9352266Z                     "app": "***"
+2025-08-17T05:22:26.9352433Z                 }
+2025-08-17T05:22:26.9352588Z             },
+2025-08-17T05:22:26.9352747Z             "spec": {
+2025-08-17T05:22:26.9353207Z                 "containers": [
+2025-08-17T05:22:26.9353382Z                     {
+2025-08-17T05:22:26.9353614Z                         "image": "nithishacrm3wx2.azurecr.io/***:v***",
+2025-08-17T05:22:26.9353853Z                         "imagePullPolicy": "IfNotPresent",
+2025-08-17T05:22:26.9354056Z                         "name": "***",
+2025-08-17T05:22:26.9354230Z                         "ports": [
+2025-08-17T05:22:26.9354415Z                             {
+2025-08-17T05:22:26.9354589Z                                 "containerPort": 3000,
+2025-08-17T05:22:26.9354776Z                                 "protocol": "TCP"
+2025-08-17T05:22:26.9354948Z                             }
+2025-08-17T05:22:26.9355120Z                         ],
+2025-08-17T05:22:26.9355288Z                         "resources": {},
+2025-08-17T05:22:26.9355490Z                         "terminationMessagePath": "/dev/termination-log",
+2025-08-17T05:22:26.9355706Z                         "terminationMessagePolicy": "File"
+2025-08-17T05:22:26.9355904Z                     }
+2025-08-17T05:22:26.9356061Z                 ],
+2025-08-17T05:22:26.9356242Z                 "dnsPolicy": "ClusterFirst",
+2025-08-17T05:22:26.9356427Z                 "imagePullSecrets": [
+2025-08-17T05:22:26.9356756Z                     {
+2025-08-17T05:22:26.9356929Z                         "name": "acr-staging"
+2025-08-17T05:22:26.9357303Z                     }
+2025-08-17T05:22:26.9357462Z                 ],
+2025-08-17T05:22:26.9357641Z                 "restartPolicy": "Always",
+2025-08-17T05:22:26.9357844Z                 "schedulerName": "default-scheduler",
+2025-08-17T05:22:26.9358055Z                 "securityContext": {},
+2025-08-17T05:22:26.9358253Z                 "terminationGracePeriodSeconds": 30,
+2025-08-17T05:22:26.9358447Z                 "tolerations": [
+2025-08-17T05:22:26.9358616Z                     {
+2025-08-17T05:22:26.9358810Z                         "effect": "NoSchedule",
+2025-08-17T05:22:26.9359003Z                         "key": "CriticalAddonsOnly",
+2025-08-17T05:22:26.9359188Z                         "operator": "Exists"
+2025-08-17T05:22:26.9359351Z                     }
+2025-08-17T05:22:26.9359517Z                 ]
+2025-08-17T05:22:26.9359668Z             }
+2025-08-17T05:22:26.9359822Z         }
+2025-08-17T05:22:26.9359973Z     },
+2025-08-17T05:22:26.9360149Z     "status": {
+2025-08-17T05:22:26.9360347Z         "availableReplicas": ***,
+2025-08-17T05:22:26.9360527Z         "conditions": [
+2025-08-17T05:22:26.9360700Z             {
+2025-08-17T05:22:26.9360906Z                 "lastTransitionTime": "2025-08-***6T***5:07:58Z",
+2025-08-17T05:22:26.9361146Z                 "lastUpdateTime": "2025-08-***6T***5:07:58Z",
+2025-08-17T05:22:26.9361388Z                 "message": "Deployment has minimum availability.",
+2025-08-17T05:22:26.9361606Z                 "reason": "MinimumReplicasAvailable",
+2025-08-17T05:22:26.9361801Z                 "status": "True",
+2025-08-17T05:22:26.9361989Z                 "type": "Available"
+2025-08-17T05:22:26.9362158Z             },
+2025-08-17T05:22:26.9362314Z             {
+2025-08-17T05:22:26.9362514Z                 "lastTransitionTime": "2025-08-***6T***5:07:57Z",
+2025-08-17T05:22:26.9362762Z                 "lastUpdateTime": "2025-08-***6T***5:07:58Z",
+2025-08-17T05:22:26.9363011Z                 "message": "ReplicaSet \"***-5b4d7b78cd\" has successfully progressed.",
+2025-08-17T05:22:26.9363255Z                 "reason": "NewReplicaSetAvailable",
+2025-08-17T05:22:26.9363440Z                 "status": "True",
+2025-08-17T05:22:26.9363615Z                 "type": "Progressing"
+2025-08-17T05:22:26.9363785Z             }
+2025-08-17T05:22:26.9363957Z         ],
+2025-08-17T05:22:26.9364139Z         "observedGeneration": ***,
+2025-08-17T05:22:26.9364331Z         "readyReplicas": ***,
+2025-08-17T05:22:26.9364528Z         "replicas": ***,
+2025-08-17T05:22:26.9364711Z         "updatedReplicas": ***
+2025-08-17T05:22:26.9364881Z     }
+2025-08-17T05:22:26.9365050Z }
+2025-08-17T05:22:26.9365108Z 
+2025-08-17T05:22:27.2684673Z ##[section]Finishing: Deploy to Staging
+2025-08-17T05:22:27.2707488Z ##[section]Starting: Verify Staging rollout
+2025-08-17T05:22:27.2712936Z ==============================================================================
+2025-08-17T05:22:27.2713087Z Task         : Command line
+2025-08-17T05:22:27.2713165Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2025-08-17T05:22:27.2713317Z Version      : 2.250.1
+2025-08-17T05:22:27.2713411Z Author       : Microsoft Corporation
+2025-08-17T05:22:27.2713508Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2025-08-17T05:22:27.2713620Z ==============================================================================
+2025-08-17T05:22:27.4366057Z Generating script.
+2025-08-17T05:22:27.4377435Z Script contents:
+2025-08-17T05:22:27.4386402Z kubectl -n staging rollout status deployment/*** --timeout=60s
+2025-08-17T05:22:27.4386805Z ========================== Starting Command Output ===========================
+2025-08-17T05:22:27.4399256Z [command]/usr/bin/bash --noprofile --norc /home/nithish/myagent/_temp/3629725d-0dfb-4c2d-9728-00874ff3fb20.sh
+2025-08-17T05:22:27.6305577Z deployment "***" successfully rolled out
+2025-08-17T05:22:27.6387030Z 
+2025-08-17T05:22:27.6451069Z ##[section]Finishing: Verify Staging rollout
+2025-08-17T05:22:27.6475145Z ##[section]Starting: Checkout Multi-Stage Project@main to s
+2025-08-17T05:22:27.6478813Z ==============================================================================
+2025-08-17T05:22:27.6478952Z Task         : Get sources
+2025-08-17T05:22:27.6479044Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2025-08-17T05:22:27.6479165Z Version      : 1.0.0
+2025-08-17T05:22:27.6479273Z Author       : Microsoft
+2025-08-17T05:22:27.6479344Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2025-08-17T05:22:27.6479471Z ==============================================================================
+2025-08-17T05:22:27.9328527Z Cleaning any cached credential from repository: Multi-Stage Project (Git)
+2025-08-17T05:22:27.9492058Z ##[command]git version
+2025-08-17T05:22:27.9999774Z git version 2.25.***
+2025-08-17T05:22:28.0062923Z ##[command]git config --unset-all http.https://nithishp@dev.azure.com/nithishp/Technical%AZP2520Assessment%AZP2520-%AZP2520ABB/_git/Multi-Stage%AZP2520Project.extraheader
+2025-08-17T05:22:28.0187291Z ##[section]Finishing: Checkout Multi-Stage Project@main to s
+2025-08-17T05:22:28.0212094Z ##[section]Starting: Finalize Job
+2025-08-17T05:22:28.0225191Z Cleaning up task key
+2025-08-17T05:22:28.0226081Z Start cleaning up orphan processes.
+2025-08-17T05:22:28.0495866Z ##[section]Finishing: Finalize Job
+2025-08-17T05:22:28.0523782Z ##[section]Finishing: Staging Deployment

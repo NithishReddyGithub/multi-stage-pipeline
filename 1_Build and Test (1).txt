@@ -1,0 +1,45 @@
+2025-08-17T05:20:21.3343632Z ##[section]Starting: Prepare job Build_Test
+2025-08-17T05:20:21.3704968Z Variables:
+2025-08-17T05:20:21.3939589Z   imageName: $[ variablegroups.nithish-keyvault.imageName ]
+2025-08-17T05:20:21.3939589Z   DockerfileName: $[ variablegroups.nithish-keyvault.DockerfileName ]
+2025-08-17T05:20:21.3939589Z   REPLICAS: $[ variablegroups.nithish-keyvault.REPLICAS ]
+2025-08-17T05:20:21.3939589Z ContinueOnError: False
+2025-08-17T05:20:21.3939589Z TimeoutInMinutes: 60
+2025-08-17T05:20:21.3939589Z CancelTimeoutInMinutes: 5
+2025-08-17T05:20:21.3939589Z Expand:
+2025-08-17T05:20:21.3939589Z   MaxConcurrency: 0
+2025-08-17T05:20:21.4200278Z   ########## System Pipeline Decorator(s) ##########
+
+2025-08-17T05:20:21.4200278Z   Begin evaluating template 'system-pre-steps.yml'
+Evaluating: eq('true', variables['system.debugContext'])
+Expanded: eq('true', Null)
+Result: False
+Evaluating: resources['repositories']['self']
+Expanded: Object
+Result: True
+Evaluating: not(containsValue(job['steps']['*']['task']['id'], '6d15af64-176c-496d-b583-fd2ae21d4df4'))
+Expanded: not(containsValue(Object, '6d15af64-176c-496d-b583-fd2ae21d4df4'))
+Result: True
+Evaluating: resources['repositories']['self']['checkoutOptions']
+Result: Object
+Evaluating: pair['key']
+Result: 'fetchDepth'
+Evaluating: pair['value']
+Result: '1'
+Evaluating: pair['key']
+Result: 'lfs'
+Evaluating: pair['value']
+Result: 'false'
+Finished evaluating template 'system-pre-steps.yml'
+********************************************************************************
+Template and static variable resolution complete. Final runtime YAML document:
+steps:
+- task: 6d15af64-176c-496d-b583-fd2ae21d4df4@1
+  inputs:
+    repository: self
+    fetchDepth: 1
+    lfs: false
+
+
+2025-08-17T05:20:21.4200278Z   MaxConcurrency: 0
+2025-08-17T05:20:21.4233855Z ##[section]Finishing: Prepare job Build_Test

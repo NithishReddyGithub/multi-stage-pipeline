@@ -1,0 +1,18 @@
+2025-08-17T05:21:23.4729973Z ##[section]Starting: Create Artifact
+2025-08-17T05:21:23.4735424Z ==============================================================================
+2025-08-17T05:21:23.4735556Z Task         : Command line
+2025-08-17T05:21:23.4735647Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2025-08-17T05:21:23.4735772Z Version      : 2.250.1
+2025-08-17T05:21:23.4736055Z Author       : Microsoft Corporation
+2025-08-17T05:21:23.4736154Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2025-08-17T05:21:23.4736271Z ==============================================================================
+2025-08-17T05:21:23.6377752Z Generating script.
+2025-08-17T05:21:23.6381304Z ========================== Starting Command Output ===========================
+2025-08-17T05:21:23.6401025Z [command]/usr/bin/bash --noprofile --norc /home/nithish/myagent/_temp/ba8dacd6-f920-44c***-87e3-7f7fdc***f9cd***.sh
+2025-08-17T05:21:23.6831003Z artifact:
+2025-08-17T05:21:23.6831744Z app.tar.gz
+2025-08-17T05:21:23.6832449Z dev-deployment.yaml
+2025-08-17T05:21:23.6832812Z production-deployment.yaml
+2025-08-17T05:21:23.6833172Z staging-deployment.yaml
+2025-08-17T05:21:23.6841666Z 
+2025-08-17T05:21:23.6938639Z ##[section]Finishing: Create Artifact

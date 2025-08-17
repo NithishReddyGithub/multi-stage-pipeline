@@ -1,0 +1,14 @@
+2025-08-17T05:23:04.4488219Z ##[section]Starting: Apply ConfigMap
+2025-08-17T05:23:04.4494264Z ==============================================================================
+2025-08-17T05:23:04.4494448Z Task         : Command line
+2025-08-17T05:23:04.4494518Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2025-08-17T05:23:04.4494693Z Version      : 2.250.1
+2025-08-17T05:23:04.4494777Z Author       : Microsoft Corporation
+2025-08-17T05:23:04.4494910Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2025-08-17T05:23:04.4495041Z ==============================================================================
+2025-08-17T05:23:04.7065278Z Generating script.
+2025-08-17T05:23:04.7076488Z ========================== Starting Command Output ===========================
+2025-08-17T05:23:04.7095327Z [command]/usr/bin/bash --noprofile --norc /home/nithish/myagent/_temp/a46efceb-533e-45ff-9a9b-73daef07d76e.sh
+2025-08-17T05:23:04.7151311Z No production config files found, skipping ConfigMap.
+2025-08-17T05:23:04.7161730Z 
+2025-08-17T05:23:04.7263596Z ##[section]Finishing: Apply ConfigMap

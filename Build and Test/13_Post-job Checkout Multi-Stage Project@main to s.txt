@@ -1,0 +1,10 @@
+2025-08-17T05:21:24.8899248Z ##[section]Starting: Checkout Multi-Stage Project@main to s
+2025-08-17T05:21:24.8903574Z ==============================================================================
+2025-08-17T05:21:24.8903748Z Task         : Get sources
+2025-08-17T05:21:24.8903852Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2025-08-17T05:21:24.8904004Z Version      : 1.0.0
+2025-08-17T05:21:24.8904130Z Author       : Microsoft
+2025-08-17T05:21:24.8904232Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2025-08-17T05:21:24.8904385Z ==============================================================================
+2025-08-17T05:21:25.1671137Z Cleaning any cached credential from repository: Multi-Stage Project (Git)
+2025-08-17T05:21:25.1771688Z ##[section]Finishing: Checkout Multi-Stage Project@main to s

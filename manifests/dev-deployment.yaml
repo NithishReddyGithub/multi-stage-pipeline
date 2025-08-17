@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+  namespace: dev
+spec:
+  replicas: ${REPLICAS}
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      tolerations:
+        - key: "CriticalAddonsOnly"
+          operator: "Exists"
+          effect: "NoSchedule"
+      imagePullSecrets:
+        - name: acr-dev
+      containers:
+        - name: my-app
+          image: nithishacrm3wx2.azurecr.io/my-app:v1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
